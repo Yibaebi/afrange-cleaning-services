@@ -2,7 +2,7 @@ import { LandingPage } from "../../pages";
 
 const routeBuilder = [
   {
-    path: "/",
+    path: "/home",
     exact: true,
     component: LandingPage,
   },
