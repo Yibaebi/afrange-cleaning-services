@@ -1,0 +1,50 @@
+/* Hero Wrapper Styles */
+.aae-landing-hero--container.container-styles {
+  margin: 0px;
+  padding-bottom: 0px;
+}
+.aae-landing-hero--wrapper {
+  padding: 3em;
+  padding-top: 100px;
+  background-color: var(--color-platinum);
+  display: flex;
+  padding-bottom: 20em;
+}
+
+.aae-landing-hero--content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-intro {
+  font-size: 14px;
+  letter-spacing: 5.04px;
+}
+
+.content-close {
+  color: #0e273c;
+}
+
+.aae-landing-hero--content h1 {
+  margin-top: 20px;
+  font-size: 45px;
+  max-width: 400px;
+  font-weight: 800;
+  line-height: 110%;
+  margin-bottom: 30px;
+  color: rgb(59, 74, 103);
+}
+
+.aae-landing-hero--image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.aae-landing-hero--image img {
+  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+}
