@@ -45,7 +45,7 @@ const NavBar = () => {
         <NavLink className="nav-link" to="/contact-us">
           Contact Us
         </NavLink>
-        <button>Place Order</button>
+        <button className="primary-button">Place Order</button>
       </ul>
     </nav>
   );
