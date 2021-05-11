@@ -1,3 +1,4 @@
+import { Redirect, Route } from "react-router";
 import { LandingPage } from "../../pages";
 
 const routeBuilder = [
@@ -5,6 +6,12 @@ const routeBuilder = [
     path: "/home",
     exact: true,
     component: LandingPage,
+    Router: Route,
+  },
+  {
+    from: "/",
+    to: "/home",
+    Router: Redirect,
   },
 ];
 

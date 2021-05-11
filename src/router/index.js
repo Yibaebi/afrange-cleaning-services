@@ -10,9 +10,9 @@ const AppRouter = () => {
       <ScrollToTop />
       <Switch>
         {routeBuilder.map((route, index) => {
-          const { component: Component, path, exact, ...rest } = route;
+          const { component: Component, path, exact, Router, ...rest } = route;
           return (
-            <Route
+            <Router
               path={path}
               exact={exact}
               {...rest}
