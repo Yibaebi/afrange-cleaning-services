@@ -26,6 +26,7 @@ const NavBar = () => {
         <span></span>
         <span></span>
       </div>
+
       <ul className={`aae-nav-bar--links-wrapper`}>
         <NavLink className="nav-link" to="/home">
           Home

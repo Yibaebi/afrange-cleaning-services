@@ -38,7 +38,6 @@
 .aae-nav-bar--links-wrapper .nav-link.active,
 .aae-nav-bar--links-wrapper .nav-link.active:hover {
   margin: 5px 5px;
-  color: rgb(59, 74, 103);
   transform: scale(1.2);
   font-weight: 700;
 }
