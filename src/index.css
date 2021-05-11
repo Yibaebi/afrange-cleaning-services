@@ -8,6 +8,8 @@
 :root {
   --color-dark-blue: #3b4a8f;
   --color-platinum: #e6e6e6;
+  --complementary-goblin: #3b8f56;
+  --complementary-rouge: #8f803b;
   --color-white: #fff;
   --btn-padding-small: 0.5em 1em;
 }
@@ -33,37 +35,61 @@ h6 {
 }
 
 .primary-button,
-.secondary-button {
-  background-color: #3b4a67;
+.secondary-button,
+.primary-button--green,
+.secondary-button--green {
+  background-color: var(--color-dark-blue);
   color: white;
   font-weight: 500;
-
   padding: var(--btn-padding-small);
   outline: none;
   border-radius: 5px;
   border: none;
-  border: 2px solid rgb(59, 74, 103);
+  border: 2px solid var(--color-dark-blue);
   cursor: pointer;
   font-weight: 500;
   font-size: 1rem;
   transition: all 0.3s ease-in-out;
+  height: fit-content;
+  width: fit-content;
+}
+
+.primary-button--green {
+  background-color: var(--complementary-goblin);
+  color: white;
+  border: 2px solid var(--complementary-goblin);
+}
+.primary-button--green:hover {
+  background-color: white;
+  color: var(--complementary-goblin);
 }
 
 .primary-button:hover {
   background-color: white;
-  color: rgb(59, 74, 103);
-  border: 2px solid rgb(59, 74, 103);
+  color: var(--color-dark-blue);
+  border: 2px solid var(--color-dark-blue);
 }
 
 .secondary-button {
   background-color: white;
-  color: rgb(59, 74, 103);
-  border: 2px solid rgb(59, 74, 103);
+  color: var(--color-dark-blue);
+  border: 2px solid var(--color-dark-blue);
+  font-weight: 600;
+}
+
+.secondary-button--green {
+  background-color: white;
+  color: var(--complementary-goblin);
+  border: 2px solid var(--complementary-goblin);
   font-weight: 600;
 }
 
 .secondary-button:hover {
-  background-color: rgb(59, 74, 103);
+  background-color: var(--color-dark-blue);
+  color: white;
+}
+.secondary-button--green:hover {
+  background-color: var(--complementary-goblin);
   color: white;
 }
 
