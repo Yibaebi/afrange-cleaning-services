@@ -23,7 +23,7 @@
 }
 
 .content-close {
-  color: #0e273c;
+  color: #3b4a8fbd;
 }
 
 .aae-landing-hero--content h1 {
@@ -33,7 +33,7 @@
   font-weight: 800;
   line-height: 110%;
   margin-bottom: 30px;
-  color: rgb(59, 74, 103);
+  color: var(--color-dark-blue);
 }
 
 .aae-landing-hero--image {
