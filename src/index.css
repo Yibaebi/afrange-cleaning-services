@@ -5,6 +5,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+ul,
+ol {
+  margin: 0px;
+}
+
 :root {
   --color-dark-blue: #3b4a8f;
   --color-platinum: #e6e6e6;
