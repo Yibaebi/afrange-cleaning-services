@@ -20,11 +20,13 @@
 }
 
 .aae-nav-bar--links-wrapper {
+  height: 100%;
+  margin-bottom: 0px;
   display: flex;
   align-items: center;
 }
 
-.aae-nav-bar--links-wrapper .nav-link {
+.aae-nav-bar--links-wrapper .aae-nav-link {
   text-decoration: none;
   color: var(--color-dark-blue);
   text-align: center;
@@ -35,8 +37,8 @@
   transition: all 0.2s ease-in-out;
 }
 
-.aae-nav-bar--links-wrapper .nav-link.active,
-.aae-nav-bar--links-wrapper .nav-link.active:hover {
+.aae-nav-bar--links-wrapper .aae-nav-link.active,
+.aae-nav-bar--links-wrapper .aae-nav-link.active:hover {
   margin: 5px 5px;
   transform: scale(1.2);
   font-weight: 700;

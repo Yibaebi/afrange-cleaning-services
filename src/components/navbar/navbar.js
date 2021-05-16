@@ -28,22 +28,22 @@ const NavBar = () => {
       </div>
 
       <ul className={`aae-nav-bar--links-wrapper`}>
-        <NavLink className="nav-link" to="/home">
+        <NavLink className="aae-nav-link" to="/home">
           Home
         </NavLink>
-        <NavLink className="nav-link" to="/about-us">
+        <NavLink className="aae-nav-link" to="/about">
           About Us
         </NavLink>
-        <NavLink className="nav-link" to="/services">
+        <NavLink className="aae-nav-link" to="/services">
           Services
         </NavLink>
-        <NavLink className="nav-link" to="/gallery">
+        <NavLink className="aae-nav-link" to="/gallery">
           Gallery
         </NavLink>
-        <NavLink className="nav-link" to="/pricing">
+        <NavLink className="aae-nav-link" to="/pricing">
           Pricing
         </NavLink>
-        <NavLink className="nav-link" to="/contact-us">
+        <NavLink className="aae-nav-link" to="/contact-us">
           Contact Us
         </NavLink>
         <button className="primary-button">Place Order</button>
