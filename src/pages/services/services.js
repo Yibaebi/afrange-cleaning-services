@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 import "./services.css";
+import { DryCleaning } from "./serviceSections/dryCleaning";
 import { WashAndIron } from "./serviceSections/washAndIron";
 
 const Services = () => {
@@ -21,6 +22,7 @@ const Services = () => {
         </ul>
       </nav>
 
+      <DryCleaning />
       <WashAndIron />
 
       <section className="aae-services--schedule-pickup-section">
