@@ -4,18 +4,18 @@ import AboutUs from "./sections/aboutUs";
 
 import "./landingPage.css";
 import Pricing from "./sections/pricing";
-import Footer from "./sections/footer";
 import WhereWeAre from "./sections/whereWeAre";
 
 const LandingPage = () => {
   return (
     <main id="aae-landing-page" className="aae-landing-page--container">
       <Hero />
+
       <AboutUs />
       <Services />
       <Pricing />
       <WhereWeAre />
-      <Footer />
+
       <a
         href="https://api.whatsapp.com/send?phone=08107837035&text=Hi%20There%21%20Welcome%20to%20Afrange!"
         class="float"

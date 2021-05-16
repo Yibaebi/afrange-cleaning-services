@@ -1,5 +1,6 @@
 import React from "react";
 import { primaryLogo } from "../../assets";
+import { Footer } from "../footer/footer";
 import { NavBar } from "../navbar/navbar";
 import Router from "./../../router/index";
 
@@ -36,6 +37,7 @@ const Afrange = () => {
       <main>
         <Router />
       </main>
+      <Footer />
     </div>
   );
 };

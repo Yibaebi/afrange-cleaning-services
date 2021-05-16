@@ -1,5 +1,5 @@
 import React from "react";
-import { primaryLogo } from "../../../assets";
+import { primaryLogo } from "../../assets";
 import "./footer.css";
 
 const Footer = () => {
@@ -108,4 +108,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export { Footer };
