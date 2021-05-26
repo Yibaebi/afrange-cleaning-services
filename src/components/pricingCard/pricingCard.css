@@ -1,0 +1,41 @@
+/* Pricing card container */
+
+.aae-pricing-card__container {
+  background-color: white;
+  width: calc(100% * 1 / 3.501);
+  background: #fff;
+  color: #666;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 8%);
+  margin: 20px;
+  min-width: 300px;
+  height: fit-content;
+}
+
+.pricing-card__header {
+  padding: 1.2rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.pricing-card__details {
+  padding: 1.1rem 1.2rem 0.6rem;
+}
+
+.pricing-list__item {
+  width: 100%;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #a5afda2d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pricing-list__item:last-of-type {
+  border: none;
+}
+
+.pricing-list__item span {
+  color: #3b4a8fe1;
+  font-size: 18px;
+  font-weight: 550;
+}
