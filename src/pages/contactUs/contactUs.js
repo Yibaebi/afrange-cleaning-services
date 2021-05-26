@@ -1,8 +1,12 @@
 import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 import "./contactUs.css";
 
 const ContactUs = () => {
+  const [state, handleSubmit] = useForm("xeqvgojb");
+
+  const errorMessage = state?.errors[0]?.message;
   return (
     <>
       <div className="aae-contact-us container-styles">
@@ -76,6 +80,93 @@ const ContactUs = () => {
                           </ul>
                         </div>
                       </aside>
+                    </div>
+                    <div className="screen-body-item">
+                      <form className="app-form" onSubmit={handleSubmit}>
+                        <div className="app-form-group">
+                          <input
+                            className="app-form-control"
+                            placeholder="Name"
+                            id="name"
+                            type="name"
+                            name="name"
+                          />
+                          <ValidationError
+                            prefix="Name"
+                            field="name"
+                            errors={state.errors}
+                          />
+                        </div>
+                        <div className="app-form-group">
+                          <input
+                            id="email"
+                            type="email"
+                            name="email"
+                            className="app-form-control"
+                            placeholder="Email"
+                          />
+                          <ValidationError
+                            prefix="Email"
+                            field="email"
+                            errors={state.errors}
+                          />
+                        </div>
+                        <div className="app-form-group">
+                          <ValidationError
+                            prefix="Phone Number"
+                            field="tel"
+                            errors={state.errors}
+                          />
+                          <input
+                            id="tel"
+                            type="tel"
+                            name="tel"
+                            className="app-form-control"
+                            placeholder="Contact no."
+                          />
+                        </div>
+                        <div className="app-form-group message">
+                          <textarea
+                            className="app-form-control"
+                            placeholder="Message"
+                            id="message"
+                            name="message"
+                          />
+                          <ValidationError
+                            prefix="Message"
+                            field="message"
+                            errors={state.errors}
+                          />
+                        </div>
+
+                        <div className="app-form-group buttons">
+                          <button
+                            type="submit"
+                            disabled={state.submitting}
+                            className="secondary-button"
+                          >
+                            Send us a message
+                          </button>
+                          {
+                            <p
+                              className="feedback-success"
+                              style={{
+                                visibility:
+                                  (state.succeeded || errorMessage) &&
+                                  "visible",
+                                color: errorMessage && "#af2939",
+                                backgroundColor: errorMessage && "#fff",
+                                padding: errorMessage && "6px",
+                                borderRadius: errorMessage && "10px",
+                              }}
+                            >
+                              {errorMessage
+                                ? "Error. Can't send an incomplete/empty form."
+                                : "We've successfully received your message. We'll get back to you soon."}
+                            </p>
+                          }
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
