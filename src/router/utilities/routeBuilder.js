@@ -1,5 +1,11 @@
 import { Redirect, Route } from "react-router";
-import { LandingPage, AboutUs, Services } from "../../pages";
+import {
+  LandingPage,
+  AboutUs,
+  Services,
+  Pricing,
+  ContactUs,
+} from "../../pages";
 
 const routeBuilder = [
   {
@@ -18,6 +24,18 @@ const routeBuilder = [
     path: "/services",
     exact: true,
     component: Services,
+    Router: Route,
+  },
+  {
+    path: "/pricing",
+    exact: true,
+    component: Pricing,
+    Router: Route,
+  },
+  {
+    path: "/contact-us",
+    exact: true,
+    component: ContactUs,
     Router: Route,
   },
   {
