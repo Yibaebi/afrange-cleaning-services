@@ -1,7 +1,9 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import { motion } from "framer-motion";
 
 import "./contactUs.css";
+import InView from "react-intersection-observer";
 
 const ContactUs = () => {
   const [state, handleSubmit] = useForm("xeqvgojb");
@@ -17,163 +19,180 @@ const ContactUs = () => {
         <i className="fas fa-address-book fa-2x"></i>
         <i className="fas fa-map-marker-alt fa-2x"></i>
 
-        <section className="contact-us__intro">
+        <motion.section
+          initial={{ opacity: 0, y: 200 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 200 }}
+          className="contact-us__intro"
+        >
           <h1>Contact Us</h1>
           <p>
             Let's start something great together. Get in touch with us today.
           </p>
           <i className="fas fa-chevron-down fa-2x"></i>
-        </section>
-        <section className="contact-us__form--container">
-          <aside className="contact-us__form--intro">
-            <div className="background">
-              <div className="container">
-                <div className="screen">
-                  <div className="screen-header">
-                    <div className="screen-header-left">
-                      <div className="screen-header-button close"></div>
-                      <div className="screen-header-button maximize"></div>
-                      <div className="screen-header-button minimize"></div>
-                    </div>
-                    <div className="screen-header-right">
-                      <div className="screen-header-ellipsis"></div>
-                      <div className="screen-header-ellipsis"></div>
-                      <div className="screen-header-ellipsis"></div>
-                    </div>
-                  </div>
-                  <div className="screen-body">
-                    <div className="screen-body-item left">
-                      <div className="app-title">
-                        <span>CONTACT DETAILS</span>
+        </motion.section>
+        <InView triggerOnce threshold={0.2}>
+          {({ inView, ref }) => (
+            <motion.section
+              ref={ref}
+              initial={{ opacity: 0, y: 200 }}
+              animate={inView ? { opacity: 1, y: 0 } : ""}
+              exit={{ opacity: 0, y: 200 }}
+              className="contact-us__form--container"
+            >
+              <aside className="contact-us__form--intro">
+                <div className="background">
+                  <div className="container">
+                    <div className="screen">
+                      <div className="screen-header">
+                        <div className="screen-header-left">
+                          <div className="screen-header-button close"></div>
+                          <div className="screen-header-button maximize"></div>
+                          <div className="screen-header-button minimize"></div>
+                        </div>
+                        <div className="screen-header-right">
+                          <div className="screen-header-ellipsis"></div>
+                          <div className="screen-header-ellipsis"></div>
+                          <div className="screen-header-ellipsis"></div>
+                        </div>
                       </div>
-                      <aside className="intro-sections--container">
-                        <div className="intro__section">
-                          <h5>Phone</h5>
-                          <p>08107837035</p>
-                        </div>
-                        <div className="intro__section">
-                          <h5>Email</h5>
-                          <p>afrange@info.com</p>
-                        </div>
-                        <div className="intro__section">
-                          <h5>Address</h5>
-                          <p>5-7 Mandeville Pl, Marylebone, London W1U 3AY</p>
-                        </div>
-                        <div className="copy-social--container">
-                          <ul className="social-icons">
-                            <li>
-                              <a className="instagram" href="#a">
-                                <i className="fab fa-instagram"></i>
-                              </a>
-                            </li>
-                            <li>
-                              <a className="twitter" href="#b">
-                                <i className="fab fa-twitter"></i>
-                              </a>
-                            </li>
+                      <div className="screen-body">
+                        <div className="screen-body-item left">
+                          <div className="app-title">
+                            <span>CONTACT DETAILS</span>
+                          </div>
+                          <aside className="intro-sections--container">
+                            <div className="intro__section">
+                              <h5>Phone</h5>
+                              <p>08107837035</p>
+                            </div>
+                            <div className="intro__section">
+                              <h5>Email</h5>
+                              <p>afrange@info.com</p>
+                            </div>
+                            <div className="intro__section">
+                              <h5>Address</h5>
+                              <p>
+                                5-7 Mandeville Pl, Marylebone, London W1U 3AY
+                              </p>
+                            </div>
+                            <div className="copy-social--container">
+                              <ul className="social-icons">
+                                <li>
+                                  <a className="instagram" href="#a">
+                                    <i className="fab fa-instagram"></i>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a className="twitter" href="#b">
+                                    <i className="fab fa-twitter"></i>
+                                  </a>
+                                </li>
 
-                            <li>
-                              <a className="facebook" href="#d">
-                                <i className="fab fa-facebook-f "></i>
-                              </a>
-                            </li>
-                          </ul>
+                                <li>
+                                  <a className="facebook" href="#d">
+                                    <i className="fab fa-facebook-f "></i>
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </aside>
                         </div>
-                      </aside>
-                    </div>
-                    <div className="screen-body-item">
-                      <form className="app-form" onSubmit={handleSubmit}>
-                        <div className="app-form-group">
-                          <input
-                            className="app-form-control"
-                            placeholder="Name"
-                            id="name"
-                            type="name"
-                            name="name"
-                          />
-                          <ValidationError
-                            prefix="Name"
-                            field="name"
-                            errors={state.errors}
-                          />
-                        </div>
-                        <div className="app-form-group">
-                          <input
-                            id="email"
-                            type="email"
-                            name="email"
-                            className="app-form-control"
-                            placeholder="Email"
-                          />
-                          <ValidationError
-                            prefix="Email"
-                            field="email"
-                            errors={state.errors}
-                          />
-                        </div>
-                        <div className="app-form-group">
-                          <ValidationError
-                            prefix="Phone Number"
-                            field="tel"
-                            errors={state.errors}
-                          />
-                          <input
-                            id="tel"
-                            type="tel"
-                            name="tel"
-                            className="app-form-control"
-                            placeholder="Contact no."
-                          />
-                        </div>
-                        <div className="app-form-group message">
-                          <textarea
-                            className="app-form-control"
-                            placeholder="Message"
-                            id="message"
-                            name="message"
-                          />
-                          <ValidationError
-                            prefix="Message"
-                            field="message"
-                            errors={state.errors}
-                          />
-                        </div>
+                        <div className="screen-body-item">
+                          <form className="app-form" onSubmit={handleSubmit}>
+                            <div className="app-form-group">
+                              <input
+                                className="app-form-control"
+                                placeholder="Name"
+                                id="name"
+                                type="name"
+                                name="name"
+                              />
+                              <ValidationError
+                                prefix="Name"
+                                field="name"
+                                errors={state.errors}
+                              />
+                            </div>
+                            <div className="app-form-group">
+                              <input
+                                id="email"
+                                type="email"
+                                name="email"
+                                className="app-form-control"
+                                placeholder="Email"
+                              />
+                              <ValidationError
+                                prefix="Email"
+                                field="email"
+                                errors={state.errors}
+                              />
+                            </div>
+                            <div className="app-form-group">
+                              <ValidationError
+                                prefix="Phone Number"
+                                field="tel"
+                                errors={state.errors}
+                              />
+                              <input
+                                id="tel"
+                                type="tel"
+                                name="tel"
+                                className="app-form-control"
+                                placeholder="Contact no."
+                              />
+                            </div>
+                            <div className="app-form-group message">
+                              <textarea
+                                className="app-form-control"
+                                placeholder="Message"
+                                id="message"
+                                name="message"
+                              />
+                              <ValidationError
+                                prefix="Message"
+                                field="message"
+                                errors={state.errors}
+                              />
+                            </div>
 
-                        <div className="app-form-group buttons">
-                          <button
-                            type="submit"
-                            disabled={state.submitting}
-                            className="secondary-button"
-                          >
-                            Send us a message
-                          </button>
-                          {
-                            <p
-                              className="feedback-success"
-                              style={{
-                                visibility:
-                                  (state.succeeded || errorMessage) &&
-                                  "visible",
-                                color: errorMessage && "#af2939",
-                                backgroundColor: errorMessage && "#fff",
-                                padding: errorMessage && "6px",
-                                borderRadius: errorMessage && "10px",
-                              }}
-                            >
-                              {errorMessage
-                                ? "Error. Can't send an incomplete/empty form."
-                                : "We've successfully received your message. We'll get back to you soon."}
-                            </p>
-                          }
+                            <div className="app-form-group buttons">
+                              <button
+                                type="submit"
+                                disabled={state.submitting}
+                                className="secondary-button"
+                              >
+                                Send us a message
+                              </button>
+                              {
+                                <p
+                                  className="feedback-success"
+                                  style={{
+                                    visibility:
+                                      (state.succeeded || errorMessage) &&
+                                      "visible",
+                                    color: errorMessage && "#af2939",
+                                    backgroundColor: errorMessage && "#fff",
+                                    padding: errorMessage && "6px",
+                                    borderRadius: errorMessage && "10px",
+                                  }}
+                                >
+                                  {errorMessage
+                                    ? "Error. Can't send an incomplete/empty form."
+                                    : "We've successfully received your message. We'll get back to you soon."}
+                                </p>
+                              }
+                            </div>
+                          </form>
                         </div>
-                      </form>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </aside>
-        </section>
+              </aside>
+            </motion.section>
+          )}
+        </InView>
       </div>
       <div className="google-map-location">
         <iframe
