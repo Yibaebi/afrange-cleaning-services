@@ -1,147 +1,69 @@
 import React from "react";
 
-import WashAndIron from "../../../assets/landing-page/dry-clean and Ironed laundry.svg";
-import TwentyFourSeven from "../../../assets/landing-page/24-7 service.svg";
-import BookService from "../../../assets/landing-page/book-service.svg";
-import ClothRepairs from "../../../assets/landing-page/cloth repairs.svg";
-import DeliveryBus from "../../../assets/landing-page/delivery-bus.svg";
-import Hanger from "../../../assets/landing-page/hanger.svg";
-import HomeClean from "../../../assets/landing-page/home-clean.svg";
-import IndustrialCleaning from "../../../assets/landing-page/industrial-cleaning.svg";
-import IroningOnly from "../../../assets/landing-page/ironing-only.svg";
-import LaundryWashingMachine from "../../../assets/landing-page/laundry-washing-machine.svg";
-import OfficeCleaning from "../../../assets/landing-page/office cleaning.svg";
-import Towel from "../../../assets/landing-page/towel.svg";
-import WashMachine from "../../../assets/landing-page/washing machine.svg";
+import PickADate from "../../../assets/landing-page/pick-a-date.jpg";
+import PickUp from "../../../assets/landing-page/pickup.jpg";
+import PlaceOrder from "../../../assets/landing-page/place-order.jpg";
+import WashAndFold from "../../../assets/landing-page/wash and fold.jpg";
 
 import "./services.css";
 
 const Services = () => {
   return (
     <section className="aae-landing-services-container container-styles">
-      <div className="bubbles">
-        <div className="bubble"></div>
-        <div className="bubble"></div>
-        <div className="bubble"></div>
-        <div className="bubble"></div>
-        <div className="bubble"></div>
-        <div className="bubble"></div>
-        <div className="bubble"></div>
-        <div className="bubble"></div>
-        <div className="bubble"></div>
-        <div className="bubble"></div>
-      </div>
-
       <aside className="landing-services--content">
-        <div className="landing-services--content-header">
+        <aside className="landing-services--content-header">
           <h1>
-            <span>We believe in the luxury that comes with variety... </span>
-            Our <em>Services</em>
+            <em>Redefining Ease</em> with our simple process
           </h1>
-        </div>
+          <p>
+            BrainStation offers a full spectrum of cutting-edge digital
+            learning, giving professionals and organizations of all sizes the
+            skills they need to thrive in the digital economy.
+          </p>
+        </aside>
 
         <section className="services-container">
           <div className="service-item">
-            <img src={TwentyFourSeven} alt="" />
-            <h4>Laundry Only</h4>
-            <p>Washed, Tumbled, Dried, and Folded</p>
-            <div className="blob-wrapper">
-              <div className="blob"></div>
-            </div>
+            <img src={PlaceOrder} alt="" />
+            <h4>Place a Service Request</h4>
+            <p>
+              Choose items from our price list or skip ahead and talk to one of
+              our agents.
+            </p>
+
+            <button className="primary-button mt-2">
+              Go to Pricing Table <i className="fas fa-arrow-right ml-2"></i>
+            </button>
           </div>
           <div className="service-item">
-            <img src={BookService} alt="" />
-            <h4>Laundry Only</h4>
-            <p>Washed, Tumbled, Dried, and Folded</p>
+            <img src={PickADate} alt="" />
+            <h4>Choose Date</h4>
+            <p>
+              Pick a day and time for collection and delivery. Each time slot is
+              only 1-hour long, so there's no waiting around!
+            </p>
           </div>
           <div className="service-item">
-            <img src={DeliveryBus} alt="" />
-            <h4>Laundry Only</h4>
-            <p>Washed, Tumbled, Dried, and Folded</p>
+            <img src={PickUp} alt="" />
+            <h4>Meet with Our Agent</h4>
+            <p>
+              We'll meet you with two laundry bags; a black one for dry cleaning
+              or ironed laundry and a blue one for our wash, tumble dry and fold
+              service.
+            </p>
           </div>
           <div className="service-item">
-            <img src={TwentyFourSeven} alt="" />
-            <h4>Laundry Only</h4>
-            <p>Washed, Tumbled, Dried, and Folded</p>
-          </div>
-          <div className="service-item">
-            <img src={BookService} alt="" />
-            <h4>Laundry Only</h4>
-            <p>Washed, Tumbled, Dried, and Folded</p>
-          </div>
-          <div className="service-item">
-            <img src={DeliveryBus} alt="" />
-            <h4>Laundry Only</h4>
-            <p>Washed, Tumbled, Dried, and Folded</p>
-          </div>
-          <div className="service-item">
-            <img src={TwentyFourSeven} alt="" />
-            <h4>Laundry Only</h4>
-            <p>Washed, Tumbled, Dried, and Folded</p>
-          </div>
-          <div className="service-item">
-            <img src={BookService} alt="" />
-            <h4>Laundry Only</h4>
-            <p>Washed, Tumbled, Dried, and Folded</p>
-          </div>
-          <div className="service-item">
-            <img src={DeliveryBus} alt="" />
-            <h4>Laundry Only</h4>
-            <p>Washed, Tumbled, Dried, and Folded</p>
+            <img src={WashAndFold} alt="" />
+            <h4>Professional Cleaning</h4>
+            <p>
+              We'll clean your items at our nearest cleaning partner facility,
+              then return them to you in as little as 48 hours.
+            </p>
+            <button className="secondary-button mt-2">
+              See Delivery Details <i className="fas fa-caret-right ml-2"></i>
+            </button>
           </div>
         </section>
-
-        {/* <div className="service-item">
-          <img src={IroningOnly} alt="" />
-          <h4>Laundry Only</h4>
-          <p>Washed, Tumbled, Dried, and Folded</p>
-        </div>
-
-        <div className="service-item">
-          <img src={Hanger} alt="" />
-          <h4>Laundry Only</h4>
-          <p>Washed, Tumbled, Dried, and Folded</p>
-        </div>
-        <div className="service-item">
-          <img src={ClothRepairs} alt="" />
-          <h4>Laundry Only</h4>
-          <p>Washed, Tumbled, Dried, and Folded</p>
-        </div>
-        <div className="service-item">
-          <img src={HomeClean} alt="" />
-          <h4>Laundry Only</h4>
-          <p>Washed, Tumbled, Dried, and Folded</p>
-        </div>
-        <div className="service-item">
-          <img src={IndustrialCleaning} alt="" />
-          <h4>Laundry Only</h4>
-          <p>Washed, Tumbled, Dried, and Folded</p>
-        </div>
-        <div className="service-item">
-          <img src={LaundryWashingMachine} alt="" />
-          <h4>Laundry Only</h4>
-          <p>Washed, Tumbled, Dried, and Folded</p>
-        </div>
-        <div className="service-item">
-          <img src={OfficeCleaning} alt="" />
-          <h4>Laundry Only</h4>
-          <p>Washed, Tumbled, Dried, and Folded</p>
-        </div>
-        <div className="service-item">
-          <img src={Towel} alt="" />
-          <h4>Laundry Only</h4>
-          <p>Washed, Tumbled, Dried, and Folded</p>
-        </div>
-        <div className="service-item">
-          <img src={WashMachine} alt="" />
-          <h4>Laundry Only</h4>
-          <p>Washed, Tumbled, Dried, and Folded</p>
-        </div>
-        <div className="service-item">
-          <img src={WashAndIron} alt="" />
-          <h4>Laundry Only</h4>
-          <p>Washed, Tumbled, Dried, and Folded</p>
-        </div> */}
       </aside>
     </section>
   );
