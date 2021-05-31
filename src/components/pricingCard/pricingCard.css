@@ -15,7 +15,7 @@
   padding: 1.2rem;
   color: #fff;
   font-weight: 600;
-  font-size: 32px;
+  font-size: 28px;
 }
 
 .pricing-card__details {
@@ -36,6 +36,6 @@
 
 .pricing-list__item span {
   color: #3b4a8fe1;
-  font-size: 18px;
-  font-weight: 550;
+  font-size: 15px;
+  /* font-weight: 550; */
 }
