@@ -7,6 +7,88 @@
   background-repeat: no-repeat;
 }
 
+.landing-services--content-header > p {
+  color: #555;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  text-align: center;
+  width: 40%;
+  font-size: 0.9rem;
+  line-height: 1.71428571;
+}
+.landing-services--content-header h1,
+.landing-services--content-header h1 span {
+  text-align: center;
+  width: 100%;
+  font-size: 1.557rem;
+  line-height: 2.11rem;
+  margin-bottom: 50px;
+}
+.landing-services--content-header h1 span {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.landing-services--content-header h1:before {
+  height: 3px;
+  width: 80px;
+  display: block;
+  content: " ";
+  background-color: var(--color-dark-blue);
+  position: absolute;
+  bottom: 0px;
+}
+.landing-services--content-header h1 em {
+  color: var(--color-dark-blue);
+}
+
+.landing-services--content-header h1 {
+  position: relative;
+}
+
+.landing-services--content-header h1 em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--color-dark-blue);
+}
+
+.landing-services--content-header h1 {
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+.landing-services--content-header h1:before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 3px;
+  content: "";
+  left: 50%;
+  margin-left: -50px;
+  background-color: var(--color-dark-blue);
+}
+.landing-services--content-header > p {
+  color: #555;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  text-align: center;
+  width: 40%;
+  font-size: 0.9rem;
+  line-height: 1.71428571;
+}
+
+.landing-services--content-header h1,
+.landing-services--content-header h1 span {
+  text-align: center;
+  width: 100%;
+  font-size: 1.557rem;
+  line-height: 2.11rem;
+  margin-bottom: 50px;
+}
+.landing-services--content-header h1 span {
+  text-transform: uppercase;
+  font-weight: 600;
+}
 .float {
   position: fixed;
   bottom: 10px;

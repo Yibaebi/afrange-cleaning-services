@@ -32,40 +32,6 @@
   margin-bottom: 30px;
 }
 
-.aae-landing-about-us--wrapper .landing-services--content-header > p {
-  color: #555;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  text-align: center;
-  width: 40%;
-  font-size: 0.9rem;
-  line-height: 1.71428571;
-}
-.aae-landing-about-us--wrapper .landing-services--content-header h1,
-.aae-landing-about-us--wrapper .landing-services--content-header h1 span {
-  text-align: center;
-  width: 100%;
-  font-size: 1.557rem;
-  line-height: 2.11rem;
-  margin-bottom: 50px;
-}
-.aae-landing-about-us--wrapper .landing-services--content-header h1 span {
-  text-transform: uppercase;
-  font-weight: 600;
-}
-.aae-landing-about-us--wrapper .landing-services--content-header h1:before {
-  height: 3px;
-  width: 80px;
-  display: block;
-  content: " ";
-  background-color: var(--color-dark-blue);
-  position: absolute;
-  bottom: 0px;
-}
-.aae-landing-about-us--wrapper .landing-services--content-header h1 em {
-  color: var(--color-dark-blue);
-}
-
 /* Image Gallery */
 .container {
   background-color: #e6e6e636;
@@ -81,13 +47,24 @@
   grid-gap: 0.3rem;
 }
 .gallery--header {
-  text-align: center;
+  width: fit-content;
+  text-align: left;
   border-radius: 10px;
-  color: #ffffff;
+  color: var(--color-dark-blue);
   font-weight: 600;
   font-size: 1.5rem;
-  background-color: var(--color-dark-blue);
+  background-color: #fff;
   padding: 16px;
+  position: relative;
+}
+.gallery--header::after {
+  height: 3px;
+  width: 80px;
+  display: block;
+  content: " ";
+  background-color: var(--color-dark-blue);
+  position: absolute;
+  bottom: 10px;
 }
 
 .gallery__item {
