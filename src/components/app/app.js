@@ -7,10 +7,6 @@ import Router from "./../../router/index";
 
 import "./app.css";
 
-/*
- * FIXME:
- */
-
 const Afrange = () => {
   return (
     <AnimatePresence>
@@ -44,11 +40,16 @@ const Afrange = () => {
         <main>
           <Router />
         </main>
-        <div type="button" class="email-bt">
-          <div class="text-call">
+        <a
+          class="email-bt"
+          href="https://wa.me/message/TOKS546P3O5PI1"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span class="text-call">
             <i class="fab fa-whatsapp my-float"></i>
-          </div>
-        </div>
+          </span>
+        </a>
         <Footer />
       </div>
     </AnimatePresence>
