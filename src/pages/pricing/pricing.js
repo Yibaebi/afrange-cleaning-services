@@ -1,19 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "react-widgets/styles.css";
 import { PricingCard } from "../../components";
 
 import "./pricing.css";
 import { NavLink } from "react-router-dom";
-import { WashAndIronSideBar } from "./sidebarSections/washAndIron";
+import { CustomizationPane } from "./sidebarSections/customizationPane";
 import { DropdownList, Listbox, NumberPicker } from "react-widgets/cjs";
+import { nairaIcon } from "../../assets";
+import { motion } from "framer-motion";
 
 const Pricing = () => {
-  const [totalPrice, setTotalPrice] = useState({ price: 0 });
+  const [totalPrice, setTotalPrice] = useState({ price: 0, quantity: 0 });
+  const [isActive, setIsActive] = useState(false);
   const [selectedClothes, setSelectedClothes] = useState([]);
-  const [clothQuantities, setClothQuantities] = useState([]);
   const [deliveryFrequencyPrice, setDeliveryFrequencyPrice] = useState(0);
   const [firstTimeDiscount, setFirstTimeDiscount] = useState(0);
   const [deliveryPrice, setDeliveryPrice] = useState(0);
+
+  useEffect(() => {
+    console.log("Received selected Clothes", selectedClothes);
+  }, []);
 
   const frequency = [
     "Once a week",
@@ -181,18 +187,49 @@ const Pricing = () => {
     },
   ];
 
-  const handlePriceUpdate = (price, name, index) => {
-    const newClothQuantities = clothQuantities;
-    if (newClothQuantities) {
-      newClothQuantities[index] = { price, name };
-      const newTotal = newClothQuantities.reduce((newTotal, currentValue) => {
-        return { price: newTotal.price + currentValue.price };
-      });
-      setTotalPrice(newTotal);
-    }
-  };
+  const handlePriceUpdate = (clothDetails, serviceType) => {
+    const newClothQuantities = [...selectedClothes].map((cloth) => {
+      if (cloth.id === clothDetails.id) {
+        if (serviceType === "Iron All") {
+          cloth.quantity = clothDetails.quantity;
+          cloth.calculatedPrice = cloth.ironOnlyPrice * cloth.quantity;
+          cloth.specifyNumber = false;
+        } else if (serviceType === "Iron Specific Number") {
+          cloth.specifyNumber = true;
+          cloth.calculatedPrice =
+            cloth.price * (cloth.quantity - clothDetails.ironQuantity) +
+            clothDetails.ironQuantity * cloth.ironOnlyPrice;
+        } else if (serviceType === "Specified Number") {
+          console.log(cloth, clothDetails);
+          cloth.ironQuantity = clothDetails.ironQuantity;
+          cloth.calculatedPrice =
+            cloth.price * (cloth.quantity - clothDetails.ironQuantity) +
+            clothDetails.ironQuantity * cloth.ironOnlyPrice;
+        } else {
+          cloth.specifyNumber = false;
+          cloth.quantity = clothDetails.quantity;
+          cloth.calculatedPrice = cloth.price * cloth.quantity;
+        }
+      }
+      return cloth;
+    });
 
-  console.log("Cloth Quantities", clothQuantities);
+    setSelectedClothes(newClothQuantities);
+
+    const calculatedTotal = newClothQuantities.reduce(
+      (newTotal, currentValue) => {
+        return {
+          calculatedPrice:
+            newTotal.calculatedPrice + currentValue.calculatedPrice,
+          quantity: newTotal.quantity + currentValue.quantity,
+        };
+      }
+    );
+    setTotalPrice({
+      price: calculatedTotal.calculatedPrice,
+      quantity: calculatedTotal.quantity,
+    });
+  };
 
   const calculatedTotal =
     (totalPrice.price + deliveryFrequencyPrice + deliveryPrice) *
@@ -201,60 +238,59 @@ const Pricing = () => {
   return (
     <div className="aae-pricing container-styles">
       <section className="pricing-customization__section">
-        <aside className="customization__info">
-          <h1>Find A Plan.</h1>
+        <motion.aside
+          initial={{ opacity: 0, y: 200 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 200 }}
+          className="customization__info"
+        >
+          <h1>Find the right price for your laundry items.</h1>
           <p>Made For You. Flexible. Straightforward. No hidden costs.</p>
-        </aside>
-        <p className="suitable-plan">Select a suitable plan</p>
+          <span className="naira-icon">{nairaIcon()}</span>
+        </motion.aside>
+        <h2 className="suitable-plan">
+          <i className="fas fa-cut mr-2"></i>Select a suitable plan
+        </h2>
         <aside className="customization__container">
           <div className="customization__sidebar">
             <ul>
               <li className="sidebar--item">
                 <NavLink
-                  to="#wash-and-iron"
+                  to="#male"
                   isActive={() => {
-                    if (window.location.hash === "#wash-and-iron") {
+                    if (
+                      window.location.hash === "#male" ||
+                      window.location.hash === ""
+                    ) {
                       return true;
                     }
                   }}
                 >
-                  Wash and Iron
+                  Male
                 </NavLink>
               </li>
               <li className="sidebar--item">
                 <NavLink
-                  to="#dry-cleaning"
+                  to="#female"
                   isActive={(match, location) => {
-                    if (window.location.hash === "#dry-cleaning") {
+                    if (window.location.hash === "#female") {
                       return true;
                     }
                   }}
                 >
-                  Dry Cleaning
+                  Female
                 </NavLink>
               </li>
               <li className="sidebar--item">
                 <NavLink
-                  to="#cloth-repairs"
+                  to="#others"
                   isActive={() => {
-                    if (window.location.hash === "#cloth-repairs") {
+                    if (window.location.hash === "#others") {
                       return true;
                     }
                   }}
                 >
-                  Cloth Repairs
-                </NavLink>
-              </li>
-              <li className="sidebar--item">
-                <NavLink
-                  to="#office-cleaning"
-                  isActive={() => {
-                    if (window.location.hash === "#office-cleaning") {
-                      return true;
-                    }
-                  }}
-                >
-                  Office Cleaning
+                  Others
                 </NavLink>
               </li>
             </ul>
@@ -262,10 +298,12 @@ const Pricing = () => {
           <div className="customization__selector">
             <section className="selector__section">
               <h5>Cloth Types</h5>
-              <WashAndIronSideBar
+              <CustomizationPane
                 setSelectedClothes={setSelectedClothes}
+                selectedClothes={selectedClothes}
                 setTotalPrice={setTotalPrice}
                 totalPrice={totalPrice}
+                handlePriceUpdate={handlePriceUpdate}
               />
               <h5>Frequency</h5>
               <DropdownList
@@ -278,7 +316,7 @@ const Pricing = () => {
               />
               <h5>First Time</h5>
               <DropdownList
-                data={["Yes", "No"]}
+                data={["Wash and Iron", "Iron All"]}
                 dataKey="first-timer"
                 textField="name"
                 placeholder="Is this your first time?"
@@ -305,11 +343,14 @@ const Pricing = () => {
             <section className="selector__cloth-type-number--container">
               {selectedClothes.length ? (
                 <>
-                  <h5>Number of laundry items</h5>
+                  <h5>Customize service request </h5>
                   <section className="selector__cloth-type-number">
                     {selectedClothes.map((cloth, index) => {
                       return (
-                        <aside key={cloth.id}>
+                        <aside
+                          className="cloth-type-number--item"
+                          key={cloth.id}
+                        >
                           <h6>
                             {cloth.name} <span>{`(₦${cloth.price})`}</span>
                           </h6>
@@ -318,40 +359,126 @@ const Pricing = () => {
                             placeholder="Quantity"
                             className="customization__number-picker"
                             onChange={(value) =>
-                              handlePriceUpdate(
-                                value * cloth.price,
-                                cloth.name,
-                                index
-                              )
+                              handlePriceUpdate({
+                                price: cloth.price,
+                                cloth: cloth.name,
+                                id: cloth.id,
+                                quantity: value,
+                              })
                             }
+                            disabled={cloth.specifyNumber}
+                            value={cloth.quantity}
                             min={1}
                           />
+                          {cloth.ironOnlyPrice && (
+                            <>
+                              <DropdownList
+                                defaultOpen={true}
+                                defaultValue="Wash and Iron"
+                                data={[
+                                  "Iron All",
+                                  "Wash and Iron",
+                                  "Iron Specific Number",
+                                ]}
+                                containerClassName="service-type"
+                                onChange={(value) => {
+                                  if (value === "Iron All") {
+                                    handlePriceUpdate(
+                                      {
+                                        price: cloth.ironOnlyPrice,
+                                        cloth: cloth.name,
+                                        id: cloth.id,
+                                        quantity: cloth.quantity,
+                                      },
+                                      "Iron All"
+                                    );
+                                  } else if (value === "Iron Specific Number") {
+                                    handlePriceUpdate(
+                                      {
+                                        price: cloth.ironOnlyPrice,
+                                        cloth: cloth.name,
+                                        id: cloth.id,
+                                        quantity: cloth.quantity,
+                                        ironQuantity: 1,
+                                      },
+                                      "Iron Specific Number"
+                                    );
+                                  } else {
+                                    handlePriceUpdate({
+                                      price: cloth.price,
+                                      cloth: cloth.name,
+                                      id: cloth.id,
+                                      quantity: cloth.quantity,
+                                    });
+                                  }
+                                }}
+                              />
+                              {cloth.specifyNumber && (
+                                <NumberPicker
+                                  key={cloth.id}
+                                  placeholder="Quantity"
+                                  className="customization__number-picker"
+                                  onChange={(value) =>
+                                    handlePriceUpdate(
+                                      {
+                                        price: cloth.ironOnlyPrice,
+                                        cloth: cloth.name,
+                                        id: cloth.id,
+                                        quantity: cloth.quantity,
+                                        ironQuantity: value,
+                                      },
+                                      "Specified Number"
+                                    )
+                                  }
+                                  max={cloth.quantity}
+                                  value={cloth.ironQuantity}
+                                  defaultValue={1}
+                                  min={1}
+                                />
+                              )}
+                            </>
+                          )}
                         </aside>
                       );
                     })}
                   </section>
                 </>
               ) : (
-                <div className="empty-price-list">
-                  <i className="fas fa-info-circle fa-2x"></i> <br /> No cloth
-                  type selected. To select a cloth type, click on the select box
-                  on the left section
-                </div>
+                <>
+                  <div className="empty-price-list">
+                    <i className="fas fa-info-circle fa-2x"></i> <br /> No cloth
+                    type selected. To select a cloth type, click on the select
+                    box on the left section Or
+                  </div>
+                  <div className="aae-about-us-hero--buttons my-0 justify-center flex mx-auto">
+                    <button className="secondary-button p-3  ">
+                      <i className="fas fa-mail-bulk mr-2"></i> Contact Us
+                    </button>
+                  </div>
+                </>
               )}
             </section>
             {!!selectedClothes.length && (
               <section className="price__container">
                 <aside className="price__container--section">
                   <h5>Total Items </h5>
-                  <span className="total--items__count">10</span>
+                  <span className="total--items__count">
+                    {totalPrice.quantity}
+                  </span>
                 </aside>
                 <aside className="price__container--section">
                   <h5>Total Price (₦)</h5>
                   <span className="price-tag price-tag--one-line">
                     <span className="price-tag__main">₦{calculatedTotal}</span>
-                    <span>{firstTimeDiscount}% off</span>
                   </span>
                 </aside>
+                <div className="mt-7 justify-center items-center flex flex-col mx-auto">
+                  <p className="not-satisfied-info">Not satisfied? </p>
+
+                  <button className="secondary-button p-3  ">
+                    <i className="fas fa-mail-bulk mr-2"></i> Send Feedback
+                  </button>
+                </div>
               </section>
             )}
           </div>
@@ -375,6 +502,25 @@ const Pricing = () => {
           </section>
         );
       })}
+
+      <div
+        id="circularMenu1"
+        class={`circular-menu circular-menu-left ${isActive ? "active" : ""}`}
+      >
+        <button
+          class="floating-btn"
+          onClick={() => {
+            setIsActive(!isActive);
+          }}
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <menu class="items-wrapper">
+          <a href="#male" class="menu-item fa fa-male"></a>
+          <a href="#female" class="menu-item fa fa-female"></a>
+        </menu>
+      </div>
     </div>
   );
 };
