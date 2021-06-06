@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from "react";
 import "react-widgets/styles.css";
+import Collapse from "rc-collapse";
+import "rc-collapse/assets/index.css";
+import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
+import { DropdownList, Listbox, NumberPicker } from "react-widgets/cjs";
+
 import { PricingCard } from "../../components";
+import { CustomizationPane } from "./sidebarSections/customizationPane";
+import { nairaIcon } from "../../assets";
+import { pricingList } from "../../dummy-data/dummyLists.json";
 
 import "./pricing.css";
-import { NavLink } from "react-router-dom";
-import { CustomizationPane } from "./sidebarSections/customizationPane";
-import { DropdownList, Listbox, NumberPicker } from "react-widgets/cjs";
-import { nairaIcon } from "../../assets";
-import { motion } from "framer-motion";
+
+const Panel = Collapse.Panel;
 
 const Pricing = () => {
   const [totalPrice, setTotalPrice] = useState({ price: 0, quantity: 0 });
   const [isActive, setIsActive] = useState(false);
   const [selectedClothes, setSelectedClothes] = useState([]);
-  const [deliveryFrequencyPrice, setDeliveryFrequencyPrice] = useState(0);
+  const [deliveryFrequencyPrice] = useState(0);
   const [firstTimeDiscount, setFirstTimeDiscount] = useState(0);
   const [deliveryPrice, setDeliveryPrice] = useState(0);
 
@@ -26,165 +32,6 @@ const Pricing = () => {
     "Twice a week",
     "Monthly",
     "Not applicable",
-  ];
-
-  const pricingList = [
-    {
-      sectionTitle: "Cloth Types",
-      pricingDetailsList: [
-        {
-          title: "Tops",
-          background:
-            "url(https://images.unsplash.com/photo-1523381294911-8d3cead13475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80) center 43%",
-          listDetails: [
-            {
-              type: "All Shirts",
-              price: "₦3.95",
-            },
-            {
-              type: "Polo",
-              price: "₦3.95",
-            },
-            {
-              type: "Blouse",
-              price: "₦3.95",
-            },
-            {
-              type: "Sweater",
-              price: "₦3.95",
-            },
-            {
-              type: "Jacket/Blazer",
-              price: "₦3.95",
-            },
-            {
-              type: "Vest",
-              price: "₦3.95",
-            },
-          ],
-        },
-        {
-          title: "Bottoms",
-          background:
-            "url(https://images.unsplash.com/photo-1604176354204-9268737828e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80) 80% 15%",
-          listDetails: [
-            {
-              type: " Pants",
-              price: "₦3.95",
-            },
-            {
-              type: "Skirt",
-              price: "₦3.95",
-            },
-            {
-              type: "Shorts",
-              price: "₦3.95",
-            },
-          ],
-        },
-        {
-          title: "Full body",
-          background:
-            "url(https://images.unsplash.com/photo-1539533018447-63fcce2678e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) left 20%",
-          listDetails: [
-            {
-              type: "Casual Dress",
-              price: "₦3.95",
-            },
-            {
-              type: "Formal Dress",
-              price: "₦3.95",
-            },
-            {
-              type: "Coat",
-              price: "₦3.95",
-            },
-            {
-              type: "Suit (Jacket & Pants)",
-              price: "₦3.95",
-            },
-          ],
-        },
-        {
-          title: "Household",
-          background:
-            "url(https://images.unsplash.com/photo-1610973310510-82f514ea1986?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) 80% 20%",
-          listDetails: [
-            {
-              type: "Bath mat",
-              price: "₦3.95",
-            },
-            {
-              type: "Formal Dress",
-              price: "₦3.95",
-            },
-            {
-              type: "Sheets/Blanket",
-              price: "₦3.95",
-            },
-            {
-              type: "Duvet cover",
-              price: "₦3.95",
-            },
-            {
-              type: "Comforter/Duvet",
-              price: "₦3.95",
-            },
-            {
-              type: "Tablecloth",
-              price: "₦3.95",
-            },
-          ],
-        },
-        {
-          title: "Accessories",
-          background:
-            "url(https://images.unsplash.com/photo-1572427734891-5592aae758b2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) 70% 69% ",
-          listDetails: [
-            {
-              type: "Napkin",
-              price: "₦3.95",
-            },
-            {
-              type: "Pillowcase",
-              price: "₦3.95",
-            },
-            {
-              type: "Tie/Scarf",
-              price: "₦3.95",
-            },
-            {
-              type: "Suit (Jacket & Pants)",
-              price: "₦3.95",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      sectionTitle: "Cloth Repairs",
-      pricingDetailsList: [
-        {
-          title: "General",
-          background:
-            "url(https://images.unsplash.com/photo-1539533018447-63fcce2678e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) left 20%",
-          listDetails: [
-            {
-              type: "Missing/broken buttons",
-              price: "FREE",
-            },
-            {
-              type: "Basic repairs",
-              price: "₦3.95",
-            },
-            {
-              type: "Complex repairs",
-              price: "₦3.95",
-            },
-          ],
-        },
-      ],
-    },
   ];
 
   const handlePriceUpdate = (clothDetails, serviceType) => {
@@ -237,6 +84,12 @@ const Pricing = () => {
 
   return (
     <div className="aae-pricing container-styles">
+      <Collapse accordion={true}>
+        <Panel header="hello" headerClass="my-header-class">
+          this is panel content
+        </Panel>
+        <Panel header="title2">this is panel content2 or other</Panel>
+      </Collapse>
       <section className="pricing-customization__section">
         <motion.aside
           initial={{ opacity: 0, y: 200 }}
