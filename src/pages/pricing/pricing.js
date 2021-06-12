@@ -23,10 +23,6 @@ const Pricing = () => {
   const [firstTimeDiscount, setFirstTimeDiscount] = useState(0);
   const [deliveryPrice, setDeliveryPrice] = useState(0);
 
-  useEffect(() => {
-    console.log("Received selected Clothes", selectedClothes);
-  }, []);
-
   const frequency = [
     "Once a week",
     "Twice a week",
@@ -37,7 +33,8 @@ const Pricing = () => {
   const handlePriceUpdate = (clothDetails, serviceType) => {
     const newClothQuantities = [...selectedClothes].map((cloth) => {
       if (cloth.id === clothDetails.id) {
-        if (serviceType === "Iron All") {
+        if (serviceType === "Iron All" || clothDetails.ironAll) {
+          cloth.ironAll = true;
           cloth.quantity = clothDetails.quantity;
           cloth.calculatedPrice = cloth.ironOnlyPrice * cloth.quantity;
           cloth.specifyNumber = false;
@@ -47,12 +44,12 @@ const Pricing = () => {
             cloth.price * (cloth.quantity - clothDetails.ironQuantity) +
             clothDetails.ironQuantity * cloth.ironOnlyPrice;
         } else if (serviceType === "Specified Number") {
-          console.log(cloth, clothDetails);
           cloth.ironQuantity = clothDetails.ironQuantity;
           cloth.calculatedPrice =
             cloth.price * (cloth.quantity - clothDetails.ironQuantity) +
             clothDetails.ironQuantity * cloth.ironOnlyPrice;
         } else {
+          cloth.ironAll = false;
           cloth.specifyNumber = false;
           cloth.quantity = clothDetails.quantity;
           cloth.calculatedPrice = cloth.price * cloth.quantity;
@@ -84,12 +81,6 @@ const Pricing = () => {
 
   return (
     <div className="aae-pricing container-styles">
-      <Collapse accordion={true}>
-        <Panel header="hello" headerClass="my-header-class">
-          this is panel content
-        </Panel>
-        <Panel header="title2">this is panel content2 or other</Panel>
-      </Collapse>
       <section className="pricing-customization__section">
         <motion.aside
           initial={{ opacity: 0, y: 200 }}
@@ -98,11 +89,16 @@ const Pricing = () => {
           className="customization__info"
         >
           <h1>Find the right price for your laundry items.</h1>
-          <p>Made For You. Flexible. Straightforward. No hidden costs.</p>
+          <p>
+            - Made For You. <br />
+            - Flexible. <br />
+            - Straightforward. <br />- No hidden costs.
+          </p>
+          <button className="primary-button">Go to pricing table</button>
           <span className="naira-icon">{nairaIcon()}</span>
         </motion.aside>
         <h2 className="suitable-plan">
-          <i className="fas fa-cut mr-2"></i>Select a suitable plan
+          <i className="fas fa-cut mr-3"></i>Select a suitable plan
         </h2>
         <aside className="customization__container">
           <div className="customization__sidebar">
@@ -150,48 +146,58 @@ const Pricing = () => {
           </div>
           <div className="customization__selector">
             <section className="selector__section">
-              <h5>Cloth Types</h5>
-              <CustomizationPane
-                setSelectedClothes={setSelectedClothes}
-                selectedClothes={selectedClothes}
-                setTotalPrice={setTotalPrice}
-                totalPrice={totalPrice}
-                handlePriceUpdate={handlePriceUpdate}
-              />
-              <h5>Frequency</h5>
-              <DropdownList
-                data={frequency}
-                dataKey="service-frequency"
-                textField="service-frequency"
-                placeholder="Select service frequency"
-                style={{ width: "300px", marginBottom: "5px" }}
-                onChange={(value) => console.log(value)}
-              />
-              <h5>First Time</h5>
-              <DropdownList
-                data={["Wash and Iron", "Iron All"]}
-                dataKey="first-timer"
-                textField="name"
-                placeholder="Is this your first time?"
-                style={{ width: "300px", marginBottom: "5px" }}
-                onChange={(value) => {
-                  value === "Yes"
-                    ? setFirstTimeDiscount(10)
-                    : setFirstTimeDiscount(0);
-                  return;
-                }}
-              />
-              <h5>
-                Delivery <span>(₦200)</span>
-              </h5>
-              <Listbox
-                onChange={(value) => {
-                  value === "Yes" ? setDeliveryPrice(200) : setDeliveryPrice(0);
-                  return;
-                }}
-                className="delivery__request"
-                data={["Yes", "No"]}
-              />
+              <aside>
+                <h5>Cloth Types</h5>
+                <CustomizationPane
+                  setSelectedClothes={setSelectedClothes}
+                  setTotalPrice={setTotalPrice}
+                />
+              </aside>
+
+              <aside>
+                <h5>Frequency</h5>
+                <DropdownList
+                  data={frequency}
+                  dataKey="service-frequency"
+                  textField="service-frequency"
+                  placeholder="Select service frequency"
+                  style={{ width: "300px", marginBottom: "5px" }}
+                  onChange={(value) => console.log(value)}
+                />
+              </aside>
+
+              <aside>
+                <h5>First Time</h5>
+                <DropdownList
+                  data={["Wash and Iron", "Iron All"]}
+                  dataKey="first-timer"
+                  textField="name"
+                  placeholder="Is this your first time?"
+                  style={{ width: "300px", marginBottom: "5px" }}
+                  onChange={(value) => {
+                    value === "Yes"
+                      ? setFirstTimeDiscount(10)
+                      : setFirstTimeDiscount(0);
+                    return;
+                  }}
+                />
+              </aside>
+
+              <aside>
+                <h5>
+                  Delivery <span>(₦200)</span>
+                </h5>
+                <Listbox
+                  onChange={(value) => {
+                    value === "Yes"
+                      ? setDeliveryPrice(200)
+                      : setDeliveryPrice(0);
+                    return;
+                  }}
+                  className="delivery__request"
+                  data={["Yes", "No"]}
+                />
+              </aside>
             </section>
             <section className="selector__cloth-type-number--container">
               {selectedClothes.length ? (
@@ -211,14 +217,15 @@ const Pricing = () => {
                             key={cloth.id}
                             placeholder="Quantity"
                             className="customization__number-picker"
-                            onChange={(value) =>
+                            onChange={(value) => {
                               handlePriceUpdate({
                                 price: cloth.price,
                                 cloth: cloth.name,
                                 id: cloth.id,
                                 quantity: value,
-                              })
-                            }
+                                ironAll: cloth.ironAll || false,
+                              });
+                            }}
                             disabled={cloth.specifyNumber}
                             value={cloth.quantity}
                             min={1}
@@ -242,6 +249,7 @@ const Pricing = () => {
                                         cloth: cloth.name,
                                         id: cloth.id,
                                         quantity: cloth.quantity,
+                                        ironAll: true,
                                       },
                                       "Iron All"
                                     );
@@ -257,12 +265,16 @@ const Pricing = () => {
                                       "Iron Specific Number"
                                     );
                                   } else {
-                                    handlePriceUpdate({
-                                      price: cloth.price,
-                                      cloth: cloth.name,
-                                      id: cloth.id,
-                                      quantity: cloth.quantity,
-                                    });
+                                    handlePriceUpdate(
+                                      {
+                                        price: cloth.price,
+                                        cloth: cloth.name,
+                                        id: cloth.id,
+                                        quantity: cloth.quantity,
+                                        ironAll: false,
+                                      },
+                                      "Wash and Iron"
+                                    );
                                   }
                                 }}
                               />
@@ -337,43 +349,43 @@ const Pricing = () => {
           </div>
         </aside>
       </section>
+      <h2 className="suitable-plan pricing-table">
+        <i className="fas fa-table mr-3"></i>Our Pricing Table
+      </h2>
 
       {pricingList.map((item, index) => {
         return (
           <section className="pricing-group__section" key={`index${index + 1}`}>
-            <h2 className="pricing-section__title">{item.sectionTitle}</h2>
-            <aside className="pricing-section__cards">
-              {item.pricingDetailsList.map((listItem, index) => (
-                <PricingCard
-                  pricingDetailsList={listItem.listDetails}
-                  cardTitle={listItem.title}
-                  background={listItem.background}
-                  key={`index${index + 1}`}
-                />
-              ))}
-            </aside>
+            <Collapse
+              collapsible={false}
+              accordion={true}
+              key={index}
+              defaultActiveKey={index === 0 && ["0"]}
+              className="pricing-table-header"
+            >
+              <Panel
+                header={
+                  <h2 className="pricing-section__title">
+                    {item.sectionTitle}
+                  </h2>
+                }
+                headerClass="pricing-title-header"
+              >
+                <aside className="pricing-section__cards">
+                  {item.pricingDetailsList.map((listItem, index) => (
+                    <PricingCard
+                      pricingDetailsList={listItem.listDetails}
+                      cardTitle={listItem.title}
+                      background={listItem.background}
+                      key={`index${index + 1}`}
+                    />
+                  ))}
+                </aside>
+              </Panel>
+            </Collapse>
           </section>
         );
       })}
-
-      <div
-        id="circularMenu1"
-        class={`circular-menu circular-menu-left ${isActive ? "active" : ""}`}
-      >
-        <button
-          class="floating-btn"
-          onClick={() => {
-            setIsActive(!isActive);
-          }}
-        >
-          <i class="fa fa-bars"></i>
-        </button>
-
-        <menu class="items-wrapper">
-          <a href="#male" class="menu-item fa fa-male"></a>
-          <a href="#female" class="menu-item fa fa-female"></a>
-        </menu>
-      </div>
     </div>
   );
 };

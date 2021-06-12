@@ -7,7 +7,8 @@
   color: #666;
   box-shadow: 0 5px 15px rgb(0 0 0 / 8%);
   margin: 20px;
-  min-width: 300px;
+  width: 300px;
+  min-width: 250px;
   height: fit-content;
 }
 
@@ -38,4 +39,10 @@
   color: #3b4a8fe1;
   font-size: 15px;
   /* font-weight: 550; */
+}
+
+@media screen and (max-width: 320px) {
+  .aae-pricing-card__container {
+    margin: 10px 0px;
+  }
 }
