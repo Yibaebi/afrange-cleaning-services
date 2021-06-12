@@ -1,6 +1,6 @@
 .aae-nav-bar--extra-info {
   position: absolute;
-  z-index: 10000;
+  z-index: 998;
   background-color: var(--color-dark-blue);
   width: 100%;
   padding: 0em 4em;
@@ -27,8 +27,12 @@
   align-items: center;
 }
 
+.aae-nav-bar--extra-info button {
+  border: 1px solid white !important;
+}
+
 .aae-nav-bar--extra-info button:hover {
-  border: 2px solid white;
+  border: 1px solid white !important;
 }
 
 .email-bt {

@@ -13,14 +13,18 @@ ol {
 :root {
   --color-dark-blue: #3b4a8f;
   --color-platinum: #e6e6e6;
-  --complementary-goblin: #3b8f56;
-  --complementary-rouge: #8f803b;
+  --complementary-orange: #ec5429;
   --color-white: #fff;
-  --btn-padding-small: 0.5em 1em;
+  --btn-padding-small: 0.3em 1em;
+  --background-overlay: linear-gradient(
+    90deg,
+    rgba(59, 74, 143, 0.8018382352941176) 0%,
+    rgba(236, 84, 41, 0.2962359943977591) 90%
+  );
 }
 
 body {
-  background-color: rgb(243, 243, 244, 0.6);
+  background-color: #edeeff;
   background: url("http://dirtywashkit.demothemesflat.com/wp-content/uploads/2020/08/bg1.jpg");
 }
 
@@ -34,23 +38,28 @@ h6 {
   color: rgb(77, 59, 143);
 }
 
+a {
+  font-family: "Raleway", sans-serif;
+}
+
 .container-styles {
   max-width: 1382px;
   padding: 0.8em 4em;
+  margin-bottom: 80px;
 }
 
 .primary-button,
 .secondary-button,
-.primary-button--green,
-.secondary-button--green {
+.primary-button:focus,
+.secondary-button:focus {
   background-color: var(--color-dark-blue);
   color: white;
-  font-weight: 500;
+  font-weight: 400;
   padding: var(--btn-padding-small);
   outline: none;
   border-radius: 5px;
   border: none;
-  border: 2px solid var(--color-dark-blue);
+  border: 1.2px solid var(--color-dark-blue);
   cursor: pointer;
   font-weight: 500;
   font-size: 1rem;
@@ -59,43 +68,100 @@ h6 {
   width: fit-content;
 }
 
-.primary-button--green {
-  background-color: var(--complementary-goblin);
-  color: white;
-  border: 2px solid var(--complementary-goblin);
-}
-.primary-button--green:hover {
-  background-color: white;
-  color: var(--complementary-goblin);
-}
-
 .primary-button:hover {
   background-color: white;
   color: var(--color-dark-blue);
-  border: 2px solid var(--color-dark-blue);
+  border: 1.2px solid var(--color-dark-blue);
 }
 
-.secondary-button {
+.secondary-button,
+.secondary-button:focus {
   background-color: white;
-  color: var(--color-dark-blue);
-  border: 2px solid var(--color-dark-blue);
-  font-weight: 600;
-}
-
-.secondary-button--green {
-  background-color: white;
-  color: var(--complementary-goblin);
-  border: 2px solid var(--complementary-goblin);
-  font-weight: 600;
+  color: var(--complementary-orange);
+  border: 1.2px solid var(--complementary-orange);
 }
 
 .secondary-button:hover {
-  background-color: var(--color-dark-blue);
+  background-color: var(--complementary-orange);
   color: white;
 }
 .secondary-button--green:hover {
   background-color: var(--complementary-goblin);
   color: white;
+}
+
+.landing-services--content-header > p {
+  color: rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 40%;
+  font-size: 1rem;
+  line-height: 1.71428571;
+}
+.landing-services--content-header h1,
+.landing-services--content-header h1 span {
+  text-align: center;
+  width: 100%;
+  font-size: 1.557rem;
+  line-height: 1.61rem;
+  margin-bottom: 50px;
+}
+.landing-services--content-header h1 span {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.landing-services--content-header h1:before {
+  height: 3px;
+  width: 80px;
+  display: block;
+  content: " ";
+  background-color: var(--color-dark-blue);
+  position: absolute;
+  bottom: 0px;
+}
+.landing-services--content-header h1 em {
+  color: var(--color-dark-blue);
+}
+
+.landing-services--content-header h1 {
+  position: relative;
+}
+
+.landing-services--content-header h1 em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--color-dark-blue);
+}
+
+.landing-services--content-header h1 {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+.landing-services--content-header h1:before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 3px;
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-dark-blue);
+}
+
+.landing-services--content-header h1,
+.landing-services--content-header h1 span {
+  text-align: center;
+  width: 100%;
+  line-height: 2.11rem;
+  margin-bottom: 50px;
+}
+.landing-services--content-header h1 span {
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 1090px) {
