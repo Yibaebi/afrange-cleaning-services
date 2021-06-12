@@ -5,6 +5,7 @@ import {
   Services,
   Pricing,
   ContactUs,
+  Gallery,
 } from "../../pages";
 
 const routeBuilder = [
@@ -36,6 +37,12 @@ const routeBuilder = [
     path: "/contact-us",
     exact: true,
     component: ContactUs,
+    Router: Route,
+  },
+  {
+    path: "/gallery",
+    exact: true,
+    component: Gallery,
     Router: Route,
   },
   {
