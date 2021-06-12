@@ -1,4 +1,5 @@
 import React from "react";
+import dryCleaning from "../../../assets/services/dry-cleaning.jpg";
 import { deliveryBus } from "../../../assets";
 
 const DryCleaning = () => {
@@ -22,10 +23,7 @@ const DryCleaning = () => {
             </button>
           </aside>
           <aside className="wash-fold-service--intro--image">
-            <img
-              src="https://hellolaundry.co.uk/storage/app/uploads/blogs/18/NxDk733CcgBGx9NbRDWiJyEKWSfMDkqR5J1VXVvN.jpeg"
-              alt=""
-            />
+            <img src={dryCleaning} alt="" />
           </aside>
         </section>
         <section className="aae-how-it-works">
@@ -76,40 +74,21 @@ const DryCleaning = () => {
           </p>
           <aside className="aae-deliver--container">
             <div>
-              <div class="delivery-container">
-                <div class="delivery">
-                  <div class="delivery-preview free">
-                    <h2>Free - $0</h2>
-                    <div className="delivery-bus-icon">
-                      {deliveryBus("#fff")}
-                    </div>
-                  </div>
-
-                  <div class="delivery-info free">
-                    The $7.95 Service Fee covers pickup and delivery with
-                    Standard 3–4 day turnaround.
-                  </div>
-                </div>
-                <div class="delivery">
-                  <div class="delivery-preview">
-                    <h2>Standard - $7.95</h2>
-                    <div className="delivery-bus-icon">
-                      {deliveryBus("#fff")}
-                    </div>
-                  </div>
-
-                  <div class="delivery-info">
-                    The $7.95 Service Fee covers pickup and delivery with
-                    Standard 3–4 day turnaround.
+              <div class="delivery">
+                <div class="delivery-preview">
+                  <h2>Affordable Delivery</h2>
+                  <div className="delivery-info">
+                    <p>
+                      Get unlimited free pickups and deliveries with Rinse Go.
+                      Waive the $7.95 Service Fee on all your Rinse orders for
+                      just $7.95/mo or $79/yr
+                    </p>
+                    <button className="primary-button">
+                      Find Delivery Price
+                    </button>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="aae-deliver---image-container">
-              <img
-                src="https://images.pexels.com/photos/4391478/pexels-photo-4391478.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt=""
-              />
             </div>
           </aside>
         </section>

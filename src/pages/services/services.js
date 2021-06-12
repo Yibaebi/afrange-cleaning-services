@@ -12,7 +12,7 @@ const Services = () => {
       <nav className="aae-services--nav">
         <ul className={`aae-services-nav-bar--links-wrapper`}>
           <NavLink
-            className="aae-nav-link"
+            className="aae-nav-link desktop-view"
             to="#wash-and-iron"
             isActive={() => {
               if (
@@ -24,6 +24,20 @@ const Services = () => {
             }}
           >
             Wash and Fold
+          </NavLink>
+          <NavLink
+            className="aae-nav-link mobile-view"
+            to="#wash-and-iron"
+            isActive={() => {
+              if (
+                window.location.hash === "#wash-and-iron" ||
+                window.location.hash === ""
+              ) {
+                return true;
+              }
+            }}
+          >
+            Wash
           </NavLink>
 
           <NavLink

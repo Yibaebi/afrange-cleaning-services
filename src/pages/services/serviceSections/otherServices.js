@@ -8,7 +8,7 @@ const OtherServices = () => {
   return (
     <>
       <main className="aae-wash-fold-service--main">
-        <section className="aae-wash-fold-service">
+        <section className="aae-wash-fold-service other-services">
           <aside className="wash-fold-service--intro other-services">
             <h2>Other Services</h2>
             <p>A service for everything in your closet.</p>
@@ -174,6 +174,7 @@ const OtherServices = () => {
               </button>
             </div>
           </section>
+
           <figure>
             <img src={staffTraining} alt="staff training" />
           </figure>

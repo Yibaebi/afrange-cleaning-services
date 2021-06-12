@@ -1,11 +1,12 @@
 .aae-services.container-styles {
-  padding-top: 83px;
+  padding-top: 65px;
   padding-left: 0px;
   padding-right: 0px;
+  margin-bottom: 0px;
 }
 .aae-services.container-styles nav {
   position: sticky;
-  top: 75px;
+  top: 65px;
   padding: 20px;
   padding-left: 4em;
   padding-right: 4em;
@@ -44,7 +45,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 400px;
 }
+
 .wash-fold-service--intro h2,
 .aae-how-it-works h2,
 .aae-services-delivery h2 {
@@ -68,7 +71,7 @@
   max-width: 400px;
   width: 70%;
   color: rgba(0, 0, 0, 0.5);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   margin-bottom: 20px;
 }
@@ -85,6 +88,7 @@
   border-radius: 0px 10px 10px 0px;
   width: 100%;
   object-fit: cover;
+  min-height: 400px;
 }
 
 .aae-how-it-works {
@@ -108,7 +112,7 @@
   border-top: 2px solid #f2f0ee;
   max-width: 280px;
   color: #a09a93;
-  margin-bottom: 30px;
+  margin-bottom: 78px;
 }
 .how-it-works h5 {
   font-size: 24px;
@@ -181,7 +185,7 @@
 
 /* Delivery */
 .aae-services-delivery {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #f2f8ff;
   background-position: -600% 600%;
   background-repeat: no-repeat;
   padding: 2em 4em;
@@ -204,10 +208,13 @@
   width: 90%;
 }
 
-.aae-deliver--container {
-  display: flex;
-  align-items: center;
+.delivery {
+  max-width: 700px;
+  min-height: 200px;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 8%);
+  padding: 5px;
 }
+
 .delivery h6 {
   opacity: 0.6;
   margin: 0;
@@ -216,24 +223,20 @@
 }
 
 .delivery h2 {
-  font-size: 20px;
+  font-size: 26px;
   color: white;
-  letter-spacing: 1px;
   margin: 10px 0;
+  margin-bottom: 20px;
 }
 
 .delivery-preview {
   background-color: var(--color-dark-blue);
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 5px;
   color: #fff;
-  padding: 30px 20px;
+  padding: 10px 20px;
   display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  width: 400px;
-}
-.delivery-preview.free {
-  background-color: #006298;
+  flex-direction: column;
+  width: 100%;
 }
 
 .delivery-preview a {
@@ -246,21 +249,22 @@
 }
 
 .delivery-info {
-  padding: 30px;
-  width: 100%;
-  border-radius: 0px 10px 10px 0px;
-  border: 2px solid var(--color-dark-blue);
   display: flex;
-  align-items: center;
-  color: rgba(0, 0, 0, 0.568);
+  justify-content: space-between;
 }
-.delivery-info.free {
-  border: 2px solid #006298;
+.delivery-info p {
+  width: 60%;
+  color: white;
 }
 
-.delivery-bus-icon svg {
-  width: 130px;
-  height: 70px;
+.delivery-info button {
+  background-color: #fff;
+  color: var(--color-dark-blue);
+  padding: 0.6rem 1rem;
+  border-color: #fff;
+}
+.delivery-info button:hover {
+  box-shadow: 3px 0 50px 0 rgb(242 248 255 / 30%);
 }
 
 .aae-deliver--container {
@@ -284,12 +288,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: #fff;
   border-radius: 5px;
   margin: 0 auto;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  width: 80%;
+  width: 100%;
+  max-width: 1500px;
   height: 80vh;
+  max-height: 700px;
   position: relative;
 }
 
@@ -302,7 +307,6 @@
   justify-content: center;
   height: 100%;
   z-index: 2;
-  /* background-color: var(--color-platinum); */
 }
 .schedule-pickup-section--content h1 {
   font-size: 40px;
@@ -316,4 +320,65 @@
 
 .schedule-pickup-section--content button {
   border-color: white;
+}
+
+@media screen and (min-width: 1500px) {
+  .aae-services.container-styles {
+    background-color: #fff;
+  }
+}
+@media screen and (max-width: 1030px) {
+  .wash-fold-service--intro {
+    width: 100%;
+    border-radius: 10px;
+    background-position: -65% 186%;
+  }
+  .wash-fold-service--intro--image {
+    width: 100%;
+  }
+  .wash-fold-service--intro--image img {
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .aae-services.container-styles {
+    padding-top: 65px;
+  }
+  .aae-services.container-styles nav {
+    top: 65px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .delivery-info {
+    flex-direction: column;
+  }
+
+  .delivery-preview p {
+    width: 70%;
+  }
+  .delivery-preview {
+    padding-bottom: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .aae-wash-fold-service {
+    padding: 0.4em 0em !important;
+  }
+  .aae-how-it-works {
+    padding: 1em 1.4em !important;
+  }
+  .aae-services-delivery {
+    padding: 20px 30px;
+  }
+  .delivery-preview p {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .schedule-pickup-section--content h1 {
+    font-size: 33px;
+  }
+  .wash-fold-service--intro {
+    padding-left: 30px;
+  }
 }
