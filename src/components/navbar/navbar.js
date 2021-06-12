@@ -32,7 +32,7 @@ const NavBar = () => {
           Home
         </NavLink>
         <NavLink className="aae-nav-link" to="/about">
-          About Us
+          About
         </NavLink>
         <NavLink className="aae-nav-link" to="/services">
           Services
@@ -44,9 +44,9 @@ const NavBar = () => {
           Pricing
         </NavLink>
         <NavLink className="aae-nav-link" to="/contact-us">
-          Contact Us
+          Contact
         </NavLink>
-        <button className="primary-button">Place Order</button>
+        <button className="primary-button">Schedule Pickup</button>
       </ul>
     </nav>
   );
