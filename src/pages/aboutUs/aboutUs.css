@@ -17,6 +17,7 @@
   display: flex;
   flex: 1 1;
   background-image: url("../../assets/about-us/about\ us-hero.jpg");
+  margin-bottom: 50px;
 }
 
 .aae-about-us--header .background-overlay {
@@ -317,7 +318,7 @@
 }
 .our-story--image-container img {
   width: 100%;
-  height: 400px;
+  height: 200px;
   object-fit: cover;
 }
 

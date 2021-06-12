@@ -48,8 +48,8 @@ const AboutUs = () => {
                   dry-cleaning, and home cleaning services at the tap of a
                   button.
                 </p>
-                <button className="secondary-button p-3">
-                  Find out more <i className="fas fa-arrow-right ml-2"></i>
+                <button className="primary-button">
+                  Find out more<i className="fas fa-arrow-right ml-2"></i>
                 </button>
               </div>
             </div>
@@ -61,8 +61,8 @@ const AboutUs = () => {
                   We work with some of the biggest names in real estate to help
                   bring modern amenities their residents expect
                 </p>
-                <button className="primary-button">
-                  Find out more<i className="fas fa-arrow-right ml-2"></i>
+                <button className="secondary-button p-3">
+                  Find out more <i className="fas fa-arrow-right ml-2"></i>
                 </button>
               </div>
             </div>
@@ -79,14 +79,26 @@ const AboutUs = () => {
               <em>Our Story</em>
             </h1>
             <p>
-              Since 2015, Afrange has been at the forefront of providing
-              accessible and convenient clothing care & home cleaning services.
-              We're bringing clean homes and clean clothes to these cities and
-              expanding fast.
+              We are a cleaning and hospitality management company with huge
+              experience in providing tailor-made consumer laundry and dry
+              cleaning, home/office cleaning, move in/out cleaning, industrial
+              cleaning and training services to diverse clients. Our goal is to
+              deliver world class cleaning and management services to
+              individuals and organizations.
+            </p>
+            <p>
+              Afrange provides cleaning services to individuals, homes, offices
+              and factories/industries. We are committed to excellence and our
+              experience in providing cleaning services that stand out has
+              helped us build a high standard profile. First, we understand the
+              dynamics of maintaining hygienic and healthy lifestyle. That's why
+              we are not afraid to think outside the box in providing cleaning
+              solutions tailored to our clients.
             </p>
             <div className="aae-about-us-hero--buttons">
               <button className="primary-button">
-                Find out more<i className="fas fa-arrow-right ml-2"></i>
+                Find out more about our services
+                <i className="fas fa-arrow-right ml-2"></i>
               </button>
             </div>
           </aside>
@@ -160,7 +172,7 @@ const AboutUs = () => {
           <h1>
             Save 3+ hours a week when you leave your laundry to the experts
           </h1>
-          <button className="secondary-button">Schedule Pickup</button>
+          <button className="primary-button">Schedule Pickup</button>
         </aside>
       </section>
     </div>
