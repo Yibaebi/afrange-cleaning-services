@@ -33,6 +33,16 @@
   border-bottom: 1px solid #fff;
 }
 
+.aae-footer--info-container > div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  max-width: 800px;
+}
+.aae-footer--info-container > div:nth-child(2) div {
+  margin-right: 10px;
+}
+
 .aae-footer--mission-statement h5 {
   color: white;
   text-transform: uppercase;
@@ -51,6 +61,7 @@
 .aae-footer--contact-details p {
   font-size: 0.9rem;
   margin-bottom: 8px;
+  width: 80%;
 }
 
 .aae-footer--info-container li a:hover,
@@ -73,4 +84,49 @@
 .social-icons li {
   margin: 15px;
   margin-left: 0px;
+}
+
+@media screen and (max-width: 1150px) {
+  .aae-footer.container-styles {
+    padding-left: 40px;
+  }
+  .aae-footer--info-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .aae-footer--mission-statement {
+    width: 50%;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #fff;
+  }
+  .aae-footer--info-container > div:nth-child(2) {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .aae-footer--info-container > div:nth-child(2) {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  .aae-footer.container-styles {
+    padding-left: 1em;
+  }
+  .aae-footer--mission-statement {
+    width: 100%;
+  }
+  .aae-footer--contact-details p {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .aae-footer .copy-social--container {
+    flex-direction: column;
+  }
+  .aae-footer .copyright-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 }
