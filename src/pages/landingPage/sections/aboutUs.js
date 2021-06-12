@@ -54,11 +54,9 @@ const AboutUs = () => {
               </aside>
             </div>
           </aside>
+          <h3 className="gallery--header">What We Do</h3>
         </aside>
         <div class="container">
-          <h3 className="gallery--header">
-            <i className="fa fa-globe mr-2"></i>Our Services
-          </h3>
           <div class="gallery">
             <figure class="gallery__item gallery__item--3">
               <aside className="gallery__item--desc">

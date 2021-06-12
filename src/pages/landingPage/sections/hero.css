@@ -2,13 +2,14 @@
 .aae-landing-hero--container.container-styles {
   margin: 0px;
   padding-bottom: 0px;
+  margin-bottom: 80px;
 }
 .aae-landing-hero--wrapper {
   padding: 3em;
   padding-top: 100px;
   background-color: var(--color-platinum);
   display: flex;
-  padding-bottom: 4em;
+  padding-bottom: 2em;
 }
 
 .aae-landing-hero--content {

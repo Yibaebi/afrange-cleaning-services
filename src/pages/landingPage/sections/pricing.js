@@ -1,16 +1,22 @@
 import React from "react";
+import { nairaIcon } from "../../../assets";
 import DeliveryBus from "../../../assets/landing-page/delivery-bus.svg";
 import "./pricing.css";
 
 const Pricing = () => {
   return (
     <section className="aae-landing-pricing--section container-styles">
-      <div className="landing-services--content-header">
+      <aside className="landing-services--content-header">
+        <span className="naira-icon">{nairaIcon()}</span>
         <h1>
-          <span>Our Prices are very affordable... </span>
-          Our <em>Prices</em>
+          We Offer <em>Very Affordable Prices</em>
         </h1>
-      </div>
+        <p>
+          BrainStation offers a full spectrum of cutting-edge digital learning,
+          giving professionals and organizations of all sizes the skills they
+          need to thrive in the digital economy.
+        </p>
+      </aside>
       <div className="landing-pricing--content-body">
         <div className="pricing pricing-palden">
           <div className="pricing-item">
@@ -81,7 +87,6 @@ const Pricing = () => {
               <span className="pricing-currency">N</span>2900
               <span className="pricing-period">/ mo</span>
             </div>
-            {/* <button className="primary-button--green">See More</button> */}
           </div>
         </div>
         <div className="pricing pricing-palden focused">
@@ -153,7 +158,6 @@ const Pricing = () => {
               <span className="pricing-currency">N</span>2900
               <span className="pricing-period">/ mo</span>
             </div>
-            {/* <button className="secondary-button">See More</button> */}
           </div>
         </div>
         <div className="pricing pricing-palden">
@@ -225,10 +229,9 @@ const Pricing = () => {
               <span className="pricing-currency">N</span>2900
               <span className="pricing-period">/ mo</span>
             </div>
-            {/* <button className="primary-button--green">See More</button> */}
           </div>
         </div>
-        <button className="primary-button--green">
+        <button className="secondary-button">
           See more pricing info
           <i className="fas fa-arrow-right ml-2"></i>
         </button>
