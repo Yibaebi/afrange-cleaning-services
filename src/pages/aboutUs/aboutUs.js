@@ -31,7 +31,7 @@ const AboutUs = () => {
             <i className="fas fa-braille fa-3x"></i>
             <i className="fas fa-bolt fa-3x"></i>
             <h1>
-              Powering <em>homes and buildings </em>
+              Powering <em>homes and businesses </em>
             </h1>
             <p>
               We built our service to help both individuals and families as well
@@ -56,7 +56,7 @@ const AboutUs = () => {
             <div className="homes-buildings-container">
               <div className="background-overlay homes-buildings"></div>
               <div className="content-container">
-                <h5 className="homes-buildings-header">For Buildings</h5>
+                <h5 className="homes-buildings-header">For Businesses</h5>
                 <p className="homes-buildings-content">
                   We work with some of the biggest names in real estate to help
                   bring modern amenities their residents expect
@@ -97,7 +97,7 @@ const AboutUs = () => {
             </p>
             <div className="aae-about-us-hero--buttons">
               <button className="primary-button">
-                Find out more about our services
+                Find out more
                 <i className="fas fa-arrow-right ml-2"></i>
               </button>
             </div>

@@ -1,5 +1,5 @@
 .aae-about-us--container {
-  padding-top: 82px;
+  padding-top: 60px;
 }
 
 .button-container {
@@ -13,10 +13,14 @@
   max-width: 1382px;
   padding: 0.8em 4em;
   height: calc(100vh - 82px);
+  max-height: 800px;
   position: relative;
   display: flex;
   flex: 1 1;
   background-image: url("../../assets/about-us/about\ us-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 50px;
   margin-bottom: 50px;
 }
 
@@ -188,6 +192,7 @@
 }
 
 .aae-about-us--values {
+  max-width: 1500px;
   width: 90%;
   margin: 0 auto;
   padding: 50px 0px;
@@ -296,8 +301,9 @@
 /* Our Story */
 
 .aae-about-us--our-story {
+  margin: 0 auto;
+  max-width: 1500px;
   background-color: #fff;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
@@ -325,9 +331,117 @@
 .landing-services--content-header.our-story {
   padding: 50px;
 }
+.landing-services--content-header.our-story p {
+  width: 57%;
+}
 
 .landing-services--content-header.our-story .aae-about-us-hero--buttons {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .mission-container {
+    width: 80%;
+  }
+  .about-us--values-container {
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .aae-about-us--homes-buildings-container {
+    justify-content: space-evenly;
+  }
+  .landing-services--content-header > p {
+    width: 50%;
+  }
+  .homes-buildings-container p {
+    width: 80%;
+  }
+  .homes-buildings-container {
+    width: 45% !important;
+  }
+  .homes-buildings-container .content-container {
+    padding-left: 20px;
+  }
+  .landing-services--content-header.our-story p {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .mission-container {
+    width: 95%;
+  }
+  .aae-about-us--header h1 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  .mission-container p {
+    width: 90%;
+  }
+
+  .aae-about-us-hero--buttons {
+    margin-top: 15px;
+  }
+  .aae-about-us-hero--buttons button {
+    margin-top: 10px;
+  }
+
+  .landing-services--content-header.homes-buildings i {
+    display: none;
+  }
+  .aae-about-us--homes-buildings-container {
+    flex-direction: column;
+  }
+  .homes-buildings-container {
+    margin: 0 auto;
+    width: 80% !important;
+  }
+  .landing-services--content-header h1 {
+    padding: 0px 10px;
+  }
+  .landing-services--content-header > p {
+    width: 85% !important;
+    margin: 0px;
+  }
+  .landing-services--content-header i {
+    display: none;
+  }
+}
+@media screen and (max-width: 475px) {
+  .about-us--values-container {
+    width: 100%;
+    max-width: unset;
+  }
+  .landing-services--content-header.our-story {
+    padding: 30px 5px;
+  }
+  .aae-about-us--header h1 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  .aae-about-us--header h1 {
+    font-size: 30px;
+    line-height: 34px;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .about-us--values-container {
+    margin: 20px 0px;
+  }
+  .aae-about-us--values {
+    width: 100%;
+  }
+
+  .aae-about-us--header {
+    padding: 10px;
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .aae-about-us--values {
+    width: 100%;
+  }
 }

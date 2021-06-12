@@ -31,7 +31,7 @@ const ContactUs = () => {
           </p>
           <i className="fas fa-chevron-down fa-2x"></i>
         </motion.section>
-        <InView triggerOnce threshold={0.2}>
+        <InView triggerOnce threshold={0.05}>
           {({ inView, ref }) => (
             <motion.section
               ref={ref}
@@ -99,6 +99,13 @@ const ContactUs = () => {
                           </aside>
                         </div>
                         <div className="screen-body-item">
+                          <div className="app-title message-pane">
+                            <span>MESSAGE PANE</span>
+                          </div>
+                          <p>
+                            <i className="fas fa-info-circle mr-1"></i> Enter
+                            message details
+                          </p>
                           <form className="app-form" onSubmit={handleSubmit}>
                             <div className="app-form-group">
                               <input
@@ -160,7 +167,7 @@ const ContactUs = () => {
                               <button
                                 type="submit"
                                 disabled={state.submitting}
-                                className="secondary-button"
+                                className="primary-button"
                               >
                                 Send us a message
                               </button>
