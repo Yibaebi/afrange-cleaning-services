@@ -45,6 +45,7 @@ a {
 .container-styles {
   max-width: 1382px;
   padding: 0.8em 4em;
+  margin: 0 auto;
   margin-bottom: 80px;
 }
 
@@ -88,6 +89,10 @@ a {
 .secondary-button--green:hover {
   background-color: var(--complementary-goblin);
   color: white;
+}
+
+.container-styles {
+  max-width: 1500px;
 }
 
 .landing-services--content-header > p {

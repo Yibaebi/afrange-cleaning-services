@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "react-widgets/styles.css";
 import Collapse from "rc-collapse";
 import "rc-collapse/assets/index.css";
@@ -17,7 +17,6 @@ const Panel = Collapse.Panel;
 
 const Pricing = () => {
   const [totalPrice, setTotalPrice] = useState({ price: 0, quantity: 0 });
-  const [isActive, setIsActive] = useState(false);
   const [selectedClothes, setSelectedClothes] = useState([]);
   const [deliveryFrequencyPrice] = useState(0);
   const [firstTimeDiscount, setFirstTimeDiscount] = useState(0);

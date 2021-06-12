@@ -22,7 +22,7 @@ const Afrange = () => {
               </p>
             </div>
           </div>
-          <div className="location-container">
+          <div className="location-container open-hours">
             <i className="fas fa-clock mr-4 fa-2x"></i>
             <div className="aae-nav--contact-details">
               <p>
@@ -31,7 +31,7 @@ const Afrange = () => {
               </p>
             </div>
           </div>
-          <button className="secondary-button">Schedule Pickup</button>
+          <button className="primary-button">Schedule Pickup</button>
         </aside>
 
         <header>
