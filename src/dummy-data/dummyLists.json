@@ -1,7 +1,7 @@
 {
   "pricingList": [
     {
-      "sectionTitle": "Cloth Types",
+      "sectionTitle": "Male Pricing List",
       "pricingDetailsList": [
         {
           "title": "Tops",
@@ -128,6 +128,156 @@
       ]
     },
     {
+      "sectionTitle": "Female Pricing List",
+      "pricingDetailsList": [
+        {
+          "title": "Tops",
+          "background": "url(https://images.unsplash.com/photo-1523381294911-8d3cead13475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80) center 43%",
+          "listDetails": [
+            {
+              "type": "All Shirts",
+              "price": "₦3.95"
+            },
+            {
+              "type": "Polo",
+              "price": "₦3.95"
+            },
+            {
+              "type": "Blouse",
+              "price": "₦3.95"
+            },
+            {
+              "type": "Sweater",
+              "price": "₦3.95"
+            },
+            {
+              "type": "Jacket/Blazer",
+              "price": "₦3.95"
+            },
+            {
+              "type": "Vest",
+              "price": "₦3.95"
+            }
+          ]
+        },
+        {
+          "title": "Bottoms",
+          "background": "url(https://images.unsplash.com/photo-1604176354204-9268737828e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80) 80% 15%",
+          "listDetails": [
+            {
+              "type": " Pants",
+              "price": "₦3.95"
+            },
+            {
+              "type": "Skirt",
+              "price": "₦3.95"
+            },
+            {
+              "type": "Shorts",
+              "price": "₦3.95"
+            }
+          ]
+        },
+        {
+          "title": "Full body",
+          "background": "url(https://images.unsplash.com/photo-1539533018447-63fcce2678e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) left 20%",
+          "listDetails": [
+            {
+              "type": "Casual Dress",
+              "price": "₦3.95"
+            },
+            {
+              "type": "Formal Dress",
+              "price": "₦3.95"
+            },
+            {
+              "type": "Coat",
+              "price": "₦3.95"
+            },
+            {
+              "type": "Suit (Jacket & Pants)",
+              "price": "₦3.95"
+            }
+          ]
+        },
+        {
+          "title": "Household",
+          "background": "url(https://images.unsplash.com/photo-1610973310510-82f514ea1986?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) 80% 20%",
+          "listDetails": [
+            {
+              "type": "Bath mat",
+              "price": "₦3.95"
+            },
+            {
+              "type": "Formal Dress",
+              "price": "₦3.95"
+            },
+            {
+              "type": "Sheets/Blanket",
+              "price": "₦3.95"
+            },
+            {
+              "type": "Duvet cover",
+              "price": "₦3.95"
+            },
+            {
+              "type": "Comforter/Duvet",
+              "price": "₦3.95"
+            },
+            {
+              "type": "Tablecloth",
+              "price": "₦3.95"
+            }
+          ]
+        },
+        {
+          "title": "Accessories",
+          "background": "url(https://images.unsplash.com/photo-1572427734891-5592aae758b2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) 70% 69% ",
+          "listDetails": [
+            {
+              "type": "Napkin",
+              "price": "₦3.95"
+            },
+            {
+              "type": "Pillowcase",
+              "price": "₦3.95"
+            },
+            {
+              "type": "Tie/Scarf",
+              "price": "₦3.95"
+            },
+            {
+              "type": "Suit (Jacket & Pants)",
+              "price": "₦3.95"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Other Items",
+      "pricingDetailsList": [
+        {
+          "title": "General",
+          "background": "url(https://images.unsplash.com/photo-1539533018447-63fcce2678e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) left 20%",
+          "listDetails": [
+            {
+              "type": "Missing/broken buttons",
+              "price": "FREE"
+            },
+            {
+              "type": "Basic repairs",
+              "price": "₦3.95"
+            },
+            {
+              "type": "Complex repairs",
+              "price": "₦3.95"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "sectionTitle": "Cloth Repairs",
       "pricingDetailsList": [
         {
@@ -152,11 +302,11 @@
     }
   ],
   "maleClothes": [
-    { "id": 0, "name": "3-Piece Suit", "price": 1200, "quantity": 1 },
-    { "id": 1, "name": "2-Piece Suit", "price": 1000, "quantity": 1 },
-    { "id": 2, "name": "Jacket", "price": 600, "quantity": 1 },
+    { "id": "M0", "name": "3-Piece Suit", "price": 1200, "quantity": 1 },
+    { "id": "M1", "name": "2-Piece Suit", "price": 1000, "quantity": 1 },
+    { "id": "M2", "name": "Jacket", "price": 600, "quantity": 1 },
     {
-      "id": 3,
+      "id": "M3",
       "name": "Jean",
       "price": 300,
       "quantity": 1,
@@ -165,7 +315,7 @@
       "ironOnlyPrice": 200
     },
     {
-      "id": 4,
+      "id": "M4",
       "name": "Chinos",
       "price": 300,
       "quantity": 1,
@@ -173,9 +323,9 @@
       "ironQuantity": 1,
       "ironOnlyPrice": 200
     },
-    { "id": 5, "name": "Singlet", "price": 300, "quantity": 1 },
+    { "id": "M5", "name": "Singlet", "price": 300, "quantity": 1 },
     {
-      "id": 6,
+      "id": "M6",
       "name": "Tie",
       "price": 300,
       "quantity": 1,
@@ -184,7 +334,7 @@
       "ironOnlyPrice": 200
     },
     {
-      "id": 7,
+      "id": "M7",
       "name": "Trousers",
       "price": 300,
       "quantity": 1,
@@ -193,7 +343,7 @@
       "ironOnlyPrice": 200
     },
     {
-      "id": 8,
+      "id": "M8",
       "name": "Shirt",
       "price": 300,
       "quantity": 1,
@@ -202,7 +352,7 @@
       "ironOnlyPrice": 200
     },
     {
-      "id": 9,
+      "id": "M9",
       "name": "T-shirt",
       "price": 250,
       "quantity": 1,
@@ -211,7 +361,7 @@
       "ironOnlyPrice": 200
     },
     {
-      "id": 10,
+      "id": "M10",
       "name": "Polo",
       "price": 200,
       "quantity": 1,
@@ -220,7 +370,7 @@
       "ironOnlyPrice": 150
     },
     {
-      "id": 11,
+      "id": "M11",
       "name": "Short ",
       "price": 300,
       "quantity": 1,
@@ -228,10 +378,10 @@
       "ironQuantity": 1,
       "ironOnlyPrice": 200
     },
-    { "id": 12, "name": "Native Caps", "price": 300, "quantity": 1 },
-    { "id": 13, "name": "Sweat Shirt", "price": 400, "quantity": 1 },
+    { "id": "M12", "name": "Native Caps", "price": 300, "quantity": 1 },
+    { "id": "M13", "name": "Sweat Shirt", "price": 400, "quantity": 1 },
     {
-      "id": 14,
+      "id": "M14",
       "name": "Kaftan",
       "price": 500,
       "quantity": 1,
@@ -240,7 +390,7 @@
       "ironOnlyPrice": 300
     },
     {
-      "id": 15,
+      "id": "M15",
       "name": "Lace Kaftan",
       "price": 600,
       "quantity": 1,
@@ -249,7 +399,7 @@
       "ironOnlyPrice": 400
     },
     {
-      "id": 16,
+      "id": "M16",
       "name": "Safari Suit",
       "price": 600,
       "quantity": 1,
@@ -257,11 +407,269 @@
       "ironQuantity": 1,
       "ironOnlyPrice": 400
     },
-    { "id": 17, "name": "Bath Robe", "price": 1000, "quantity": 1 },
+    { "id": "M17", "name": "Bath Robe", "price": 1000, "quantity": 1 },
     {
-      "id": 18,
+      "id": "M18",
       "name": "Sweater",
       "price": 400,
+      "quantity": 1,
+      "ironOnly": false,
+      "ironQuantity": 1,
+      "ironOnlyPrice": 400
+    }
+  ],
+  "otherItems": [
+    {
+      "id": "O0",
+      "name": "Bedsheet ",
+      "price": 500,
+      "quantity": 1
+    },
+    {
+      "id": "O1",
+      "name": "Blanket (Medium)",
+      "price": 2000,
+      "quantity": 1
+    },
+    {
+      "id": "O2",
+      "name": "Blanket (Big)",
+      "price": 3000,
+      "quantity": 1
+    },
+    {
+      "id": "O3",
+      "name": "Blanket (King Size)",
+      "price": 4000,
+      "quantity": 1
+    },
+    {
+      "id": "O4",
+      "name": "Duvet (Small)",
+      "price": 1200,
+      "quantity": 1
+    },
+    { "id": "O5", "name": "Duvet (Medium)", "price": 1500, "quantity": 1 },
+    {
+      "id": "O6",
+      "name": "Duvet (Big)",
+      "price": 2000,
+      "quantity": 1
+    },
+    {
+      "id": "O7",
+      "name": "Duvet (King Size)",
+      "price": 3000,
+      "quantity": 1
+    },
+    {
+      "id": "O8",
+      "name": "Towel (White)",
+      "price": 600,
+      "quantity": 1
+    },
+    {
+      "id": "O9",
+      "name": "Towels (Color)",
+      "price": 500,
+      "quantity": 1
+    },
+    {
+      "id": "O10",
+      "name": "Bath Robe (White)",
+      "price": 1100,
+      "quantity": 1
+    },
+    {
+      "id": "O11",
+      "name": "Bath Robe (Color)",
+      "price": 300,
+      "quantity": 1,
+      "ironOnly": false,
+      "ironQuantity": 1,
+      "ironOnlyPrice": 200
+    },
+    { "id": "O12", "name": "Curtain (heavy)", "price": 250, "quantity": 1 },
+    { "id": "O13", "name": "Curtain (light)", "price": 200, "quantity": 1 }
+  ],
+  "femaleClothes": [
+    { "id": "f0", "name": "3-Piece Suit (f)", "price": 1200, "quantity": 1 },
+    { "id": "f1", "name": "2-Piece Suit (f)", "price": 1000, "quantity": 1 },
+    { "id": "f2", "name": "Pleated Skirt Suit", "price": 1200, "quantity": 1 },
+    {
+      "id": "f3",
+      "name": "Jean (f)",
+      "price": 300,
+      "quantity": 1,
+      "ironOnly": false,
+      "ironQuantity": 1,
+      "ironOnlyPrice": 200
+    },
+    {
+      "id": "f4",
+      "name": "Chinos (f)",
+      "price": 300,
+      "quantity": 1,
+      "ironOnly": false,
+      "ironQuantity": 1,
+      "ironOnlyPrice": 200
+    },
+    {
+      "id": "f5",
+      "name": "Skirt (f)",
+      "price": 300,
+      "quantity": 1,
+      "ironOnly": false,
+      "ironQuantity": 1,
+      "ironOnlyPrice": 200
+    },
+    {
+      "id": "f6",
+      "name": "Jump Suit",
+      "price": 800,
+      "quantity": 1,
+      "ironOnly": false,
+      "ironQuantity": 1,
+      "ironOnlyPrice": 600
+    },
+    {
+      "id": "f7",
+      "name": "Plain Blouse",
+      "price": 300,
+      "quantity": 1
+    },
+    {
+      "id": "f8",
+      "name": "Blouse (Lace)",
+      "price": 500,
+      "quantity": 1
+    },
+    {
+      "id": "f9",
+      "name": "Cotton Blouse",
+      "price": 400,
+      "quantity": 1
+    },
+    {
+      "id": "f10",
+      "name": "Trousers (f)",
+      "price": 300,
+      "quantity": 1,
+      "ironOnly": false,
+      "ironQuantity": 1,
+      "ironOnlyPrice": 200
+    },
+    {
+      "id": "f11",
+      "name": "Shirt (f)",
+      "price": 300,
+      "quantity": 1,
+      "ironOnly": false,
+      "ironQuantity": 1,
+      "ironOnlyPrice": 200
+    },
+    { "id": "f12", "name": "Head Gear", "price": 400, "quantity": 1 },
+    { "id": "f13", "name": "2 Piece George", "price": 700, "quantity": 1 },
+    {
+      "id": "f14",
+      "name": "Blouse/Skirt (Lace)",
+      "price": 800,
+      "quantity": 1
+    },
+    {
+      "id": "f15",
+      "name": "Wedding Dress (Plain)",
+      "price": 2500,
+      "quantity": 1
+    },
+    {
+      "id": "f16",
+      "name": "Wedding Dress (Multiple)",
+      "price": 3500,
+      "quantity": 1
+    },
+    {
+      "id": "f17",
+      "name": "Cardigan/Jumper",
+      "price": 550,
+      "quantity": 1,
+      "ironOnly": false,
+      "ironQuantity": 1,
+      "ironOnlyPrice": 350
+    },
+    {
+      "id": "f18",
+      "name": "Sweater (f)",
+      "price": 400,
+      "quantity": 1
+    },
+    {
+      "id": "f19",
+      "name": "Plain Skirt",
+      "price": 300,
+      "quantity": 1,
+      "ironOnly": false,
+      "ironQuantity": 1,
+      "ironOnlyPrice": 200
+    },
+    {
+      "id": "f20",
+      "name": "Plated/Flam skirt",
+      "price": 400,
+      "quantity": 1
+    },
+    {
+      "id": "f21",
+      "name": "Track Suit",
+      "price": 600,
+      "quantity": 1,
+      "ironOnly": false,
+      "ironQuantity": 1,
+      "ironOnlyPrice": 400
+    },
+    {
+      "id": "f22",
+      "name": "Plated/Flam Gown",
+      "price": 1200,
+      "quantity": 1,
+      "ironOnly": false,
+      "ironQuantity": 1,
+      "ironOnlyPrice": 300
+    },
+    {
+      "id": "f23",
+      "name": "Singlet (f)",
+      "price": 300,
+      "quantity": 1
+    },
+    {
+      "id": "f24",
+      "name": "Top",
+      "price": 300,
+      "quantity": 1,
+      "ironOnly": false,
+      "ironQuantity": 1,
+      "ironOnlyPrice": 200
+    },
+    {
+      "id": "f25",
+      "name": "Kaftan (f)",
+      "price": 600,
+      "quantity": 1,
+      "ironOnly": false,
+      "ironQuantity": 1,
+      "ironOnlyPrice": 400
+    },
+    {
+      "id": "f26",
+      "name": "Bath Robe (f)",
+      "price": 1000,
+      "quantity": 1
+    },
+    {
+      "id": "f27",
+      "name": "Jacket (f)",
+      "price": 600,
       "quantity": 1,
       "ironOnly": false,
       "ironQuantity": 1,
