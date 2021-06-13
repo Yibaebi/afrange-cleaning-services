@@ -1,12 +1,12 @@
 .aae-services.container-styles {
-  padding-top: 65px;
+  padding-top: 75px;
   padding-left: 0px;
   padding-right: 0px;
   margin-bottom: 0px;
 }
 .aae-services.container-styles nav {
   position: sticky;
-  top: 65px;
+  top: 75px;
   padding: 20px;
   padding-left: 4em;
   padding-right: 4em;
@@ -290,7 +290,8 @@
   background-position: center;
   background-color: #fff;
   border-radius: 5px;
-  margin: 0 auto;
+  margin: 20px auto;
+
   width: 100%;
   max-width: 1500px;
   height: 80vh;
@@ -342,10 +343,10 @@
 }
 @media screen and (max-width: 1000px) {
   .aae-services.container-styles {
-    padding-top: 65px;
+    padding-top: 75px;
   }
   .aae-services.container-styles nav {
-    top: 65px;
+    top: 75px;
   }
 }
 @media screen and (max-width: 750px) {
@@ -361,6 +362,9 @@
   }
 }
 @media screen and (max-width: 600px) {
+  .wash-fold-service--intro--image img {
+    border-radius: 0px;
+  }
   .aae-wash-fold-service {
     padding: 0.4em 0em !important;
   }
@@ -373,10 +377,15 @@
   .delivery-preview p {
     width: 100%;
   }
+  .schedule-pickup-section--content h1 {
+    padding: 0px 10px;
+    font-size: 29px;
+  }
 }
 @media screen and (max-width: 350px) {
   .schedule-pickup-section--content h1 {
-    font-size: 33px;
+    padding: 0px 10px;
+    font-size: 22px;
   }
   .wash-fold-service--intro {
     padding-left: 30px;

@@ -10,7 +10,7 @@ const WhereWeAre = () => {
           <em>Where We Are</em>
         </h1>
         <p>
-          BrainStation offers a full spectrum of cutting-edge digital learning,
+          Afrange offers a full spectrum of cutting-edge digital learning,
           giving professionals and organizations of all sizes the skills they
           need to thrive in the digital economy.
         </p>

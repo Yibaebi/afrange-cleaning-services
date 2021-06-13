@@ -10,8 +10,8 @@ const WashAndIron = () => {
             <h2>Wash & Fold</h2>
             <p>This is the ideal service for your everyday laundry needs.</p>
             <p>
-              Save 3+ hours per week by having Rinse pick up your clothes right
-              from your door and return them freshly cleaned and perfectly
+              Save 3+ hours per week by having Afrange pick up your clothes
+              right from your door and return them freshly cleaned and perfectly
               folded.
             </p>
 
@@ -68,7 +68,7 @@ const WashAndIron = () => {
           <h2>Delivery</h2>
           <p>
             We pick up and deliver 7 days a week, always between 8pm and 10pm.
-            Free contactless delivery available with Rinse Drop.
+            Free contactless delivery available with Afrange Drop.
           </p>
           <aside className="aae-deliver--container">
             <div>
@@ -77,9 +77,9 @@ const WashAndIron = () => {
                   <h2>Affordable Delivery</h2>
                   <div className="delivery-info">
                     <p>
-                      Get unlimited free pickups and deliveries with Rinse Go.
-                      Waive the $7.95 Service Fee on all your Rinse orders for
-                      just $7.95/mo or $79/yr
+                      Get unlimited free pickups and deliveries with Afrange.
+                      Waive the ₦7.95 Service Fee on all your Afrange orders for
+                      just ₦7.95/mo or ₦79/yr
                     </p>
                     <button className="primary-button">
                       Find Delivery Price

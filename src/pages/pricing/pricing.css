@@ -1,5 +1,5 @@
 .aae-pricing.container-styles {
-  padding-top: 80px;
+  padding-top: 75px;
   /* padding-left: 4em; */
   /* padding-right: 4em; */
 }
@@ -48,7 +48,8 @@
 
 .customization__container {
   border: 1px solid #e4e8e6;
-  padding: 30px 10px;
+  padding: 30px 0px;
+  padding-top: 15px;
   background: radial-gradient(
     100% 100% at 0,
     at 0,
@@ -69,7 +70,8 @@
 
 .customization__info {
   margin: 20px 0px;
-  margin-bottom: 100px;
+  margin-bottom: 45px;
+  margin-top: 0px;
   padding: 30px;
   background-color: var(--color-dark-blue);
   color: white;
@@ -83,7 +85,8 @@
   margin-bottom: 15px;
 }
 .customization__info p {
-  font-size: 17px;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .customization__info .naira-icon {
@@ -94,7 +97,6 @@
 }
 
 h2.suitable-plan {
-  border-radius: 10px 10px 0px 0px;
   font-weight: 550;
   font-size: 1.3rem;
   margin-bottom: 0px;
@@ -111,7 +113,6 @@ h2.suitable-plan {
   border-right: 1px solid #a5afda57;
   background-color: var(--color-dark-blue);
   padding-right: 0px;
-  border-radius: 3px;
   min-width: 180px;
 }
 
@@ -303,6 +304,10 @@ h2.suitable-plan {
   padding-bottom: 10px;
   border-top: 1px solid #a5afda57;
   border-bottom: 1px solid #a5afda57;
+}
+
+.pricing-customization__section {
+  background-color: white;
 }
 
 .pricing-customization__section .primary-button,
