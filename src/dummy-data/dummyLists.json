@@ -8,28 +8,28 @@
           "background": "url(https://images.unsplash.com/photo-1523381294911-8d3cead13475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80) center 43%",
           "listDetails": [
             {
-              "type": "All Shirts",
-              "price": "₦3.95"
+              "type": "Shirt",
+              "price": "₦300"
             },
             {
               "type": "Polo",
-              "price": "₦3.95"
+              "price": "₦200"
             },
             {
-              "type": "Blouse",
-              "price": "₦3.95"
+              "type": "T-shirt",
+              "price": "₦250"
             },
             {
               "type": "Sweater",
-              "price": "₦3.95"
+              "price": "₦400"
             },
             {
-              "type": "Jacket/Blazer",
-              "price": "₦3.95"
+              "type": "Sweat Shirt",
+              "price": "₦400"
             },
             {
-              "type": "Vest",
-              "price": "₦3.95"
+              "type": "Singlet",
+              "price": "₦300"
             }
           ]
         },
@@ -38,90 +38,65 @@
           "background": "url(https://images.unsplash.com/photo-1604176354204-9268737828e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80) 80% 15%",
           "listDetails": [
             {
-              "type": " Pants",
-              "price": "₦3.95"
+              "type": "Trousers",
+              "price": "₦300"
             },
             {
-              "type": "Skirt",
-              "price": "₦3.95"
+              "type": "Jean",
+              "price": "₦300"
+            },
+            {
+              "type": "Chinos",
+              "price": "₦300"
             },
             {
               "type": "Shorts",
-              "price": "₦3.95"
+              "price": "₦300"
             }
           ]
         },
         {
           "title": "Full body",
-          "background": "url(https://images.unsplash.com/photo-1539533018447-63fcce2678e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) left 20%",
+          "background": "url(https://images.unsplash.com/photo-1611937663641-5cef5189d71b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) left 80%",
           "listDetails": [
             {
-              "type": "Casual Dress",
-              "price": "₦3.95"
+              "type": "3 piece suit",
+              "price": "₦1,200"
             },
             {
-              "type": "Formal Dress",
-              "price": "₦3.95"
+              "type": "2 Piece suit",
+              "price": "₦1,000"
+            },
+
+            {
+              "type": "Kaftan",
+              "price": "₦500"
             },
             {
-              "type": "Coat",
-              "price": "₦3.95"
+              "type": "Lace kaftan",
+              "price": "₦600"
             },
             {
-              "type": "Suit (Jacket & Pants)",
-              "price": "₦3.95"
-            }
-          ]
-        },
-        {
-          "title": "Household",
-          "background": "url(https://images.unsplash.com/photo-1610973310510-82f514ea1986?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) 80% 20%",
-          "listDetails": [
-            {
-              "type": "Bath mat",
-              "price": "₦3.95"
-            },
-            {
-              "type": "Formal Dress",
-              "price": "₦3.95"
-            },
-            {
-              "type": "Sheets/Blanket",
-              "price": "₦3.95"
-            },
-            {
-              "type": "Duvet cover",
-              "price": "₦3.95"
-            },
-            {
-              "type": "Comforter/Duvet",
-              "price": "₦3.95"
-            },
-            {
-              "type": "Tablecloth",
-              "price": "₦3.95"
+              "type": "Safari suit ",
+              "price": "₦600"
             }
           ]
         },
         {
           "title": "Accessories",
-          "background": "url(https://images.unsplash.com/photo-1572427734891-5592aae758b2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) 70% 69% ",
+          "background": "url(https://images.unsplash.com/photo-1610973310510-82f514ea1986?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) 80% 20%",
           "listDetails": [
             {
-              "type": "Napkin",
-              "price": "₦3.95"
+              "type": "Native Caps",
+              "price": "₦300"
             },
             {
-              "type": "Pillowcase",
-              "price": "₦3.95"
+              "type": "Tie",
+              "price": "₦300"
             },
             {
-              "type": "Tie/Scarf",
-              "price": "₦3.95"
-            },
-            {
-              "type": "Suit (Jacket & Pants)",
-              "price": "₦3.95"
+              "type": "Bath robe",
+              "price": "₦1,000"
             }
           ]
         }
@@ -135,28 +110,36 @@
           "background": "url(https://images.unsplash.com/photo-1523381294911-8d3cead13475?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80) center 43%",
           "listDetails": [
             {
-              "type": "All Shirts",
-              "price": "₦3.95"
+              "type": "Shirt",
+              "price": "₦300"
             },
             {
-              "type": "Polo",
-              "price": "₦3.95"
+              "type": "Jacket",
+              "price": "₦600"
             },
             {
-              "type": "Blouse",
-              "price": "₦3.95"
+              "type": "Plain Blouse",
+              "price": "₦300"
+            },
+            {
+              "type": "Blouse (Lace)",
+              "price": "₦500"
+            },
+            {
+              "type": "Cotton Blouse ",
+              "price": "₦400"
             },
             {
               "type": "Sweater",
-              "price": "₦3.95"
+              "price": "₦400"
             },
             {
-              "type": "Jacket/Blazer",
-              "price": "₦3.95"
+              "type": "Singlet",
+              "price": "₦300"
             },
             {
-              "type": "Vest",
-              "price": "₦3.95"
+              "type": "Top",
+              "price": "₦300"
             }
           ]
         },
@@ -165,16 +148,28 @@
           "background": "url(https://images.unsplash.com/photo-1604176354204-9268737828e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80) 80% 15%",
           "listDetails": [
             {
-              "type": " Pants",
-              "price": "₦3.95"
+              "type": "Trousers",
+              "price": "₦300"
+            },
+            {
+              "type": "Jean",
+              "price": "₦300"
+            },
+            {
+              "type": "Chinos",
+              "price": "₦300"
             },
             {
               "type": "Skirt",
-              "price": "₦3.95"
+              "price": "₦300"
             },
             {
-              "type": "Shorts",
-              "price": "₦3.95"
+              "type": "Blouse/Skirt (Lace)",
+              "price": "₦800"
+            },
+            {
+              "type": "Plated/Flam Skirt",
+              "price": "₦400"
             }
           ]
         },
@@ -183,72 +178,59 @@
           "background": "url(https://images.unsplash.com/photo-1539533018447-63fcce2678e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) left 20%",
           "listDetails": [
             {
-              "type": "Casual Dress",
-              "price": "₦3.95"
+              "type": "3 piece suit",
+              "price": "₦1,200"
             },
             {
-              "type": "Formal Dress",
-              "price": "₦3.95"
+              "type": "2 Piece suit",
+              "price": "₦1,000"
             },
             {
-              "type": "Coat",
-              "price": "₦3.95"
+              "type": "Pleated Skirt Suit",
+              "price": "₦1,200"
             },
             {
-              "type": "Suit (Jacket & Pants)",
-              "price": "₦3.95"
-            }
-          ]
-        },
-        {
-          "title": "Household",
-          "background": "url(https://images.unsplash.com/photo-1610973310510-82f514ea1986?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) 80% 20%",
-          "listDetails": [
-            {
-              "type": "Bath mat",
-              "price": "₦3.95"
+              "type": "Jump Suit",
+              "price": "₦800"
             },
             {
-              "type": "Formal Dress",
-              "price": "₦3.95"
+              "type": "2 Piece George ",
+              "price": "₦700"
             },
             {
-              "type": "Sheets/Blanket",
-              "price": "₦3.95"
+              "type": "Track suit",
+              "price": "₦600"
             },
+
             {
-              "type": "Duvet cover",
-              "price": "₦3.95"
-            },
-            {
-              "type": "Comforter/Duvet",
-              "price": "₦3.95"
-            },
-            {
-              "type": "Tablecloth",
-              "price": "₦3.95"
+              "type": "Kaftan",
+              "price": "₦500"
             }
           ]
         },
         {
           "title": "Accessories",
-          "background": "url(https://images.unsplash.com/photo-1572427734891-5592aae758b2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) 70% 69% ",
+          "background": "url(https://images.unsplash.com/photo-1610973310510-82f514ea1986?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) 80% 20%",
           "listDetails": [
             {
-              "type": "Napkin",
-              "price": "₦3.95"
+              "type": "Head Gear",
+              "price": "₦400"
             },
             {
-              "type": "Pillowcase",
-              "price": "₦3.95"
+              "type": "Wedding Dress (Plain)",
+              "price": "₦2,500"
             },
             {
-              "type": "Tie/Scarf",
-              "price": "₦3.95"
+              "type": "Wedding Dress (Multiple)",
+              "price": "₦3,500"
             },
             {
-              "type": "Suit (Jacket & Pants)",
-              "price": "₦3.95"
+              "type": "Plated/Flam Gown",
+              "price": "₦1,200"
+            },
+            {
+              "type": "Bath Robe",
+              "price": "₦1000"
             }
           ]
         }
@@ -258,44 +240,62 @@
       "sectionTitle": "Other Items",
       "pricingDetailsList": [
         {
-          "title": "General",
-          "background": "url(https://images.unsplash.com/photo-1539533018447-63fcce2678e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) left 20%",
+          "title": "Sheets",
+          "background": "url(https://images.unsplash.com/photo-1617233210137-745c40934844?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80) left 20%",
           "listDetails": [
             {
-              "type": "Missing/broken buttons",
-              "price": "FREE"
+              "type": "Bedsheet ",
+              "price": "₦500"
             },
             {
-              "type": "Basic repairs",
-              "price": "₦3.95"
+              "type": "Blanket (Medium)",
+              "price": "₦2,000"
             },
             {
-              "type": "Complex repairs",
-              "price": "₦3.95"
+              "type": "Blanket (Big)",
+              "price": "₦3,000"
+            },
+            {
+              "type": "Blanket (King Size)",
+              "price": "₦4,000"
+            },
+            {
+              "type": "Duvet (Small)",
+              "price": "₦1,200"
+            },
+            { "type": "Duvet (Medium)", "price": "₦1,500" },
+            {
+              "type": "Duvet (Big)",
+              "price": "₦2,000"
+            },
+            {
+              "type": "Duvet (King Size)",
+              "price": "₦3,000"
             }
           ]
-        }
-      ]
-    },
-    {
-      "sectionTitle": "Cloth Repairs",
-      "pricingDetailsList": [
+        },
         {
           "title": "General",
-          "background": "url(https://images.unsplash.com/photo-1539533018447-63fcce2678e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80) left 20%",
+          "background": "url(https://images.unsplash.com/photo-1601056639638-c53c50e13ead?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80) left 20%",
           "listDetails": [
             {
-              "type": "Missing/broken buttons",
-              "price": "FREE"
+              "type": "Towel (White)",
+              "price": "₦600"
             },
             {
-              "type": "Basic repairs",
-              "price": "₦3.95"
+              "type": "Towels (Color)",
+              "price": "₦500"
             },
             {
-              "type": "Complex repairs",
-              "price": "₦3.95"
-            }
+              "type": "Bath Robe (White)",
+              "price": "₦1,100"
+            },
+            {
+              "type": "Bath Robe (Color)",
+              "price": "₦300"
+            },
+            { "type": "Curtain (Heavy)", "price": "₦250" },
+            { "type": "Curtain (Light)", "price": "₦200" }
           ]
         }
       ]
