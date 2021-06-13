@@ -1,45 +1,57 @@
 import React from "react";
+import {
+  galleryImg1,
+  galleryImg10,
+  galleryImg2,
+  galleryImg3,
+  galleryImg4,
+  galleryImg5,
+  galleryImg6,
+  galleryImg7,
+  galleryImg8,
+  galleryImg9,
+} from "../../assets";
 import "./gallery.css";
 
 const imgUrls = [
   {
-    url: "https://source.unsplash.com/PC_lbSSxCZE/800x600",
+    url: galleryImg1,
     title: "Afrange Home",
   },
   {
-    url: "https://source.unsplash.com/PC_lbSSxCZE/800x600",
+    url: galleryImg2,
     title: "Afrange Home",
   },
   {
-    url: "https://source.unsplash.com/PC_lbSSxCZE/800x600",
+    url: galleryImg3,
     title: "Afrange Home",
   },
   {
-    url: "https://source.unsplash.com/PC_lbSSxCZE/800x600",
+    url: galleryImg4,
     title: "Afrange Home",
   },
   {
-    url: "https://source.unsplash.com/PC_lbSSxCZE/800x600",
+    url: galleryImg5,
     title: "Afrange Home",
   },
   {
-    url: "https://source.unsplash.com/PC_lbSSxCZE/800x600",
+    url: galleryImg6,
     title: "Afrange Home",
   },
   {
-    url: "https://source.unsplash.com/PC_lbSSxCZE/800x600",
+    url: galleryImg7,
     title: "Afrange Home",
   },
   {
-    url: "https://source.unsplash.com/PC_lbSSxCZE/800x600",
+    url: galleryImg8,
     title: "Afrange Home",
   },
   {
-    url: "https://source.unsplash.com/PC_lbSSxCZE/800x600",
+    url: galleryImg9,
     title: "Afrange Home",
   },
   {
-    url: "https://source.unsplash.com/PC_lbSSxCZE/800x600",
+    url: galleryImg10,
     title: "Afrange Home",
   },
 ];
@@ -55,8 +67,11 @@ class Gallery extends React.Component {
   }
   renderImageContent(src, index) {
     return (
-      <div onClick={(e) => this.openModal(e, index)}>
-        <img src={src.url} key={src} alt="gallery item" />
+      <div
+        className="image-container"
+        onClick={(e) => this.openModal(e, index)}
+      >
+        <img src={`${src.url}`} key={src} alt="gallery item" />
       </div>
     );
   }
@@ -88,6 +103,9 @@ class Gallery extends React.Component {
   render() {
     return (
       <div className="gallery-container">
+        <h1>
+          Our <em>Gallery</em>
+        </h1>
         <div className="gallery-grid">
           {imgUrls.map(this.renderImageContent)}
         </div>

@@ -461,3 +461,5 @@ export {
   homeCleaning,
   dryCleaning,
 };
+
+export * from "./gallery/index";
