@@ -62,7 +62,10 @@ const Footer = () => {
             <h6>Contact details</h6>
             <p>No. 4 North Fifth Avenue, Trans Ekulu, Enugu State.</p>
             <p>info@afrange.com</p>
-            <p>Mon - Sun: 7:00 am - 11:00 pm</p>
+            <p>
+              Office opens from 7:30am – 7:00pm, <br />
+              Monday – Saturday.
+            </p>
           </div>
         </div>
       </div>

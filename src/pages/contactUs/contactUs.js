@@ -67,7 +67,7 @@ const ContactUs = () => {
                           <aside className="intro-sections--container">
                             <div className="intro__section">
                               <h5>Phone</h5>
-                              <p>08107837035</p>
+                              <p>08036426041, 09013101272</p>
                             </div>
                             <div className="intro__section">
                               <h5>Email</h5>
@@ -76,7 +76,8 @@ const ContactUs = () => {
                             <div className="intro__section">
                               <h5>Address</h5>
                               <p>
-                                5-7 Mandeville Pl, Marylebone, London W1U 3AY
+                                No. 4 North Fifth Avenue, Trans Ekulu, Enugu
+                                State.
                               </p>
                             </div>
                             <div className="copy-social--container">

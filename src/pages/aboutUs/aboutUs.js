@@ -14,7 +14,7 @@ const AboutUs = () => {
           <h1>Laundry, Dry Cleaning & Home Cleaning</h1>
           <p>
             From home cleaning to dry cleaning and laundry we’re here to help,
-            every step of the way.
+            every step of the way. Made for you and your business.
           </p>
           <div className="aae-about-us-hero--links">
             <a
@@ -41,8 +41,10 @@ const AboutUs = () => {
               Powering <em>homes and businesses </em>
             </h1>
             <p>
-              We built our service to help both individuals and families as well
-              as real estate partners managing the buildings in our community..
+              We built our service to help both individuals, families, and
+              organizations as well as industries to manage their cleaning
+              ecosystem. We clearly understand how important our services are to
+              them.
             </p>
           </aside>
           <aside className="aae-about-us--homes-buildings-container">
@@ -65,8 +67,8 @@ const AboutUs = () => {
               <div className="content-container">
                 <h5 className="homes-buildings-header">For Businesses</h5>
                 <p className="homes-buildings-content">
-                  We work with some of the biggest names in real estate to help
-                  bring modern amenities their residents expect
+                  We work with some of the biggest names in Enugu to help bring
+                  top quality cleaning and laundry service to their doorsteps.
                 </p>
                 <Link to="/services" className="secondary-link p-3">
                   Find out more <i className="fas fa-arrow-right ml-2"></i>
@@ -120,8 +122,9 @@ const AboutUs = () => {
               What <em>We're Known</em> for
             </h1>
             <p>
-              We built our service to help both individuals and families as well
-              as real estate partners managing the buildings in our community..
+              We have a very strong reputation for quality, satisfaction,
+              swiftness, and availability. These we assure through actions laced
+              with intent.
             </p>
           </aside>
           <aside className="aae-about-us--values-container">
@@ -131,20 +134,20 @@ const AboutUs = () => {
                   <i class="fas fa-soap fa-2x"></i>Clean Wash
                 </h5>
                 <p className="values-content">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Cupiditate harum doloribus quasi dignissimos et. Libero
-                  inventore nam non blanditiis cumque sunt.
+                  We set the pace for sparkle clean wash in all varieties of
+                  services we offer. If it's laundry, we got you. If it's home
+                  cleaning, we got you even more.
                 </p>
               </div>
               <div className="about-us--values-container known-delivery">
                 <h5 className="values-header">
                   <i class="fas fa-broom fa-2x"></i>
-                  Swift Delivery
+                  Swift Service
                 </h5>
                 <p className="values-content">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Cupiditate harum doloribus quasi dignissimos et. Libero
-                  inventore nam non blanditiis cumque sunt.
+                  We know that time is very important this is why we assure you
+                  of the fastest service you can ever think of. This is evident
+                  in all our services.
                 </p>
               </div>
             </div>
@@ -154,9 +157,9 @@ const AboutUs = () => {
                   <i class="fas fa-laugh-beam fa-2x"></i>Satisfaction
                 </h5>
                 <p className="values-content">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Cupiditate harum doloribus quasi dignissimos et. Libero
-                  inventore nam non blanditiis cumque sunt.
+                  We have a high satisfaction rate. We are very intentional with
+                  the application of our services and treat our customers with
+                  every respect they deserve.
                 </p>
               </div>
               <div className="about-us--values-container service">
@@ -165,9 +168,9 @@ const AboutUs = () => {
                   24/7 Service
                 </h5>
                 <p className="values-content">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Cupiditate harum doloribus quasi dignissimos et. Libero
-                  inventore nam non blanditiis cumque sunt.
+                  Our 24-hour Express delivery is 100% of basic price. We
+                  deliver to you no matter your location around our service
+                  region/outlets. All for very affordable rates.
                 </p>
               </div>
             </div>
@@ -177,7 +180,8 @@ const AboutUs = () => {
       <section className="aae-services--schedule-pickup-section">
         <aside className="schedule-pickup-section--content">
           <h1>
-            Save 3+ hours a week when you leave your laundry to the experts
+            Save valuable time every week when you leave your laundry to the
+            experts.
           </h1>
           <a
             href="https://wa.me/message/TOKS546P3O5PI1"
