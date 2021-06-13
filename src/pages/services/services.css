@@ -248,10 +248,16 @@
   color: white;
 }
 
+p.pickup-delivery-info {
+  font-style: italic;
+  color: #3b4a8fea;
+  font-weight: 600;
+}
+
 .delivery-info a.primary-link {
   background-color: #fff;
   color: var(--color-dark-blue);
-  padding: 0.6rem 1rem;
+  padding: 0.4rem 1rem;
   border-color: #fff;
 }
 .delivery-info .primary-link:hover {

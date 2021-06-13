@@ -85,7 +85,8 @@ const Services = () => {
       <section className="aae-services--schedule-pickup-section">
         <aside className="schedule-pickup-section--content">
           <h1>
-            Save 3+ hours a week when you leave your laundry to the experts
+            Save valuable time every week when you leave your laundry to the
+            experts.
           </h1>
           <a
             href="https://wa.me/message/TOKS546P3O5PI1"
@@ -96,7 +97,6 @@ const Services = () => {
             Schedule Pickup
           </a>
         </aside>
-        <aside className="schedule-pickup-section--overlay"></aside>
       </section>
     </div>
   );

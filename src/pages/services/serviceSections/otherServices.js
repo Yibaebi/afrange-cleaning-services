@@ -125,14 +125,17 @@ const OtherServices = () => {
               <i class="fas fa-broom"></i>
               <h2>Home Cleaning </h2>
               <p>
-                We work with the best specialty leather cleaners in the business
-                to ensure your garments are thoroughly cleaned while preserving
-                the important natural oils of the leather so they look their
-                best and last for years.
+                We clean all home type (block of flats, duplex, bungalow etc.).
               </p>
-              <Link to="/pricing" className="primary-link">
-                See Pricing <i className="fas fa-arrow-right ml-2"></i>
-              </Link>
+
+              <a
+                href="https://wa.me/message/TOKS546P3O5PI1"
+                target="_blank"
+                rel="noreferrer"
+                className="primary-link  mt-4 mx-auto"
+              >
+                Talk to our agent <i className="fas fa-caret-right ml-2"></i>
+              </a>
             </div>
           </section>
 
@@ -147,14 +150,18 @@ const OtherServices = () => {
               <i class="fas fa-building"></i>
               <h2>Office Cleaning</h2>
               <p>
-                We work with the best specialty leather cleaners in the business
-                to ensure your garments are thoroughly cleaned while preserving
-                the important natural oils of the leather so they look their
-                best and last for years.
+                Afrange provides cleaning services to small, medium and and
+                large scale offices. We are committed to excellence and
+                experience in providing cleaning services that stand out.
               </p>
-              <Link to="/pricing" className="primary-link">
-                See Pricing <i className="fas fa-arrow-right ml-2"></i>
-              </Link>
+              <a
+                href="https://wa.me/message/TOKS546P3O5PI1"
+                target="_blank"
+                rel="noreferrer"
+                className="primary-link  mt-4 mx-auto"
+              >
+                Talk to our agent <i className="fas fa-caret-right ml-2"></i>
+              </a>
             </div>
           </section>
           <figure>
@@ -165,14 +172,17 @@ const OtherServices = () => {
               <i className="fas fa-industry"></i>
               <h2>Industrial Cleaning </h2>
               <p>
-                We work with the best specialty leather cleaners in the business
-                to ensure your garments are thoroughly cleaned while preserving
-                the important natural oils of the leather so they look their
-                best and last for years.
+                We are currently expanding our reach to provide our quality
+                service to industries around our service region.
               </p>
-              <Link to="/pricing" className="primary-link">
-                See Pricing <i className="fas fa-arrow-right ml-2"></i>
-              </Link>
+              <a
+                href="https://wa.me/message/TOKS546P3O5PI1"
+                target="_blank"
+                rel="noreferrer"
+                className="primary-link  mt-4 mx-auto"
+              >
+                Talk to our agent <i className="fas fa-caret-right ml-2"></i>
+              </a>
             </div>
           </section>
 
@@ -185,12 +195,17 @@ const OtherServices = () => {
               <h2>Staff Training</h2>
               <p>
                 We manage and train laundry staffs for multiple organizations.
-                Client under our laundry training include Gold Value hotel
+                Client under our laundry training include Gold Value hotel in
                 Enugu.
               </p>
-              <Link to="/pricing" className="primary-link">
-                See Pricing <i className="fas fa-arrow-right ml-2"></i>
-              </Link>
+              <a
+                href="https://wa.me/message/TOKS546P3O5PI1"
+                target="_blank"
+                rel="noreferrer"
+                className="primary-link  mt-4 mx-auto"
+              >
+                Talk to our agent <i className="fas fa-caret-right ml-2"></i>
+              </a>
             </div>
           </section>
         </article>

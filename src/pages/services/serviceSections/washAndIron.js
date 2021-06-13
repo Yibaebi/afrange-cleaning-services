@@ -10,9 +10,9 @@ const WashAndIron = () => {
             <h2>Wash & Fold</h2>
             <p>This is the ideal service for your everyday laundry needs.</p>
             <p>
-              Save 3+ hours per week by having Afrange pick up your clothes
-              right from your door and return them freshly cleaned and perfectly
-              folded.
+              Save valuable time every week by having Afrange pick up your
+              clothes right from your door and return them freshly cleaned and
+              perfectly folded.
             </p>
 
             <Link to="/pricing" className="primary-link">
@@ -68,7 +68,10 @@ const WashAndIron = () => {
           <h2>Delivery</h2>
           <p>
             We pick up and deliver 7 days a week, always between 8pm and 10pm.
-            Free contactless delivery available with Afrange Drop.
+            We also provide laundry bag for clients on bulk washing.
+          </p>
+          <p className="pickup-delivery-info">
+            Pickup & delivery time: from 7:30am – 5:00pm, Monday – Saturday.
           </p>
           <aside className="aae-deliver--container">
             <div>
@@ -77,9 +80,9 @@ const WashAndIron = () => {
                   <h2>Affordable Delivery</h2>
                   <div className="delivery-info">
                     <p>
-                      Get unlimited free pickups and deliveries with Afrange.
-                      Waive the ₦7.95 Service Fee on all your Afrange orders for
-                      just ₦7.95/mo or ₦79/yr
+                      Our 24 hours Express delivery is 100% of basic price. Our
+                      pricing is flexible and solely depends on your location
+                      relative to our operational outlets.
                     </p>
                     <Link to="/pricing" className="primary-link">
                       Find Delivery Price
