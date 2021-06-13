@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { primaryLogo } from "../../assets";
 import "./footer.css";
 
@@ -9,10 +10,10 @@ const Footer = () => {
         <div class="aae-footer--mission-statement">
           {primaryLogo("white")}
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt culpa
-            sed non repellendus quas esse amet fugiat odio illum aperiam nisi,
-            dolores rem quos obcaecati, voluptatem quasi aliquam ipsa nobis!
-            Fuga, quaerat commodi.
+            We are a cleaning and hospitality management company with huge
+            experience in providing tailor-made consumer laundry and dry
+            cleaning, home/office cleaning, move in/out cleaning, industrial
+            cleaning and training services to diverse clients.
           </p>
         </div>
 
@@ -21,30 +22,18 @@ const Footer = () => {
             <h6>Services</h6>
             <ul class="footer-links">
               <li>
-                <a href="http://scanfcode.com/category/front-end-development/">
-                  Winter Coat
-                </a>
-              </li>
-              <li>
-                <a href="http://scanfcode.com/category/back-end-development/">
-                  Dry Clean
-                </a>
-              </li>
-              <li>
-                <a href="http://scanfcode.com/category/java-programming-language/">
-                  Ironing Services
-                </a>
-              </li>
-              <li>
-                <a href="http://scanfcode.com/category/android/">
-                  Wash and Fold
-                </a>
+                <Link to="/services#dry-cleaning">Dry Clean</Link>
               </li>
 
               <li>
-                <a href="http://scanfcode.com/contribute-at-scanfcode/">
-                  Customer Care
-                </a>
+                <Link to="/services#wash-and-iron">Ironing Services</Link>
+              </li>
+              <li>
+                <Link to="/services#wash-and-iron">Wash and Fold</Link>
+              </li>
+
+              <li>
+                <Link to="/contact-us#message">Customer Care</Link>
               </li>
             </ul>
           </div>
@@ -53,31 +42,26 @@ const Footer = () => {
             <h6>Customer Care</h6>
             <ul class="footer-links">
               <li>
-                <a href="http://scanfcode.com/about/">About Us</a>
+                <Link to="/about">About us</Link>
               </li>
               <li>
-                <a href="http://scanfcode.com/contact/">Contact Us</a>
+                <Link to="/contact-us#message">Contact Us</Link>
               </li>
               <li>
-                <a href="http://scanfcode.com/contribute-at-scanfcode/">
-                  Pricing
-                </a>
+                <Link to="/pricing">Pricing</Link>
               </li>
 
               <li>
-                <a href="http://scanfcode.com/privacy-policy/">
+                <a href="/src/assets/OVERVIEW_AFRANGE.docx" download>
                   Privacy Policy
                 </a>
-              </li>
-              <li>
-                <a href="http://scanfcode.com/sitemap/">Sitemap</a>
               </li>
             </ul>
           </div>
           <div className="aae-footer--contact-details">
             <h6>Contact details</h6>
-            <p>5-7 Mandeville Pl, Marylebone, London W1U 3AY</p>
-            <p>info@laundrapp.com</p>
+            <p>No. 4 North Fifth Avenue, Trans Ekulu, Enugu State.</p>
+            <p>info@afrange.com</p>
             <p>Mon - Sun: 7:00 am - 11:00 pm</p>
           </div>
         </div>
