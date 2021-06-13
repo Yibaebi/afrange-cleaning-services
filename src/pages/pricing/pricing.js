@@ -321,7 +321,6 @@ const Pricing = () => {
                     box on the left section Or
                   </div>
                   <div className="aae-about-us-hero--buttons my-0 justify-center flex mx-auto">
-                    {/* FIXME: remember to have an id of message to message box in contact page */}
                     <Link
                       to="/contact-us/#message"
                       className="secondary-link p-3  "

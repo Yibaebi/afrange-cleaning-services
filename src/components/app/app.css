@@ -68,6 +68,7 @@
   border-radius: 50%;
   position: relative;
   overflow: hidden;
+  position: relative;
 }
 
 .email-bt .text-call span {
@@ -82,6 +83,43 @@
   font-weight: 600;
   text-transform: uppercase;
   transition: opacity 0.3s linear;
+}
+
+.email-bt span.contact-us--direction {
+  background-color: #f2f8ff;
+  border: 2px solid rgba(153, 153, 153, 0.637);
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--color-dark-blue);
+  position: fixed;
+  display: flex;
+  width: 180px;
+  border-radius: 3px;
+  padding: 5px 3px;
+  text-align: center;
+  right: 120px;
+  bottom: 6.5%;
+}
+.email-bt span.contact-us--direction span {
+  text-align: center;
+  width: 100%;
+}
+
+.email-bt span.contact-us--direction::before {
+  position: absolute;
+  border: 2px solid rgba(153, 153, 153, 0.637);
+  border-color: rgba(153, 153, 153, 0.637) rgba(153, 153, 153, 0.637) #f2f8ff
+    #f2f8ff;
+  content: "";
+  right: -8px;
+  bottom: 24%;
+  padding: 5px 3px;
+  width: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  border-radius: 0 0 0 4px;
+  background-color: #f2f8ff;
 }
 
 .email-bt:hover {
