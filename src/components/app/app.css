@@ -198,4 +198,7 @@
   .aae-nav-bar--extra-info a {
     display: none;
   }
+  .aae-nav-bar--extra-info a.primary-logo {
+    display: initial;
+  }
 }
