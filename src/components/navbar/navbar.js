@@ -28,22 +28,46 @@ const NavBar = () => {
       </div>
 
       <ul className={`aae-nav-bar--links-wrapper`}>
-        <NavLink className="aae-nav-link" to="/home">
+        <NavLink
+          onClick={handleHamburgerOpen}
+          className="aae-nav-link"
+          to="/home"
+        >
           Home
         </NavLink>
-        <NavLink className="aae-nav-link" to="/about">
+        <NavLink
+          onClick={handleHamburgerOpen}
+          className="aae-nav-link"
+          to="/about"
+        >
           About
         </NavLink>
-        <NavLink className="aae-nav-link" to="/services">
+        <NavLink
+          onClick={handleHamburgerOpen}
+          className="aae-nav-link"
+          to="/services"
+        >
           Services
         </NavLink>
-        <NavLink className="aae-nav-link" to="/gallery">
+        <NavLink
+          onClick={handleHamburgerOpen}
+          className="aae-nav-link"
+          to="/gallery"
+        >
           Gallery
         </NavLink>
-        <NavLink className="aae-nav-link" to="/pricing">
+        <NavLink
+          onClick={handleHamburgerOpen}
+          className="aae-nav-link"
+          to="/pricing"
+        >
           Pricing
         </NavLink>
-        <NavLink className="aae-nav-link" to="/contact-us">
+        <NavLink
+          onClick={handleHamburgerOpen}
+          className="aae-nav-link"
+          to="/contact-us"
+        >
           Contact
         </NavLink>
         <button className="primary-button">Schedule Pickup</button>
