@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { DryCleaning } from "./serviceSections/dryCleaning";
 import { OtherServices } from "./serviceSections/otherServices";
@@ -7,6 +7,14 @@ import { WashAndIron } from "./serviceSections/washAndIron";
 import "./services.css";
 
 const Services = () => {
+  const [currentView, setCurrentView] = useState("#wash-and-iron");
+
+  useEffect(() => {
+    const view = window.location.hash;
+
+    window.addEventListener("hashchange", setCurrentView(view), false);
+    return () => window.removeEventListener("hashchange", () => {});
+  });
   return (
     <div className="aae-services container-styles">
       <nav className="aae-services--nav">
@@ -15,10 +23,7 @@ const Services = () => {
             className="aae-nav-link desktop-view"
             to="#wash-and-iron"
             isActive={() => {
-              if (
-                window.location.hash === "#wash-and-iron" ||
-                window.location.hash === ""
-              ) {
+              if (currentView === "#wash-and-iron" || currentView === "") {
                 return true;
               }
             }}
@@ -29,10 +34,7 @@ const Services = () => {
             className="aae-nav-link mobile-view"
             to="#wash-and-iron"
             isActive={() => {
-              if (
-                window.location.hash === "#wash-and-iron" ||
-                window.location.hash === ""
-              ) {
+              if (currentView === "#wash-and-iron" || currentView === "") {
                 return true;
               }
             }}
@@ -44,7 +46,7 @@ const Services = () => {
             className="aae-nav-link"
             to="#dry-clean"
             isActive={() => {
-              if (window.location.hash === "#dry-clean") {
+              if (currentView === "#dry-clean") {
                 return true;
               }
             }}
@@ -55,7 +57,15 @@ const Services = () => {
             className="aae-nav-link"
             to="#other-services"
             isActive={() => {
-              if (window.location.hash === "#other-services") {
+              if (
+                currentView === "#other-services" ||
+                currentView === "#hang-dry" ||
+                currentView === "#cloth-repairs" ||
+                currentView === "#home-cleaning" ||
+                currentView === "#industrial-cleaning" ||
+                currentView === "#office-cleaning" ||
+                currentView === "#staff-training"
+              ) {
                 return true;
               }
             }}
@@ -64,10 +74,9 @@ const Services = () => {
           </NavLink>
         </ul>
       </nav>
-      {window.location.hash === "#wash-and-iron" ||
-      window.location.hash === "" ? (
+      {currentView === "#wash-and-iron" || currentView === "" ? (
         <WashAndIron />
-      ) : window.location.hash === "#dry-clean" ? (
+      ) : currentView === "#dry-clean" ? (
         <DryCleaning />
       ) : (
         <OtherServices />
@@ -78,7 +87,14 @@ const Services = () => {
           <h1>
             Save 3+ hours a week when you leave your laundry to the experts
           </h1>
-          <button className="primary-button">Schedule Pickup</button>
+          <a
+            href="https://wa.me/message/TOKS546P3O5PI1"
+            target="_blank"
+            rel="noreferrer"
+            className="primary-link"
+          >
+            Schedule Pickup
+          </a>
         </aside>
         <aside className="schedule-pickup-section--overlay"></aside>
       </section>

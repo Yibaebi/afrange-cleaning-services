@@ -34,9 +34,15 @@ const WhereWeAre = () => {
             <div className="square"></div>
           </div>
           <div className="shadow"></div>
-          <button className="primary-button">
+          {/* //FIXME: connect link to google maps */}
+          <a
+            href="https://wa.me/message/TOKS546P3O5PI1"
+            target="_blank"
+            rel="noreferrer"
+            className="primary-link"
+          >
             Get Directions <i className="fas fa-directions ml-2"></i>
-          </button>
+          </a>
         </aside>
       </div>
     </div>

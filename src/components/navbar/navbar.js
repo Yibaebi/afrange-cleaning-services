@@ -70,7 +70,14 @@ const NavBar = () => {
         >
           Contact
         </NavLink>
-        <button className="primary-button">Schedule Pickup</button>
+        <a
+          className="primary-link"
+          href="https://wa.me/message/TOKS546P3O5PI1"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Schedule Pickup
+        </a>
       </ul>
     </nav>
   );

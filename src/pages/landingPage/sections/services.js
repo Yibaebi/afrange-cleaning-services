@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import PickADate from "../../../assets/landing-page/pick-a-date.jpg";
 import PickUp from "../../../assets/landing-page/pickup.jpg";
@@ -31,9 +32,9 @@ const Services = () => {
               our agents.
             </p>
 
-            <button className="primary-button mt-2">
+            <Link to="/pricing/#pricing-table" className="primary-link mt-2">
               Go to Pricing Table <i className="fas fa-arrow-right ml-2"></i>
-            </button>
+            </Link>
           </div>
           <div className="service-item">
             <img src={PickADate} alt="" />
@@ -59,9 +60,9 @@ const Services = () => {
               We'll clean your items at our nearest cleaning partner facility,
               then return them to you in as little as 48 hours.
             </p>
-            <button className="secondary-button mt-2">
+            <Link to="/pricing/#delivery" className="secondary-link mt-2">
               See Delivery Details <i className="fas fa-caret-right ml-2"></i>
-            </button>
+            </Link>
           </div>
         </section>
       </aside>

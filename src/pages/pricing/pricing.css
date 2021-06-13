@@ -255,6 +255,7 @@ h2.suitable-plan {
 
 /* Cloth type number */
 .selector__cloth-type-number .rw-widget-input.service-type {
+  margin: 0 auto;
   margin-top: 5px;
   width: 145px;
 }
@@ -277,12 +278,16 @@ h2.suitable-plan {
 }
 
 .cloth-type-number--item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
   padding-bottom: 10px;
   border-bottom: 1px solid #a5afda57;
   background-color: #f2f8ff;
   padding: 10px;
   max-width: 200px;
+  width: 100%;
 }
 .cloth-type-number--item:nth-of-type(odd) {
   border-right: 1px solid #a5afda57;
@@ -309,11 +314,16 @@ h2.suitable-plan {
 .pricing-customization__section {
   background-color: white;
 }
+.pricing-customization__section p {
+  margin-bottom: 20px;
+}
 
-.pricing-customization__section .primary-button,
-.pricing-customization__section .primary-button:focus {
+.pricing-customization__section .primary-link {
   margin-top: 20px;
   border-color: #fff;
+}
+.pricing-customization__section .secondary-link {
+  margin-top: 20px;
 }
 
 .price-tag {

@@ -1,6 +1,6 @@
 /* Hero Wrapper Styles */
 .aae-landing-hero--container.container-styles {
-  margin: 0px;
+  margin: 0 auto;
   padding-bottom: 0px;
   margin-bottom: 80px;
 }
@@ -51,6 +51,11 @@
   object-fit: cover;
 }
 
+@media screen and (min-width: 1500px) {
+  .aae-landing-hero--container.container-styles {
+    padding: 0px;
+  }
+}
 @media screen and (max-width: 1125px) {
   .aae-landing-hero--wrapper {
     padding: 100px 2em;
@@ -92,14 +97,14 @@
     padding-bottom: 40px;
   }
 
-  .aae-landing-hero--buttons {
+  .aae-landing-hero--links {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .aae-landing-hero--buttons button {
+  .aae-landing-hero--links a {
     margin: 0px;
-    margin-top: 20px;
+    margin-top: 15px;
   }
 }
 @media screen and (max-width: 700px) {

@@ -231,18 +231,27 @@
   width: 300px;
   z-index: -1;
 }
-.aae-landing-pricing--section .secondary-button {
+.aae-landing-pricing--section .secondary-link {
   margin: 30px 0px;
 }
 
+@media screen and (max-width: 700px) {
+  .aae-landing-pricing--section {
+    background-position: 200%;
+  }
+  .aae-landing-pricing--section
+    .landing-services--content-header
+    .naira-icon
+    svg {
+    display: none;
+  }
+}
 @media screen and (max-width: 480px) {
   .aae-landing-pricing--section.container-styles {
     padding-left: 0px;
     padding-right: 0px;
   }
-  .landing-services--content-header .naira-icon svg {
-    display: none;
-  }
+
   .pricing-item {
     width: 100%;
   }

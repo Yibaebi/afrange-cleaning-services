@@ -1,5 +1,5 @@
 import React from "react";
-import { deliveryBus } from "../../../assets";
+import { Link } from "react-router-dom";
 
 const WashAndIron = () => {
   return (
@@ -15,9 +15,9 @@ const WashAndIron = () => {
               folded.
             </p>
 
-            <button className="primary-button">
+            <Link to="/pricing" className="primary-link">
               See Pricing Info <i className="fas fa-arrow-right ml-2"></i>
-            </button>
+            </Link>
           </aside>
           <aside className="wash-fold-service--intro--image">
             <img
@@ -81,9 +81,9 @@ const WashAndIron = () => {
                       Waive the ₦7.95 Service Fee on all your Afrange orders for
                       just ₦7.95/mo or ₦79/yr
                     </p>
-                    <button className="primary-button">
+                    <Link to="/pricing" className="primary-link">
                       Find Delivery Price
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

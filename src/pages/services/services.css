@@ -239,15 +239,6 @@
   width: 100%;
 }
 
-.delivery-preview a {
-  color: #fff;
-  display: inline-block;
-  font-size: 12px;
-  opacity: 0.6;
-  margin-top: 30px;
-  text-decoration: none;
-}
-
 .delivery-info {
   display: flex;
   justify-content: space-between;
@@ -257,13 +248,13 @@
   color: white;
 }
 
-.delivery-info button {
+.delivery-info a.primary-link {
   background-color: #fff;
   color: var(--color-dark-blue);
   padding: 0.6rem 1rem;
   border-color: #fff;
 }
-.delivery-info button:hover {
+.delivery-info .primary-link:hover {
   box-shadow: 3px 0 50px 0 rgb(242 248 255 / 30%);
 }
 
@@ -319,7 +310,7 @@
   margin-bottom: 3rem;
 }
 
-.schedule-pickup-section--content button {
+.schedule-pickup-section--content .primary-link {
   border-color: white;
 }
 

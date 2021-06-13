@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { nairaIcon } from "../../../assets";
-import DeliveryBus from "../../../assets/landing-page/delivery-bus.svg";
+
 import "./pricing.css";
 
 const Pricing = () => {
@@ -231,10 +232,10 @@ const Pricing = () => {
             </div>
           </div>
         </div>
-        <button className="secondary-button">
+        <Link to="/pricing" className="secondary-link">
           See more pricing info
           <i className="fas fa-arrow-right ml-2"></i>
-        </button>
+        </Link>
       </div>
       <div className="svg-blob-1">
         <svg

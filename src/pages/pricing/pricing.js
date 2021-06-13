@@ -3,7 +3,7 @@ import "react-widgets/styles.css";
 import Collapse from "rc-collapse";
 import "rc-collapse/assets/index.css";
 import { motion } from "framer-motion";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { DropdownList, Listbox, NumberPicker } from "react-widgets/cjs";
 
 import { PricingCard } from "../../components";
@@ -93,7 +93,13 @@ const Pricing = () => {
             - Flexible. <br />
             - Straightforward. <br />- No hidden costs.
           </p>
-          <button className="primary-button">Go to pricing table</button>
+          <a
+            href="#pricing-table"
+            rel="noreferrer"
+            className="primary-link my-5"
+          >
+            Go to pricing table
+          </a>
           <span className="naira-icon">{nairaIcon()}</span>
         </motion.aside>
         <h2 className="suitable-plan">
@@ -315,9 +321,13 @@ const Pricing = () => {
                     box on the left section Or
                   </div>
                   <div className="aae-about-us-hero--buttons my-0 justify-center flex mx-auto">
-                    <button className="secondary-button p-3  ">
+                    {/* FIXME: remember to have an id of message to message box in contact page */}
+                    <Link
+                      to="/contact-us/#message"
+                      className="secondary-link p-3  "
+                    >
                       <i className="fas fa-mail-bulk mr-2"></i> Contact Us
-                    </button>
+                    </Link>
                   </div>
                 </>
               )}
@@ -339,16 +349,19 @@ const Pricing = () => {
                 <div className="mt-7 justify-center items-center flex flex-col mx-auto">
                   <p className="not-satisfied-info">Not satisfied? </p>
 
-                  <button className="secondary-button p-3  ">
+                  <Link
+                    to="/contact-us/#message"
+                    className="secondary-link p-3  "
+                  >
                     <i className="fas fa-mail-bulk mr-2"></i> Send Feedback
-                  </button>
+                  </Link>
                 </div>
               </section>
             )}
           </div>
         </aside>
       </section>
-      <h2 className="suitable-plan pricing-table">
+      <h2 className="suitable-plan pricing-table" id="pricing-table">
         <i className="fas fa-table mr-3"></i>Our Pricing Table
       </h2>
 

@@ -45,7 +45,8 @@
   transition: all 0.2s ease-in-out;
   position: relative;
 }
-.aae-nav-bar--links-wrapper button {
+
+.aae-nav-bar--links-wrapper a.primary-link {
   margin-left: 20px;
   font-size: 0.9rem;
 }
@@ -183,7 +184,7 @@
 
     .aae-nav-bar--container.container-styles.open
       .aae-nav-bar--links-wrapper
-      button {
+      .primary-link {
       display: none;
     }
 

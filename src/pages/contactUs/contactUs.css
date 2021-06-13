@@ -13,6 +13,7 @@
   position: relative;
   flex-direction: column;
   align-items: center;
+  scroll-behavior: smooth;
 }
 .aae-contact-us.container-styles .container {
   background-color: transparent;
@@ -91,7 +92,7 @@
   color: #a09a93;
 }
 
-.contact-us__form--container button {
+.contact-us__form--container .primary-link {
   border-color: #fff;
   font-weight: 400;
   font-size: 0.9rem;
@@ -158,7 +159,7 @@
   margin-right: auto;
 }
 
-.screen-header-button {
+.screen-header-link {
   display: inline-block;
   width: 8px;
   height: 8px;
@@ -179,15 +180,12 @@
   background: white;
 }
 
-.app-form-group .secondary-button {
+.app-form-group .primary-link,
+.app-form-group .primary-link:focus {
   width: 100%;
   font-weight: 400;
   font-size: 0.9em;
-  margin-top: 30px;
   padding: 6px 15px;
-}
-
-.app-form-group .secondary-button:hover {
   border-color: #fff;
 }
 

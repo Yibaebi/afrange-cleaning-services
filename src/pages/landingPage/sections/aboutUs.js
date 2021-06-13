@@ -68,7 +68,7 @@ const AboutUs = () => {
             </figure>
             <figure class="gallery__item gallery__item--4">
               <aside className="gallery__item--desc">
-                <Link to="">
+                <Link to="/services">
                   Ironing <i className="fas fa-caret-right ml-3"></i>
                 </Link>
               </aside>
@@ -81,7 +81,7 @@ const AboutUs = () => {
 
             <figure class="gallery__item gallery__item--1">
               <aside className="gallery__item--desc">
-                <Link to="">
+                <Link to="/services">
                   Industrial Cleaning
                   <i className="fas fa-caret-right ml-3"></i>
                 </Link>
@@ -94,7 +94,7 @@ const AboutUs = () => {
             </figure>
             <figure class="gallery__item gallery__item--2">
               <aside className="gallery__item--desc">
-                <Link to="">
+                <Link to="/services">
                   Cloth Repairs <i className="fas fa-caret-right ml-3"></i>
                 </Link>
               </aside>
@@ -107,7 +107,7 @@ const AboutUs = () => {
 
             <figure class="gallery__item gallery__item--7">
               <aside className="gallery__item--desc">
-                <Link to="">
+                <Link to="/services">
                   Office Cleaning <i className="fas fa-caret-right ml-3"></i>
                 </Link>
               </aside>
@@ -119,7 +119,7 @@ const AboutUs = () => {
             </figure>
             <figure class="gallery__item gallery__item--5">
               <aside className="gallery__item--desc">
-                <Link to="">
+                <Link to="/services">
                   Delivery <i className="fas fa-caret-right ml-3"></i>
                 </Link>
               </aside>
@@ -131,7 +131,7 @@ const AboutUs = () => {
             </figure>
             <figure class="gallery__item gallery__item--6">
               <aside className="gallery__item--desc">
-                <Link to="">
+                <Link to="/services">
                   Wash and Fold <i className="fas fa-caret-right ml-3"></i>
                 </Link>
               </aside>
@@ -143,9 +143,9 @@ const AboutUs = () => {
             </figure>
           </div>
         </div>
-        <button className="primary-button my-7">
+        <Link to="/services" className="primary-link my-7">
           See more information <i className="fas fa-caret-right ml-3"></i>
-        </button>
+        </Link>
       </section>
     </section>
   );

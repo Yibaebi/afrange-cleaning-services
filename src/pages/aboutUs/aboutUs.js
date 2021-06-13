@@ -1,6 +1,8 @@
 import React from "react";
-import OurStory from "../../assets/about-us/our story.jpg";
+import { Link } from "react-router-dom";
+
 import AboutUsImg from "../../assets/about-us/laundry-hero-image-about-us.jpg";
+
 import "./aboutUs.css";
 
 const AboutUs = () => {
@@ -14,13 +16,18 @@ const AboutUs = () => {
             From home cleaning to dry cleaning and laundry we’re here to help,
             every step of the way.
           </p>
-          <div className="aae-about-us-hero--buttons">
-            <button className="primary-button mr-6">
+          <div className="aae-about-us-hero--links">
+            <a
+              href="https://wa.me/message/TOKS546P3O5PI1"
+              target="_blank"
+              rel="noreferrer"
+              className="primary-link mr-6"
+            >
               Book a Service <i className="fas fa-arrow-right ml-2"></i>
-            </button>
-            <button className="secondary-button p-3">
+            </a>
+            <Link to="/contact-us" className="secondary-link p-3">
               <i className="fas fa-mail-bulk mr-2"></i> Send us feedback
-            </button>
+            </Link>
           </div>
         </div>
       </header>
@@ -48,9 +55,9 @@ const AboutUs = () => {
                   dry-cleaning, and home cleaning services at the tap of a
                   button.
                 </p>
-                <button className="primary-button">
+                <Link to="/services" className="primary-link">
                   Find out more<i className="fas fa-arrow-right ml-2"></i>
-                </button>
+                </Link>
               </div>
             </div>
             <div className="homes-buildings-container">
@@ -61,9 +68,9 @@ const AboutUs = () => {
                   We work with some of the biggest names in real estate to help
                   bring modern amenities their residents expect
                 </p>
-                <button className="secondary-button p-3">
+                <Link to="/services" className="secondary-link p-3">
                   Find out more <i className="fas fa-arrow-right ml-2"></i>
-                </button>
+                </Link>
               </div>
             </div>
           </aside>
@@ -95,11 +102,11 @@ const AboutUs = () => {
               we are not afraid to think outside the box in providing cleaning
               solutions tailored to our clients.
             </p>
-            <div className="aae-about-us-hero--buttons">
-              <button className="primary-button">
+            <div className="aae-about-us-hero--links">
+              <Link to="/services" className="primary-link">
                 Find out more
                 <i className="fas fa-arrow-right ml-2"></i>
-              </button>
+              </Link>
             </div>
           </aside>
         </section>
@@ -172,7 +179,14 @@ const AboutUs = () => {
           <h1>
             Save 3+ hours a week when you leave your laundry to the experts
           </h1>
-          <button className="primary-button">Schedule Pickup</button>
+          <a
+            href="https://wa.me/message/TOKS546P3O5PI1"
+            target="_blank"
+            rel="noreferrer"
+            className="primary-link"
+          >
+            Schedule Pickup
+          </a>
         </aside>
       </section>
     </div>

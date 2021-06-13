@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "./hero.css";
 
 const Hero = () => {
@@ -12,13 +14,18 @@ const Hero = () => {
             Afrange picks up, cleans, and delivers your laundry and dry
             cleaning.
           </p>
-          <div className="aae-landing-hero--buttons">
-            <button className="primary-button mr-6">
+          <div className="aae-landing-hero--links">
+            <a
+              href="https://wa.me/message/TOKS546P3O5PI1"
+              target="_blank"
+              rel="noreferrer"
+              className="primary-link mr-6"
+            >
               Book a Service <i className="fas fa-arrow-right ml-2"></i>
-            </button>
-            <button className="secondary-button p-3">
+            </a>
+            <Link to="/contact-us" className="secondary-link p-3">
               <i className="fas fa-mail-bulk mr-2"></i> Contact Us
-            </button>
+            </Link>
           </div>
         </aside>
         <aside className="aae-landing-hero--image">

@@ -29,7 +29,9 @@ const ContactUs = () => {
           <p>
             Let's start something great together. Get in touch with us today.
           </p>
-          <i className="fas fa-chevron-down fa-2x"></i>
+          <a href="#message" rel="noreferrer">
+            <i className="fas fa-chevron-down fa-2x"></i>
+          </a>
         </motion.section>
         <InView triggerOnce threshold={0.05}>
           {({ inView, ref }) => (
@@ -39,6 +41,7 @@ const ContactUs = () => {
               animate={inView ? { opacity: 1, y: 0 } : ""}
               exit={{ opacity: 0, y: 200 }}
               className="contact-us__form--container"
+              id="message"
             >
               <aside className="contact-us__form--intro">
                 <div className="background">
@@ -167,7 +170,7 @@ const ContactUs = () => {
                               <button
                                 type="submit"
                                 disabled={state.submitting}
-                                className="primary-button"
+                                className="primary-link"
                               >
                                 Send us a message
                               </button>

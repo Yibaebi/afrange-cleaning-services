@@ -1,5 +1,6 @@
-import { AnimatePresence } from "framer-motion";
 import React from "react";
+import { AnimatePresence } from "framer-motion";
+
 import { primaryLogo } from "../../assets";
 import { Footer } from "../footer/footer";
 import { NavBar } from "../navbar/navbar";
@@ -31,7 +32,14 @@ const Afrange = () => {
               </p>
             </div>
           </div>
-          <button className="primary-button">Schedule Pickup</button>
+          <a
+            href="https://wa.me/message/TOKS546P3O5PI1"
+            target="_blank"
+            rel="noreferrer"
+            className="primary-link"
+          >
+            Schedule Pickup
+          </a>
         </aside>
 
         <header>
@@ -41,8 +49,9 @@ const Afrange = () => {
           <Router />
         </main>
         <a
-          class="email-bt"
+          class="email-bt link"
           href="https://wa.me/message/TOKS546P3O5PI1"
+          target="_blank"
           target="_blank"
           rel="noreferrer"
         >

@@ -31,11 +31,12 @@
   padding: 20px;
   border-radius: 0px 0px 20px 20px;
 }
-.aae-where-we-are.container-styles button {
+.aae-where-we-are.container-styles a {
   margin: 0 auto;
 }
-.aae-landing-hero--content {
+.aae-where-we-are.aae-landing-hero--content {
   margin: 0 auto;
+  max-width: 250px;
 }
 
 .box {

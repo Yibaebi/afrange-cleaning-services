@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import industryWorker from "../../../assets/services/industry worker.jpg";
 import staffTraining from "../../../assets/services/training.jpg";
 
@@ -40,7 +41,7 @@ const OtherServices = () => {
                 </a>
               </li>
               <li className="other-services-nav--item">
-                <a href="#hang-dry">
+                <a href="#staff-training">
                   Staff Training <i className="fas fa-angle-right ml-2"></i>
                 </a>
               </li>
@@ -74,7 +75,7 @@ const OtherServices = () => {
               alt=""
             />
           </figure>
-          <section className="other-services--section">
+          <section className="other-services--section" id="cloth-repairs">
             <div>
               <i className="fas fa-cut"></i>
               <h2>Cloth Repairs </h2>
@@ -85,9 +86,9 @@ const OtherServices = () => {
                 that are sent for repair are also Dry Cleaned and charged at our
                 regular price per garment.
               </p>
-              <button className="primary-button">
+              <Link to="/pricing" className="primary-link">
                 See Pricing <i className="fas fa-arrow-right ml-2"></i>
-              </button>
+              </Link>
             </div>
           </section>
 
@@ -97,7 +98,7 @@ const OtherServices = () => {
               alt=""
             />
           </figure>
-          <section className="other-services--section">
+          <section className="other-services--section" id="hang-dry">
             <div>
               <i class="fas fa-tshirt"></i>
               <h2>Hang Dry </h2>
@@ -106,9 +107,9 @@ const OtherServices = () => {
                 should avoid heat from the dryer. Machine-washed, hung to dry,
                 and returned neatly folded!
               </p>
-              <button className="primary-button">
+              <Link to="/pricing" className="primary-link">
                 See Pricing <i className="fas fa-arrow-right ml-2"></i>
-              </button>
+              </Link>
             </div>
           </section>
 
@@ -119,7 +120,7 @@ const OtherServices = () => {
               alt=""
             />
           </figure>
-          <section className="other-services--section">
+          <section className="other-services--section" id="home-cleaning">
             <div>
               <i class="fas fa-broom"></i>
               <h2>Home Cleaning </h2>
@@ -129,9 +130,9 @@ const OtherServices = () => {
                 the important natural oils of the leather so they look their
                 best and last for years.
               </p>
-              <button className="primary-button">
+              <Link to="/pricing" className="primary-link">
                 See Pricing <i className="fas fa-arrow-right ml-2"></i>
-              </button>
+              </Link>
             </div>
           </section>
 
@@ -141,7 +142,7 @@ const OtherServices = () => {
               alt=""
             />
           </figure>
-          <section className="other-services--section">
+          <section className="other-services--section" id="office-cleaning">
             <div>
               <i class="fas fa-building"></i>
               <h2>Office Cleaning</h2>
@@ -151,15 +152,15 @@ const OtherServices = () => {
                 the important natural oils of the leather so they look their
                 best and last for years.
               </p>
-              <button className="primary-button">
+              <Link to="/pricing" className="primary-link">
                 See Pricing <i className="fas fa-arrow-right ml-2"></i>
-              </button>
+              </Link>
             </div>
           </section>
           <figure>
             <img src={industryWorker} alt="industrial cleaner" />
           </figure>
-          <section className="other-services--section">
+          <section className="other-services--section" id="industrial-cleaning">
             <div>
               <i className="fas fa-industry"></i>
               <h2>Industrial Cleaning </h2>
@@ -169,16 +170,16 @@ const OtherServices = () => {
                 the important natural oils of the leather so they look their
                 best and last for years.
               </p>
-              <button className="primary-button">
+              <Link to="/pricing" className="primary-link">
                 See Pricing <i className="fas fa-arrow-right ml-2"></i>
-              </button>
+              </Link>
             </div>
           </section>
 
           <figure>
             <img src={staffTraining} alt="staff training" />
           </figure>
-          <section className="other-services--section">
+          <section className="other-services--section" id="staff-training">
             <div>
               <i className="fas fa-chalkboard-teacher"></i>
               <h2>Staff Training</h2>
@@ -187,9 +188,9 @@ const OtherServices = () => {
                 Client under our laundry training include Gold Value hotel
                 Enugu.
               </p>
-              <button className="primary-button">
+              <Link to="/pricing" className="primary-link">
                 See Pricing <i className="fas fa-arrow-right ml-2"></i>
-              </button>
+              </Link>
             </div>
           </section>
         </article>

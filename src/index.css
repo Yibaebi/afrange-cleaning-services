@@ -21,6 +21,7 @@ ol {
     rgba(59, 74, 143, 0.8018382352941176) 0%,
     rgba(236, 84, 41, 0.2962359943977591) 90%
   );
+  scroll-behavior: smooth;
 }
 
 body {
@@ -55,10 +56,10 @@ a {
   }
 }
 
-.primary-button,
-.secondary-button,
-.primary-button:focus,
-.secondary-button:focus {
+.primary-link,
+.secondary-link,
+.primary-link:focus,
+.secondary-link:focus {
   background-color: var(--color-dark-blue);
   color: white;
   font-weight: 400;
@@ -75,24 +76,24 @@ a {
   width: fit-content;
 }
 
-.primary-button:hover {
+.primary-link:hover {
   background-color: white;
   color: var(--color-dark-blue);
   border: 1.2px solid var(--color-dark-blue);
 }
 
-.secondary-button,
-.secondary-button:focus {
+.secondary-link,
+.secondary-link:focus {
   background-color: white;
   color: var(--complementary-orange);
   border: 1.2px solid var(--complementary-orange);
 }
 
-.secondary-button:hover {
+.secondary-link:hover {
   background-color: var(--complementary-orange);
   color: white;
 }
-.secondary-button--green:hover {
+.secondary-link--green:hover {
   background-color: var(--complementary-goblin);
   color: white;
 }

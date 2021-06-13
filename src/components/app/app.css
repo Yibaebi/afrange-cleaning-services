@@ -1,10 +1,13 @@
 .aae-nav-bar--extra-info {
   height: 75px;
+  padding: 0px 4em;
   position: absolute;
   z-index: 998;
   background-color: var(--color-dark-blue);
   width: 100%;
-  padding: 0em 4em;
+  max-width: 1500px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,11 +31,11 @@
   align-items: center;
 }
 
-.aae-nav-bar--extra-info button {
+.aae-nav-bar--extra-info a {
   border: 1px solid white !important;
 }
 
-.aae-nav-bar--extra-info button:hover {
+.aae-nav-bar--extra-info a:hover {
   border: 1px solid white !important;
 }
 
@@ -187,7 +190,7 @@
   .aae-nav-bar--extra-info {
     justify-content: center;
   }
-  .aae-nav-bar--extra-info button {
+  .aae-nav-bar--extra-info a {
     display: none;
   }
 }

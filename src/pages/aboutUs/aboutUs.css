@@ -2,7 +2,7 @@
   padding-top: 60px;
 }
 
-.button-container {
+.link-container {
   display: flex;
   justify-content: center;
 }
@@ -42,7 +42,7 @@
   margin-bottom: 25px;
 }
 
-.aae-about-us-hero--buttons {
+.aae-about-us-hero--links {
   margin-top: 20px;
 }
 
@@ -334,7 +334,7 @@
   width: 57%;
 }
 
-.landing-services--content-header.our-story .aae-about-us-hero--buttons {
+.landing-services--content-header.our-story .aae-about-us-hero--links {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -380,11 +380,16 @@
     width: 90%;
   }
 
-  .aae-about-us-hero--buttons {
+  .aae-about-us-hero--links {
+    display: flex;
+    flex-direction: column;
     margin-top: 15px;
   }
-  .aae-about-us-hero--buttons button {
+  .aae-about-us-hero--links a {
     margin-top: 10px;
+  }
+  .landing-services--content-header.our-story .aae-about-us-hero--links {
+    flex-direction: row;
   }
 
   .landing-services--content-header.homes-buildings i {
