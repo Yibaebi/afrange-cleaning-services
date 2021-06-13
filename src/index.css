@@ -49,6 +49,12 @@ a {
   margin-bottom: 80px;
 }
 
+@media screen and (max-width: 480px) {
+  .container-styles {
+    margin-bottom: 40px;
+  }
+}
+
 .primary-button,
 .secondary-button,
 .primary-button:focus,

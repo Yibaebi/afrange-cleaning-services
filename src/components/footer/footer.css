@@ -88,7 +88,7 @@
 
 @media screen and (max-width: 1150px) {
   .aae-footer.container-styles {
-    padding-left: 40px;
+    padding-left: 4em;
   }
   .aae-footer--info-container {
     display: flex;
@@ -110,6 +110,9 @@
     width: 100%;
     flex-direction: column;
   }
+  .aae-footer .copy-social--container {
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 500px) {
   .aae-footer.container-styles {
@@ -122,9 +125,7 @@
     margin-bottom: 30px;
     width: 100%;
   }
-  .aae-footer .copy-social--container {
-    flex-direction: column;
-  }
+
   .aae-footer .copyright-text {
     text-align: center;
     margin-bottom: 20px;

@@ -39,7 +39,7 @@
 }
 
 .box {
-  width: 280px;
+  width: 250px;
   height: 150px;
   margin-top: 20px;
   background: none;
@@ -140,5 +140,24 @@
   100% {
     transform: scale(1);
     opacity: 0.2;
+  }
+}
+
+@media screen and (max-width: 725px) {
+  .aae-where-we-are.container-styles {
+    flex-direction: column;
+  }
+  .aae-where-we-are.container-styles iframe {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .aae-where-we-are.container-styles,
+  .aae-where-we-are.landing-services--content-header {
+    width: 100%;
+    border-radius: 0px;
+  }
+  .aae-where-we-are.landing-services--content-header i {
+    display: none;
   }
 }

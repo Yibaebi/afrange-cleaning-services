@@ -19,9 +19,9 @@ const AboutUs = () => {
               Defining the Future of <em>Cleaning Servies</em>
             </h1>
             <p>
-              BrainStation offers a full spectrum of cutting-edge digital
-              learning, giving professionals and organizations of all sizes the
-              skills they need to thrive in the digital economy.
+              Afrange offers a full spectrum of cutting-edge digital learning,
+              giving professionals and organizations of all sizes the skills
+              they need to thrive in the digital economy.
             </p>
             <div className="key-info__container">
               <aside className="key-info__item">

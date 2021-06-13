@@ -120,6 +120,7 @@
 }
 
 .container {
+  max-width: unset;
   flex: 0 1 700px;
   margin: auto;
   padding: 10px;
@@ -371,6 +372,14 @@
   .aae-contact-us.container-styles {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .screen {
+    border-radius: 0px;
+  }
+
+  .screen-header {
+    border-radius: 0px;
   }
   .contact-us__form--container {
     padding: 30px 10px;

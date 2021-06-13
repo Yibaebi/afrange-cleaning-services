@@ -16,9 +16,9 @@ const Services = () => {
             <em>Redefining Ease</em> with our simple process
           </h1>
           <p>
-            BrainStation offers a full spectrum of cutting-edge digital
-            learning, giving professionals and organizations of all sizes the
-            skills they need to thrive in the digital economy.
+            Afrange offers a full spectrum of cutting-edge digital learning,
+            giving professionals and organizations of all sizes the skills they
+            need to thrive in the digital economy.
           </p>
         </aside>
 

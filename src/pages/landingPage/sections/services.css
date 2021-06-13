@@ -63,3 +63,14 @@
   margin-bottom: 1.2em;
   object-fit: cover;
 }
+
+@media screen and (max-width: 480px) {
+  .aae-landing-services-container.container-styles {
+    padding-left: 0px;
+    padding-right: 0px;
+    border-radius: 0px;
+  }
+  .landing-services--content {
+    border-radius: 0px;
+  }
+}

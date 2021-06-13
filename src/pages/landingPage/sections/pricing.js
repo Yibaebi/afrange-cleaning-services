@@ -12,7 +12,7 @@ const Pricing = () => {
           We Offer <em>Very Affordable Prices</em>
         </h1>
         <p>
-          BrainStation offers a full spectrum of cutting-edge digital learning,
+          Afrange offers a full spectrum of cutting-edge digital learning,
           giving professionals and organizations of all sizes the skills they
           need to thrive in the digital economy.
         </p>
@@ -77,9 +77,9 @@ const Pricing = () => {
                   />
                 </svg>
                 <aside className="pricing-offer-details">
-                  <p>Per use $7.95 Service Fee (per order)</p>
-                  <p>+$5 Next-Day Delivery (per order)</p>
-                  <p> $30 Minimum Order</p>
+                  <p>Per use ₦7.95 Service Fee (per order)</p>
+                  <p>+₦5 Next-Day Delivery (per order)</p>
+                  <p> ₦30 Minimum Order</p>
                 </aside>
               </div>
             </div>
@@ -148,9 +148,9 @@ const Pricing = () => {
                   />
                 </svg>
                 <aside className="pricing-offer-details">
-                  <p>Per use $7.95 Service Fee</p>
-                  <p>+$5 Next-Day Delivery</p>
-                  <p> $30 Minimum Order</p>
+                  <p>Per use ₦7.95 Service Fee</p>
+                  <p>+₦5 Next-Day Delivery</p>
+                  <p> ₦30 Minimum Order</p>
                 </aside>
               </div>
             </div>
@@ -219,9 +219,9 @@ const Pricing = () => {
                   />
                 </svg>
                 <aside className="pricing-offer-details">
-                  <p>Per use $7.95 Service Fee (per order)</p>
-                  <p>+$5 Next-Day Delivery (per order)</p>
-                  <p> $30 Minimum Order</p>
+                  <p>Per use ₦7.95 Service Fee (per order)</p>
+                  <p>+₦5 Next-Day Delivery (per order)</p>
+                  <p> ₦30 Minimum Order</p>
                 </aside>
               </div>
             </div>

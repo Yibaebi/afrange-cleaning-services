@@ -9,7 +9,8 @@ const Hero = () => {
           <p className="content-intro">SAVE 3 HOURS PER WEEK</p>
           <h1>Say Goodbye to Laundry Day.</h1>
           <p className="content-close mb-8 w-4/5 font-bold text-lg">
-            Rinse picks up, cleans, and delivers your laundry and dry cleaning.
+            Afrange picks up, cleans, and delivers your laundry and dry
+            cleaning.
           </p>
           <div className="aae-landing-hero--buttons">
             <button className="primary-button mr-6">
