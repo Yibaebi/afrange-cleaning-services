@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import { afrangeLogo } from "../../assets";
 
@@ -16,7 +16,9 @@ const NavBar = () => {
     <nav
       className={`aae-nav-bar--container container-styles ${hamburgerState}`}
     >
-      <img src={afrangeLogo} alt="afrange-logo" className="afrange-logo" />
+      <Link to="/home">
+        <img src={afrangeLogo} alt="afrange-logo" className="afrange-logo" />
+      </Link>
       <div
         id="nav-icon1"
         className={hamburgerState}
@@ -26,45 +28,44 @@ const NavBar = () => {
         <span></span>
         <span></span>
       </div>
-
       <ul className={`aae-nav-bar--links-wrapper`}>
         <NavLink
-          onClick={handleHamburgerOpen}
+          onClick={() => setHamburgerState("")}
           className="aae-nav-link"
           to="/home"
         >
           Home
         </NavLink>
         <NavLink
-          onClick={handleHamburgerOpen}
+          onClick={() => setHamburgerState("")}
           className="aae-nav-link"
           to="/about"
         >
           About
         </NavLink>
         <NavLink
-          onClick={handleHamburgerOpen}
+          onClick={() => setHamburgerState("")}
           className="aae-nav-link"
           to="/services"
         >
           Services
         </NavLink>
         <NavLink
-          onClick={handleHamburgerOpen}
+          onClick={() => setHamburgerState("")}
           className="aae-nav-link"
           to="/gallery"
         >
           Gallery
         </NavLink>
         <NavLink
-          onClick={handleHamburgerOpen}
+          onClick={() => setHamburgerState("")}
           className="aae-nav-link"
           to="/pricing"
         >
           Pricing
         </NavLink>
         <NavLink
-          onClick={handleHamburgerOpen}
+          onClick={() => setHamburgerState("")}
           className="aae-nav-link"
           to="/contact-us"
         >
