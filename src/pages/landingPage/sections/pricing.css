@@ -35,6 +35,12 @@
   fill: var(--color-platinum);
 }
 
+.calculator {
+  padding: 3px 5px;
+  border-radius: 3px;
+  background-color: #ec53293f;
+}
+
 .pricing {
   display: -webkit-flex;
   display: flex;
@@ -53,7 +59,7 @@
   -webkit-align-items: stretch;
   align-items: stretch;
   text-align: center;
-  max-width: 340px;
+  width: 340px;
   padding: 10px;
   margin-bottom: 20px;
 }
@@ -104,6 +110,7 @@
 .pricing-item .item-image svg {
   margin: 0 auto;
   width: 200px;
+  height: 130px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -184,8 +191,7 @@
 }
 
 .pricing-palden .pricing-currency {
-  font-size: 0.15em;
-  vertical-align: top;
+  font-size: 1rem;
 }
 .pricing-palden .pricing-period {
   font-size: 0.2em;
@@ -247,17 +253,26 @@
   }
 }
 @media screen and (max-width: 480px) {
+  .pricing-item {
+    width: 300px;
+  }
   .aae-landing-pricing--section.container-styles {
     padding-left: 0px;
     padding-right: 0px;
   }
 
-  .pricing-item {
-    width: 100%;
-  }
   .aae-landing-pricing--section {
     background-position: 200%;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 360px) {
+  .pricing-item {
+    width: 280px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .pricing-item {
+    padding: 0px;
+    width: 230px;
+  }
 }

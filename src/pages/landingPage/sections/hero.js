@@ -8,11 +8,12 @@ const Hero = () => {
     <section className="aae-landing-hero--container container-styles">
       <section className="aae-landing-hero--wrapper">
         <aside className="aae-landing-hero--content flex flex-col">
-          <p className="content-intro">SAVE 3 HOURS PER WEEK</p>
+          <p className="content-intro">SAVE VALUABLE TIME EVERY WEEK</p>
           <h1>Say Goodbye to Laundry Day.</h1>
           <p className="content-close mb-8 w-4/5 font-bold text-lg">
             Afrange picks up, cleans, and delivers your laundry and dry
-            cleaning.
+            cleaning. We also help individuals and businesses manage their homes
+            and offices.
           </p>
           <div className="aae-landing-hero--links">
             <a

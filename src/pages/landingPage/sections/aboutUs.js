@@ -19,9 +19,10 @@ const AboutUs = () => {
               Defining the Future of <em>Cleaning Servies</em>
             </h1>
             <p>
-              Afrange offers a full spectrum of cutting-edge digital learning,
-              giving professionals and organizations of all sizes the skills
-              they need to thrive in the digital economy.
+              Afrange offers a full spectrum of high-quality laundry, home, and
+              industrial cleaning service to individuals and businesses. We also
+              help businesses train their cleaning staff while providing a host
+              of many other cleaning services.
             </p>
             <div className="key-info__container">
               <aside className="key-info__item">

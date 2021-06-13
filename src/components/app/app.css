@@ -35,6 +35,11 @@
   border: 1px solid white !important;
 }
 
+.aae-nav-bar--extra-info .primary-logo,
+.aae-nav-bar--extra-info .primary-logo:hover {
+  border: none !important;
+}
+
 .aae-nav-bar--extra-info a:hover {
   border: 1px solid white !important;
 }
