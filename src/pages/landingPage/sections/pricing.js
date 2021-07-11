@@ -32,7 +32,7 @@ const Pricing = () => {
             <div className="pricing-deco">
               <svg
                 className="pricing-deco-img"
-                enable-background="new 0 0 300 100"
+                enableBackground="new 0 0 300 100"
                 height="100px"
                 id="Layer_1"
                 preserveAspectRatio="none"
@@ -97,7 +97,7 @@ const Pricing = () => {
             <div className="pricing-deco">
               <svg
                 className="pricing-deco-img"
-                enable-background="new 0 0 300 100"
+                enableBackground="new 0 0 300 100"
                 height="100px"
                 id="Layer_1"
                 preserveAspectRatio="none"
@@ -162,7 +162,7 @@ const Pricing = () => {
             <div className="pricing-deco">
               <svg
                 className="pricing-deco-img"
-                enable-background="new 0 0 300 100"
+                enableBackground="new 0 0 300 100"
                 height="100px"
                 id="Layer_1"
                 preserveAspectRatio="none"
@@ -234,12 +234,12 @@ const Pricing = () => {
             <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
               <stop
                 id="stop1"
-                stop-color="rgba(59, 143, 86, 1)"
+                stopColor="rgba(59, 143, 86, 1)"
                 offset="0%"
               ></stop>
               <stop
                 id="stop2"
-                stop-color="rgba(59, 143, 86, 1)"
+                stopColor="rgba(59, 143, 86, 1)"
                 offset="100%"
               ></stop>{" "}
             </linearGradient>{" "}
@@ -250,7 +250,7 @@ const Pricing = () => {
             width="100%"
             height="100%"
             transform="translate(50 50)"
-            stroke-width="0"
+            strokeWidth="0"
             style={{ transition: "all 0.3s ease 0s" }}
             stroke="url(#sw-gradient)"
           ></path>{" "}

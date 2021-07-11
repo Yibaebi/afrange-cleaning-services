@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import ClothFold from "../../../assets/landing-page/about-us-fold.jpg";
 import Cloth from "../../../assets/landing-page/about-us-image-1.jpg";
 import ClothIroning from "../../../assets/landing-page/about-us-image-ironing.jpg";
@@ -7,7 +9,6 @@ import ClothRepairs from "../../../assets/landing-page/about-us-image-cloth repa
 import ClothDelivery from "../../../assets/landing-page/about-us-image-delivery.jpg";
 
 import "./aboutUs.css";
-import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (

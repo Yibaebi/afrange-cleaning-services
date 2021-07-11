@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import dryCleaning from "../../../assets/services/dry-cleaning.jpg";
-import { deliveryBus } from "../../../assets";
 
 const DryCleaning = () => {
   return (

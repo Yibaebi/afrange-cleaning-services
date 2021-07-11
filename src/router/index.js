@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router";
+import { Switch } from "react-router";
 
 import routeBuilder from "./utilities/routeBuilder";
 import ScrollToTop from "./utilities/scrollToTop";

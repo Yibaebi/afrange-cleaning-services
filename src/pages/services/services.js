@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { DryCleaning } from "./serviceSections/dryCleaning";
 import { OtherServices } from "./serviceSections/otherServices";
 import { WashAndIron } from "./serviceSections/washAndIron";
@@ -8,13 +8,14 @@ import "./services.css";
 
 const Services = () => {
   const [currentView, setCurrentView] = useState("#wash-and-iron");
+  const { hash } = useLocation();
 
   useEffect(() => {
-    const view = window.location.hash;
+    const view = hash;
 
     window.addEventListener("hashchange", setCurrentView(view), false);
     return () => window.removeEventListener("hashchange", () => {});
-  });
+  }, [hash]);
   return (
     <div className="aae-services container-styles">
       <nav className="aae-services--nav">

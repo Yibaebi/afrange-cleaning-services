@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import HeroImage from "../../../assets/landing-page/Hero-Picture.png";
 
 import "./hero.css";
 
@@ -30,10 +31,7 @@ const Hero = () => {
           </div>
         </aside>
         <aside className="aae-landing-hero--image">
-          <img
-            src="https://laundry.drop.id/wp-content/uploads/2020/10/Hero-Picture-1536x1277.png"
-            alt=""
-          />
+          <img src={HeroImage} alt="" />
         </aside>
       </section>
     </section>
