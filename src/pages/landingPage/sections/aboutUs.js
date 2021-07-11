@@ -57,9 +57,9 @@ const AboutUs = () => {
           </aside>
           <h3 className="gallery--header">What We Do</h3>
         </aside>
-        <div class="container">
-          <div class="gallery">
-            <figure class="gallery__item gallery__item--3">
+        <div className="container">
+          <div className="gallery">
+            <figure className="gallery__item gallery__item--3">
               <aside className="gallery__item--desc">
                 <Link to="/services">
                   Dry Cleaning <i className="fas fa-caret-right ml-3"></i>
@@ -67,7 +67,7 @@ const AboutUs = () => {
               </aside>
               <img src={Cloth} alt="Gallery item 3" className="gallery__img" />
             </figure>
-            <figure class="gallery__item gallery__item--4">
+            <figure className="gallery__item gallery__item--4">
               <aside className="gallery__item--desc">
                 <Link to="/services">
                   Ironing <i className="fas fa-caret-right ml-3"></i>
@@ -80,7 +80,7 @@ const AboutUs = () => {
               />
             </figure>
 
-            <figure class="gallery__item gallery__item--1">
+            <figure className="gallery__item gallery__item--1">
               <aside className="gallery__item--desc">
                 <Link to="/services">
                   Industrial Cleaning
@@ -93,7 +93,7 @@ const AboutUs = () => {
                 className="gallery__img"
               />
             </figure>
-            <figure class="gallery__item gallery__item--2">
+            <figure className="gallery__item gallery__item--2">
               <aside className="gallery__item--desc">
                 <Link to="/services">
                   Cloth Repairs <i className="fas fa-caret-right ml-3"></i>
@@ -106,7 +106,7 @@ const AboutUs = () => {
               />
             </figure>
 
-            <figure class="gallery__item gallery__item--7">
+            <figure className="gallery__item gallery__item--7">
               <aside className="gallery__item--desc">
                 <Link to="/services">
                   Office Cleaning <i className="fas fa-caret-right ml-3"></i>
@@ -118,7 +118,7 @@ const AboutUs = () => {
                 className="gallery__img"
               />
             </figure>
-            <figure class="gallery__item gallery__item--5">
+            <figure className="gallery__item gallery__item--5">
               <aside className="gallery__item--desc">
                 <Link to="/services">
                   Delivery <i className="fas fa-caret-right ml-3"></i>
@@ -130,7 +130,7 @@ const AboutUs = () => {
                 className="gallery__img"
               />
             </figure>
-            <figure class="gallery__item gallery__item--6">
+            <figure className="gallery__item gallery__item--6">
               <aside className="gallery__item--desc">
                 <Link to="/services">
                   Wash and Fold <i className="fas fa-caret-right ml-3"></i>

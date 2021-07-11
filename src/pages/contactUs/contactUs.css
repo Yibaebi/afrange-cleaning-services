@@ -99,6 +99,15 @@
   width: 100%;
 }
 
+.contact-us__form--container .primary-link:disabled,
+.contact-us__form--container .primary-link:disabled:hover {
+  border-color: #fff;
+  color: #fff;
+  background-color: var(--color-dark-blue);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 @keyframes updown {
   0% {
     transform: translateY(0px);

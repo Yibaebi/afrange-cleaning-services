@@ -1,13 +1,12 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { motion } from "framer-motion";
+import InView from "react-intersection-observer";
 
 import "./contactUs.css";
-import InView from "react-intersection-observer";
 
 const ContactUs = () => {
   const [state, handleSubmit] = useForm("xeqvgojb");
-
   const errorMessage = state?.errors[0]?.message;
   return (
     <>
@@ -71,7 +70,7 @@ const ContactUs = () => {
                             </div>
                             <div className="intro__section">
                               <h5>Email</h5>
-                              <p>afrange@info.com</p>
+                              <p>afrangelaundry@gmail.com</p>
                             </div>
                             <div className="intro__section">
                               <h5>Address</h5>

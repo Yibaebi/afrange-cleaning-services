@@ -38,7 +38,7 @@ const AboutUs = () => {
             <i className="fas fa-braille fa-3x"></i>
             <i className="fas fa-bolt fa-3x"></i>
             <h1>
-              Powering <em>homes and businesses </em>
+              Serving <em>Homes and Businesses</em>
             </h1>
             <p>
               We built our service to help both individuals, families, and
@@ -114,10 +114,10 @@ const AboutUs = () => {
         </section>
         <section className="aae-about-us--values">
           <aside className="landing-services--content-header known-for">
-            <i class="fas fa-broom fa-2x"></i>
-            <i class="fas fa-soap fa-2x"></i>
-            <i class="fas fa-laugh-beam fa-2x"></i>
-            <i class="fas fa-clock fa-2x"></i>
+            <i className="fas fa-broom fa-2x"></i>
+            <i className="fas fa-soap fa-2x"></i>
+            <i className="fas fa-laugh-beam fa-2x"></i>
+            <i className="fas fa-clock fa-2x"></i>
             <h1>
               What <em>We're Known</em> for
             </h1>
@@ -131,7 +131,7 @@ const AboutUs = () => {
             <div>
               <div className="about-us--values-container clean-wash">
                 <h5 className="values-header">
-                  <i class="fas fa-soap fa-2x"></i>Clean Wash
+                  <i className="fas fa-soap fa-2x"></i>Clean Wash
                 </h5>
                 <p className="values-content">
                   We set the pace for sparkle clean wash in all varieties of
@@ -141,7 +141,7 @@ const AboutUs = () => {
               </div>
               <div className="about-us--values-container known-delivery">
                 <h5 className="values-header">
-                  <i class="fas fa-broom fa-2x"></i>
+                  <i className="fas fa-broom fa-2x"></i>
                   Swift Service
                 </h5>
                 <p className="values-content">
@@ -154,7 +154,7 @@ const AboutUs = () => {
             <div>
               <div className="about-us--values-container satisfaction">
                 <h5 className="values-header">
-                  <i class="fas fa-laugh-beam fa-2x"></i>Satisfaction
+                  <i className="fas fa-laugh-beam fa-2x"></i>Satisfaction
                 </h5>
                 <p className="values-content">
                   We have a high satisfaction rate. We are very intentional with
@@ -164,7 +164,7 @@ const AboutUs = () => {
               </div>
               <div className="about-us--values-container service">
                 <h5 className="values-header">
-                  <i class="fas fa-clock fa-2x"></i>
+                  <i className="fas fa-clock fa-2x"></i>
                   24/7 Service
                 </h5>
                 <p className="values-content">
