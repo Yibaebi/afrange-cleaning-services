@@ -33,7 +33,7 @@ const DryCleaning = () => {
           <div className="how-it-works--steps">
             <aside className="how-it-works part-4">
               <span>
-                <i class="fas fa-book-open"></i>
+                <i className="fas fa-book-open"></i>
               </span>
               <h5>Schedule pickup</h5>
               Pick a day and time for collection and delivery. Each time slot is
@@ -42,7 +42,7 @@ const DryCleaning = () => {
 
             <aside className="how-it-works part-1">
               <span>
-                <i class="fas fa-search"></i>
+                <i className="fas fa-search"></i>
               </span>
               <h5>Stain inspection</h5>
               Our “spotters” have decades of experience in identifying and
@@ -51,7 +51,7 @@ const DryCleaning = () => {
             </aside>
             <aside className="how-it-works part-2">
               <span>
-                <i class="fas fa-hand-sparkles"></i>
+                <i className="fas fa-hand-sparkles"></i>
               </span>
               <h5>Expert care </h5>
               We follow the care label (and know what all the symbols mean!) so
@@ -60,7 +60,7 @@ const DryCleaning = () => {
             </aside>
             <aside className="how-it-works part-3">
               <span>
-                <i class="fas fa-tshirt"></i>
+                <i className="fas fa-tshirt"></i>
               </span>
               <h5>Pressed and hung </h5>
               Your clothes are crisply pressed, put on hangers, and placed in
@@ -75,12 +75,12 @@ const DryCleaning = () => {
             We also provide laundry bag for clients on bulk washing.
           </p>
           <p className="pickup-delivery-info">
-            Pickup & delivery time: from 7:30am – 5:00pm, Monday – Saturday.
+            Pickup & delivery time: from 7:30am – 1:00pm, Monday – Saturday.
           </p>
           <aside className="aae-deliver--container">
             <div>
-              <div class="delivery">
-                <div class="delivery-preview">
+              <div className="delivery">
+                <div className="delivery-preview">
                   <h2>Affordable Delivery</h2>
                   <div className="delivery-info">
                     <p>

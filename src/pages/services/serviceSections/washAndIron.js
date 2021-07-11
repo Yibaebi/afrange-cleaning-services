@@ -31,7 +31,7 @@ const WashAndIron = () => {
           <div className="how-it-works--steps">
             <aside className="how-it-works part-4">
               <span>
-                <i class="fas fa-search"></i>
+                <i className="fas fa-search"></i>
               </span>
               <h5>Detailed inspection</h5>
               Your pockets and clothes are inspected (so nothing ends up in the
@@ -40,7 +40,7 @@ const WashAndIron = () => {
 
             <aside className="how-it-works part-1">
               <span>
-                <i class="fas fa-hand-sparkles"></i>
+                <i className="fas fa-hand-sparkles"></i>
               </span>
               <h5>Premium cleaning</h5>
               Your lights and darks are separated and all your clothes are
@@ -48,7 +48,7 @@ const WashAndIron = () => {
             </aside>
             <aside className="how-it-works part-2">
               <span>
-                <i class="fas fa-user-cog"></i>
+                <i className="fas fa-user-cog"></i>
               </span>
               <h5>Your preferences </h5>
               Need hypoallergenic detergent? Want fabric softener? No problem —
@@ -56,7 +56,7 @@ const WashAndIron = () => {
             </aside>
             <aside className="how-it-works part-3">
               <span>
-                <i class="fas fa-tshirt"></i>
+                <i className="fas fa-tshirt"></i>
               </span>
               <h5>Neatly folded</h5>
               Your clothes are crisply folded and your socks are paired, ready
@@ -71,12 +71,12 @@ const WashAndIron = () => {
             We also provide laundry bag for clients on bulk washing.
           </p>
           <p className="pickup-delivery-info">
-            Pickup & delivery time: from 7:30am – 5:00pm, Monday – Saturday.
+            Pickup & delivery time: from 7:30am – 1:00pm, Monday – Saturday.
           </p>
           <aside className="aae-deliver--container">
             <div>
-              <div class="delivery">
-                <div class="delivery-preview">
+              <div className="delivery">
+                <div className="delivery-preview">
                   <h2>Affordable Delivery</h2>
                   <div className="delivery-info">
                     <p>

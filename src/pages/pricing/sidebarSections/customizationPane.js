@@ -1,33 +1,43 @@
 import React, { useEffect, useState } from "react";
 import { Multiselect } from "react-widgets/cjs";
 import clothList from "../../../dummy-data/dummyLists.json";
+import { useLocation } from "react-router-dom";
 
 const CustomizationPane = ({ setSelectedClothes, setTotalPrice }) => {
   const [currentView, setCurrentView] = useState("maleClothes");
+  const { hash } = useLocation();
 
   useEffect(() => {
     const view =
-      window.location.hash === "#male" || window.location.hash === ""
+      hash === "#male" || hash === ""
         ? "maleClothes"
-        : window.location.hash === "#female"
+        : hash === "#female"
         ? "femaleClothes"
         : "otherItems";
 
     window.addEventListener("hashchange", setCurrentView(view), false);
     return () => window.removeEventListener("hashchange", () => {});
-  });
+  }, [hash]);
 
   const handleMultiSelectChange = (value) => {
     if (value.length !== 0) {
       const calculatedTotal = value
         .map((cloth) => {
-          if (cloth.specifyNumber === true) {
+          let {
+            specifyNumber,
+            price,
+            ironQuantity,
+            ironOnlyPrice,
+            quantity,
+            ironAll,
+          } = cloth;
+
+          if (specifyNumber === true) {
             cloth.calculatedPrice =
-              cloth.price * (cloth.quantity - cloth.ironQuantity) +
-              cloth.ironQuantity * cloth.ironOnlyPrice;
-          } else if (cloth.ironAll === true) {
-            cloth.calculatedPrice = cloth.ironOnlyPrice * cloth.quantity;
-          } else cloth.calculatedPrice = cloth.price * cloth.quantity;
+              price * (quantity - ironQuantity) + ironQuantity * ironOnlyPrice;
+          } else if (ironAll === true) {
+            cloth.calculatedPrice = ironOnlyPrice * quantity;
+          } else cloth.calculatedPrice = price * quantity;
           return cloth;
         })
         .reduce((newTotal, currentValue) => {
@@ -48,7 +58,7 @@ const CustomizationPane = ({ setSelectedClothes, setTotalPrice }) => {
   };
 
   return (
-    <div>
+    <React.Fragment>
       <Multiselect
         data={clothList[currentView]}
         dataKey="cloth-list"
@@ -63,7 +73,7 @@ const CustomizationPane = ({ setSelectedClothes, setTotalPrice }) => {
         className="customization__number-picker--container"
         style={{ width: "50px" }}
       ></aside>
-    </div>
+    </React.Fragment>
   );
 };
 

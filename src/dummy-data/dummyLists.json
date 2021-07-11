@@ -70,7 +70,7 @@
 
             {
               "type": "Kaftan",
-              "price": "₦500"
+              "price": "₦600"
             },
             {
               "type": "Lace kaftan",
@@ -93,10 +93,6 @@
             {
               "type": "Tie",
               "price": "₦300"
-            },
-            {
-              "type": "Bath robe",
-              "price": "₦1,000"
             }
           ]
         }
@@ -227,10 +223,6 @@
             {
               "type": "Plated/Flam Gown",
               "price": "₦1,200"
-            },
-            {
-              "type": "Bath Robe",
-              "price": "₦1000"
             }
           ]
         }
@@ -292,10 +284,10 @@
             },
             {
               "type": "Bath Robe (Color)",
-              "price": "₦300"
+              "price": "₦1,000"
             },
-            { "type": "Curtain (Heavy)", "price": "₦250" },
-            { "type": "Curtain (Light)", "price": "₦200" }
+            { "type": "Curtain (Heavy)", "price": "₦250/m2" },
+            { "type": "Curtain (Light)", "price": "₦200/m2" }
           ]
         }
       ]
@@ -407,9 +399,8 @@
       "ironQuantity": 1,
       "ironOnlyPrice": 400
     },
-    { "id": "M17", "name": "Bath Robe", "price": 1000, "quantity": 1 },
     {
-      "id": "M18",
+      "id": "M17",
       "name": "Sweater",
       "price": 400,
       "quantity": 1,
@@ -477,20 +468,30 @@
     {
       "id": "O10",
       "name": "Bath Robe (White)",
-      "price": 1100,
+      "price": 1000,
       "quantity": 1
     },
     {
       "id": "O11",
       "name": "Bath Robe (Color)",
-      "price": 300,
+      "price": 1000,
       "quantity": 1,
       "ironOnly": false,
       "ironQuantity": 1,
       "ironOnlyPrice": 200
     },
-    { "id": "O12", "name": "Curtain (heavy)", "price": 250, "quantity": 1 },
-    { "id": "O13", "name": "Curtain (light)", "price": 200, "quantity": 1 }
+    {
+      "id": "O12",
+      "name": "Curtain (heavy)",
+      "price": 250,
+      "quantity": 1
+    },
+    {
+      "id": "O13",
+      "name": "Curtain (light)",
+      "price": 200,
+      "quantity": 1
+    }
   ],
   "femaleClothes": [
     { "id": "f0", "name": "3-Piece Suit (f)", "price": 1200, "quantity": 1 },
@@ -662,18 +663,156 @@
     },
     {
       "id": "f26",
-      "name": "Bath Robe (f)",
-      "price": 1000,
-      "quantity": 1
-    },
-    {
-      "id": "f27",
       "name": "Jacket (f)",
       "price": 600,
       "quantity": 1,
       "ironOnly": false,
       "ironQuantity": 1,
       "ironOnlyPrice": 400
+    }
+  ],
+  "deliveryList": [
+    {
+      "id": "D0",
+      "name": "Trans-Ekulu",
+      "collection": 500,
+      "delivery": 500,
+      "collAndDelv": 1000
+    },
+    {
+      "id": "D1",
+      "name": "Phase 6",
+      "collection": 500,
+      "delivery": 500,
+      "collAndDelv": 1000
+    },
+    {
+      "id": "D2",
+      "name": "Federal Housing",
+      "collection": 500,
+      "delivery": 500,
+      "collAndDelv": 1000
+    },
+
+    {
+      "id": "D3",
+      "name": "Abakpa Nike",
+      "collection": 1000,
+      "delivery": 1000,
+      "collAndDelv": 2000
+    },
+    {
+      "id": "D4",
+      "name": "Nkwugo Nike",
+      "collection": 1000,
+      "delivery": 1000,
+      "collAndDelv": 2000
+    },
+    {
+      "id": "D5",
+      "name": "New Haven",
+      "collection": 1000,
+      "delivery": 1000,
+      "collAndDelv": 2000
+    },
+    {
+      "id": "D6",
+      "name": "Thinkers Corner",
+      "collection": 1000,
+      "delivery": 1000,
+      "collAndDelv": 2000
+    },
+    {
+      "id": "D7",
+      "name": "GRA",
+      "collection": 1000,
+      "delivery": 1000,
+      "collAndDelv": 2000
+    },
+    {
+      "id": "D8",
+      "name": "Golf Estate",
+      "collection": 1000,
+      "delivery": 1000,
+      "collAndDelv": 2000
+    },
+    {
+      "id": "D9",
+      "name": "Garden Avenue",
+      "collection": 1000,
+      "delivery": 1000,
+      "collAndDelv": 2000
+    },
+
+    {
+      "id": "D9",
+      "name": "Independence Layout",
+      "collection": 1500,
+      "delivery": 1500,
+      "collAndDelv": 3000
+    },
+    {
+      "id": "D9",
+      "name": "Uwani",
+      "collection": 1500,
+      "delivery": 1500,
+      "collAndDelv": 3000
+    },
+    {
+      "id": "D9",
+      "name": "Ogui",
+      "collection": 1500,
+      "delivery": 1500,
+      "collAndDelv": 3000
+    },
+    {
+      "id": "D9",
+      "name": "Asata",
+      "collection": 1500,
+      "delivery": 1500,
+      "collAndDelv": 3000
+    },
+    {
+      "id": "D9",
+      "name": "Emene",
+      "collection": 1500,
+      "delivery": 1500,
+      "collAndDelv": 3000
+    },
+    {
+      "id": "D9",
+      "name": "Maryland",
+      "collection": 1500,
+      "delivery": 1500,
+      "collAndDelv": 3000
+    },
+    {
+      "id": "D9",
+      "name": "Achala layout",
+      "collection": 1500,
+      "delivery": 1500,
+      "collAndDelv": 3000
+    },
+    {
+      "id": "D9",
+      "name": "Agbani Road",
+      "collection": 1500,
+      "delivery": 1500,
+      "collAndDelv": 3000
+    },
+    {
+      "id": "D9",
+      "name": "Corner stone",
+      "collection": 1500,
+      "delivery": 1500,
+      "collAndDelv": 3000
+    },
+    {
+      "id": "D9",
+      "name": "New layout",
+      "collection": 1500,
+      "delivery": 1500,
+      "collAndDelv": 3000
     }
   ]
 }

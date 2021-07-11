@@ -100,7 +100,7 @@ const OtherServices = () => {
           </figure>
           <section className="other-services--section" id="hang-dry">
             <div>
-              <i class="fas fa-tshirt"></i>
+              <i className="fas fa-tshirt"></i>
               <h2>Hang Dry </h2>
               <p>
                 Perfect for delicates, activewear, and other clothing that
@@ -122,7 +122,7 @@ const OtherServices = () => {
           </figure>
           <section className="other-services--section" id="home-cleaning">
             <div>
-              <i class="fas fa-broom"></i>
+              <i className="fas fa-broom"></i>
               <h2>Home Cleaning </h2>
               <p>
                 We clean all home type (block of flats, duplex, bungalow etc.).
@@ -147,7 +147,7 @@ const OtherServices = () => {
           </figure>
           <section className="other-services--section" id="office-cleaning">
             <div>
-              <i class="fas fa-building"></i>
+              <i className="fas fa-building"></i>
               <h2>Office Cleaning</h2>
               <p>
                 Afrange provides cleaning services to small, medium and and

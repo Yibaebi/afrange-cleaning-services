@@ -3,13 +3,13 @@ import "react-widgets/styles.css";
 import Collapse from "rc-collapse";
 import "rc-collapse/assets/index.css";
 import { motion } from "framer-motion";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { DropdownList, Listbox, NumberPicker } from "react-widgets/cjs";
 
 import { PricingCard } from "../../components";
 import { CustomizationPane } from "./sidebarSections/customizationPane";
 import { nairaIcon } from "../../assets";
-import { pricingList } from "../../dummy-data/dummyLists.json";
+import { deliveryList, pricingList } from "../../dummy-data/dummyLists.json";
 
 import "./pricing.css";
 
@@ -18,16 +18,8 @@ const Panel = Collapse.Panel;
 const Pricing = () => {
   const [totalPrice, setTotalPrice] = useState({ price: 0, quantity: 0 });
   const [selectedClothes, setSelectedClothes] = useState([]);
-  const [deliveryFrequencyPrice] = useState(0);
-  const [firstTimeDiscount, setFirstTimeDiscount] = useState(0);
-  const [deliveryPrice, setDeliveryPrice] = useState(0);
-
-  const frequency = [
-    "Once a week",
-    "Twice a week",
-    "Monthly",
-    "Not applicable",
-  ];
+  const [deliveryType, setDeliveryType] = useState({});
+  const [delvCollSelection, setDelvCollSelection] = useState(deliveryList);
 
   const handlePriceUpdate = (clothDetails, serviceType) => {
     const newClothQuantities = [...selectedClothes].map((cloth) => {
@@ -74,9 +66,15 @@ const Pricing = () => {
     });
   };
 
-  const calculatedTotal =
-    (totalPrice.price + deliveryFrequencyPrice + deliveryPrice) *
-    (1 - firstTimeDiscount / 100);
+  const deliveryPrice =
+    deliveryType.type === "Remove Cost"
+      ? 0
+      : deliveryType.type === "Collection Only"
+      ? delvCollSelection.collection
+      : deliveryType.type === "Delivery Only"
+      ? delvCollSelection.delivery
+      : delvCollSelection.collAndDelv;
+  const calculatedTotal = totalPrice.price + (deliveryPrice || 0);
 
   return (
     <div className="aae-pricing container-styles">
@@ -88,10 +86,8 @@ const Pricing = () => {
           className="customization__info"
         >
           <h1>Find the right price for your laundry items.</h1>
-          <p>
-            - Made For You. <br />
-            - Flexible. <br />
-            - Straightforward. <br />- No hidden costs.
+          <p style={{ textAlign: "left", marginBottom: "20px" }}>
+            Made For You. Flexible. Straightforward. No hidden costs.
           </p>
           <a
             href="#pricing-table"
@@ -160,55 +156,49 @@ const Pricing = () => {
               </aside>
 
               <aside>
-                <h5>Frequency</h5>
+                <h5>Delivery</h5>
                 <DropdownList
-                  data={frequency}
-                  dataKey="service-frequency"
-                  textField="service-frequency"
-                  placeholder="Select service frequency"
-                  style={{ width: "300px", marginBottom: "5px" }}
-                  onChange={(value) => console.log(value)}
-                />
-              </aside>
-
-              <aside>
-                <h5>First Time</h5>
-                <DropdownList
-                  data={["Wash and Iron", "Iron All"]}
-                  dataKey="first-timer"
+                  data={deliveryList}
+                  dataKey="delivery-list"
                   textField="name"
-                  placeholder="Is this your first time?"
+                  placeholder="Enter delivery location."
                   style={{ width: "300px", marginBottom: "5px" }}
                   onChange={(value) => {
-                    value === "Yes"
-                      ? setFirstTimeDiscount(10)
-                      : setFirstTimeDiscount(0);
-                    return;
+                    setDeliveryType({ id: 1, type: "Collection Only" });
+                    setDelvCollSelection(value);
                   }}
                 />
-              </aside>
-
-              <aside>
-                <h5>
-                  Delivery <span>(₦200)</span>
-                </h5>
-                <Listbox
-                  onChange={(value) => {
-                    value === "Yes"
-                      ? setDeliveryPrice(200)
-                      : setDeliveryPrice(0);
-                    return;
-                  }}
-                  className="delivery__request"
-                  data={["Yes", "No"]}
-                />
+                {deliveryType?.id && (
+                  <Listbox
+                    value={deliveryType}
+                    dataKey="id"
+                    textField="type"
+                    data={[
+                      { id: 1, type: "Collection Only" },
+                      { id: 2, type: "Delivery Only" },
+                      { id: 3, type: "Delivery and Collection" },
+                      { id: 4, type: "Remove Cost" },
+                    ]}
+                    onChange={(value) => {
+                      console.log(value);
+                      setDeliveryType(value);
+                    }}
+                  />
+                )}
               </aside>
             </section>
             <section className="selector__cloth-type-number--container">
-              {selectedClothes.length ? (
-                <>
+              {selectedClothes.length || deliveryPrice ? (
+                <React.Fragment>
                   <h5>Customize service request </h5>
+
                   <section className="selector__cloth-type-number">
+                    {!selectedClothes.length && (
+                      <h6 style={{ color: "red", minWidth: "200px" }}>
+                        <i className="fas fa-info-circle mr-2"></i>
+                        No clothes selected
+                      </h6>
+                    )}
                     {selectedClothes.map((cloth, index) => {
                       return (
                         <aside
@@ -216,7 +206,10 @@ const Pricing = () => {
                           key={cloth.id}
                         >
                           <h6>
-                            {cloth.name} <span>{`(₦${cloth.price})`}</span>
+                            {cloth.name}{" "}
+                            <span>{`(₦${cloth.price})${
+                              cloth.name.includes("Curtain") ? "/m2" : ""
+                            }`}</span>
                           </h6>
                           <NumberPicker
                             key={cloth.id}
@@ -236,9 +229,8 @@ const Pricing = () => {
                             min={1}
                           />
                           {cloth.ironOnlyPrice && (
-                            <>
+                            <React.Fragment>
                               <DropdownList
-                                defaultOpen={true}
                                 defaultValue="Wash and Iron"
                                 data={[
                                   "Iron All",
@@ -306,37 +298,45 @@ const Pricing = () => {
                                   min={1}
                                 />
                               )}
-                            </>
+                            </React.Fragment>
                           )}
                         </aside>
                       );
                     })}
                   </section>
-                </>
+                </React.Fragment>
               ) : (
-                <>
+                <React.Fragment>
                   <div className="empty-price-list">
                     <i className="fas fa-info-circle fa-2x"></i> <br /> No cloth
                     type selected. To select a cloth type, click on the select
                     box on the left section Or
                   </div>
                   <div className="aae-about-us-hero--buttons my-0 justify-center flex mx-auto">
-                    <Link
-                      to="/contact-us/#message"
+                    <a
+                      href="https://wa.me/message/TOKS546P3O5PI1"
                       className="secondary-link p-3  "
+                      target="_blank"
+                      rel="noreferrer"
                     >
-                      <i className="fas fa-mail-bulk mr-2"></i> Contact Us
-                    </Link>
+                      <i className="fab fa-whatsapp mr-2"></i> Contact Us
+                    </a>
                   </div>
-                </>
+                </React.Fragment>
               )}
             </section>
-            {!!selectedClothes.length && (
+            {(!!selectedClothes.length || deliveryPrice) && (
               <section className="price__container">
                 <aside className="price__container--section">
                   <h5>Total Items </h5>
                   <span className="total--items__count">
-                    {totalPrice.quantity}
+                    {totalPrice.quantity || 0}
+                  </span>
+                </aside>
+                <aside className="price__container--section">
+                  <h5>Delivery Price</h5>
+                  <span className="total--delivery-price">
+                    ₦{deliveryPrice || 0}
                   </span>
                 </aside>
                 <aside className="price__container--section">
@@ -345,24 +345,40 @@ const Pricing = () => {
                     <span className="price-tag__main">₦{calculatedTotal}</span>
                   </span>
                 </aside>
-                <div className="mt-7 justify-center items-center flex flex-col mx-auto">
-                  <p className="not-satisfied-info">Not satisfied? </p>
+                <div className="mt-7 justify-center screenshot-request items-center flex flex-col mx-auto">
+                  <p className="not-satisfied-info">
+                    Please take a screenshot of your request and send data to
+                    the <b>WhatsApp account</b> below.
+                  </p>
 
-                  <Link
-                    to="/contact-us/#message"
-                    className="secondary-link p-3  "
+                  <a
+                    href="https://wa.me/message/TOKS546P3O5PI1"
+                    className="secondary-link p-3"
+                    target="_blank"
+                    rel="noreferrer"
                   >
-                    <i className="fas fa-mail-bulk mr-2"></i> Send Feedback
-                  </Link>
+                    <i className="fab fa-whatsapp mr-2"></i> Send Request
+                  </a>
                 </div>
               </section>
             )}
           </div>
         </aside>
       </section>
+
       <h2 className="suitable-plan pricing-table" id="pricing-table">
         <i className="fas fa-table mr-3"></i>Our Pricing Table
       </h2>
+
+      <div className="pricing-table--info">
+        <span>Note</span>
+        <p>
+          * All <b>white garment</b> attracts extra ₦100{" "}
+        </p>
+        <p>
+          * All <b>white suits</b> attracts extra ₦200{" "}
+        </p>
+      </div>
 
       {pricingList.map((item, index) => {
         return (
@@ -380,7 +396,7 @@ const Pricing = () => {
                     {item.sectionTitle}
                   </h2>
                 }
-                headerClass="pricing-title-header"
+                headerclassName="pricing-title-header"
               >
                 <aside className="pricing-section__cards">
                   {item.pricingDetailsList.map((listItem, index) => (
