@@ -52,16 +52,13 @@ const Afrange = () => {
           <Router />
         </main>
         <a
-          class="email-bt link"
+          className="email-bt link"
           href="https://wa.me/message/TOKS546P3O5PI1"
           target="_blank"
           rel="noreferrer"
         >
-          <span class="text-call">
-            <i class="fab fa-whatsapp my-float"></i>
-          </span>
-          <span className="contact-us--direction">
-            <span>Click here to contact us</span>
+          <span className="text-call">
+            <i className="fab fa-whatsapp my-float"></i>
           </span>
         </a>
         <Footer />
