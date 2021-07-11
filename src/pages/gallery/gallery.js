@@ -1,4 +1,5 @@
 import React from "react";
+import Skeleton from "react-loading-skeleton";
 import {
   galleryImg1,
   galleryImg10,
@@ -71,7 +72,8 @@ class Gallery extends React.Component {
         className="image-container"
         onClick={(e) => this.openModal(e, index)}
       >
-        <img src={`${src.url}`} key={src} alt="gallery item" />
+        <img src={`${src.url}`} key={src} alt="gallery item" loading="lazy" />{" "}
+        || <Skeleton height={200} />
       </div>
     );
   }
