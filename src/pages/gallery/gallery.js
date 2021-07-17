@@ -60,7 +60,7 @@ const imgUrls = [
 class Gallery extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { currentIndex: null };
+    this.state = { currentIndex: null, imageLoaded: {} };
     this.closeModal = this.closeModal.bind(this);
     this.findNext = this.findNext.bind(this);
     this.findPrev = this.findPrev.bind(this);
@@ -69,11 +69,22 @@ class Gallery extends React.Component {
   renderImageContent(src, index) {
     return (
       <div
-        className="image-container"
+        key={src.url}
+        className='image-container'
         onClick={(e) => this.openModal(e, index)}
       >
-        <img src={`${src.url}`} key={src} alt="gallery item" loading="lazy" />{" "}
-        || <Skeleton height={200} />
+        <img
+          src={`${src.url}`}
+          key={src}
+          alt='gallery item'
+          loading='lazy'
+          onLoad={() =>
+            this.setState({
+              imageLoaded: { ...this.state.imageLoaded, [src]: true },
+            })
+          }
+        />
+        {!this.state.imageLoaded[src] && <Skeleton height={200} />}
       </div>
     );
   }
@@ -104,11 +115,11 @@ class Gallery extends React.Component {
   }
   render() {
     return (
-      <div className="gallery-container">
+      <div className='gallery-container'>
         <h1>
           Our <em>Gallery</em>
         </h1>
-        <div className="gallery-grid">
+        <div className='gallery-grid'>
           {imgUrls.map(this.renderImageContent)}
         </div>
         <GalleryModal
@@ -148,11 +159,11 @@ class GalleryModal extends React.Component {
     }
     return (
       <div>
-        <div className="modal-overlay" onClick={closeModal}></div>
-        <div isOpen={!!src} className="modal">
-          <div className="modal-body">
+        <div className='modal-overlay' onClick={closeModal}></div>
+        <div isOpen={!!src} className='modal'>
+          <div className='modal-body'>
             <button
-              className="modal-close"
+              className='modal-close'
               onClick={closeModal}
               onKeyDown={this.handleKeyDown}
             >
@@ -160,7 +171,7 @@ class GalleryModal extends React.Component {
             </button>
             {hasPrev && (
               <button
-                className="modal-prev"
+                className='modal-prev'
                 onClick={findPrev}
                 onKeyDown={this.handleKeyDown}
               >
@@ -169,14 +180,14 @@ class GalleryModal extends React.Component {
             )}
             {hasNext && (
               <button
-                className="modal-next"
+                className='modal-next'
                 onClick={findNext}
                 onKeyDown={this.handleKeyDown}
               >
                 &rsaquo;
               </button>
             )}
-            <img src={src} alt="" />
+            <img src={src} alt='' />
           </div>
         </div>
       </div>

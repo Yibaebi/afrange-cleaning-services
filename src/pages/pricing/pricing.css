@@ -183,8 +183,8 @@ h2.suitable-plan {
 .price__container h5 {
   font-weight: 600;
   font-size: 16px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 4px;
+  margin-top: 15px;
 }
 
 .price__container h5 {
@@ -258,6 +258,16 @@ h2.suitable-plan {
 
 .rw-list-option:last-of-type {
   border-bottom: none;
+}
+
+/* Location input */
+.aae-location-input {
+  padding: 7px 14px;
+  border: #ccc 1px solid;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 15px;
+  color: #666;
 }
 
 /* Multiselect Tag */
@@ -590,7 +600,8 @@ h2.suitable-plan {
   .rw-dropdown-list,
   .rw-listbox,
   .rw-widget-input,
-  .rw-list {
+  .rw-list,
+  .aae-location-input {
     max-width: 230px;
     width: 100% !important;
   }

@@ -77,36 +77,36 @@ const Pricing = () => {
   const calculatedTotal = totalPrice.price + (deliveryPrice || 0);
 
   return (
-    <div className="aae-pricing container-styles">
-      <section className="pricing-customization__section">
+    <div className='aae-pricing container-styles'>
+      <section className='pricing-customization__section'>
         <motion.aside
           initial={{ opacity: 0, y: 200 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 200 }}
-          className="customization__info"
+          className='customization__info'
         >
           <h1>Find the right price for your laundry items.</h1>
           <p style={{ textAlign: "left", marginBottom: "20px" }}>
             Made For You. Flexible. Straightforward. No hidden costs.
           </p>
           <a
-            href="#pricing-table"
-            rel="noreferrer"
-            className="primary-link my-5"
+            href='#pricing-table'
+            rel='noreferrer'
+            className='primary-link my-5'
           >
             Go to pricing table
           </a>
-          <span className="naira-icon">{nairaIcon()}</span>
+          <span className='naira-icon'>{nairaIcon()}</span>
         </motion.aside>
-        <h2 className="suitable-plan">
-          <i className="fas fa-cut mr-3"></i>Select a suitable plan
+        <h2 className='suitable-plan'>
+          <i className='fas fa-cut mr-3'></i>Select a suitable plan
         </h2>
-        <aside className="customization__container">
-          <div className="customization__sidebar">
+        <aside className='customization__container'>
+          <div className='customization__sidebar'>
             <ul>
-              <li className="sidebar--item">
+              <li className='sidebar--item'>
                 <NavLink
-                  to="#male"
+                  to='#male'
                   isActive={() => {
                     if (
                       window.location.hash === "#male" ||
@@ -119,9 +119,9 @@ const Pricing = () => {
                   Male
                 </NavLink>
               </li>
-              <li className="sidebar--item">
+              <li className='sidebar--item'>
                 <NavLink
-                  to="#female"
+                  to='#female'
                   isActive={(match, location) => {
                     if (window.location.hash === "#female") {
                       return true;
@@ -131,9 +131,9 @@ const Pricing = () => {
                   Female
                 </NavLink>
               </li>
-              <li className="sidebar--item">
+              <li className='sidebar--item'>
                 <NavLink
-                  to="#others"
+                  to='#others'
                   isActive={() => {
                     if (window.location.hash === "#others") {
                       return true;
@@ -145,8 +145,8 @@ const Pricing = () => {
               </li>
             </ul>
           </div>
-          <div className="customization__selector">
-            <section className="selector__section">
+          <div className='customization__selector'>
+            <section className='selector__section'>
               <aside>
                 <h5>Cloth Types</h5>
                 <CustomizationPane
@@ -159,9 +159,9 @@ const Pricing = () => {
                 <h5>Delivery</h5>
                 <DropdownList
                   data={deliveryList}
-                  dataKey="delivery-list"
-                  textField="name"
-                  placeholder="Enter delivery location."
+                  dataKey='delivery-list'
+                  textField='name'
+                  placeholder='Enter delivery location'
                   style={{ width: "300px", marginBottom: "5px" }}
                   onChange={(value) => {
                     setDeliveryType({ id: 1, type: "Collection Only" });
@@ -169,52 +169,65 @@ const Pricing = () => {
                   }}
                 />
                 {deliveryType?.id && (
-                  <Listbox
-                    value={deliveryType}
-                    dataKey="id"
-                    textField="type"
-                    data={[
-                      { id: 1, type: "Collection Only" },
-                      { id: 2, type: "Delivery Only" },
-                      { id: 3, type: "Delivery and Collection" },
-                      { id: 4, type: "Remove Cost" },
-                    ]}
-                    onChange={(value) => {
-                      console.log(value);
-                      setDeliveryType(value);
-                    }}
-                  />
+                  <React.Fragment>
+                    <h5>Delivery Preferences</h5>
+                    <Listbox
+                      value={deliveryType}
+                      dataKey='id'
+                      textField='type'
+                      data={[
+                        { id: 1, type: "Collection Only" },
+                        { id: 2, type: "Delivery Only" },
+                        { id: 3, type: "Delivery and Collection" },
+                        { id: 4, type: "Remove Cost" },
+                      ]}
+                      onChange={(value) => {
+                        setDeliveryType(value);
+                      }}
+                    />
+                  </React.Fragment>
                 )}
               </aside>
+              <aside>
+                <h5>Enter Home Address</h5>
+                <input
+                  type='text'
+                  placeholder='Enter location'
+                  className='aae-location-input'
+                  style={{ width: "300px" }}
+                />
+              </aside>
             </section>
-            <section className="selector__cloth-type-number--container">
+            <section className='selector__cloth-type-number--container'>
               {selectedClothes.length || deliveryPrice ? (
                 <React.Fragment>
                   <h5>Customize service request </h5>
 
-                  <section className="selector__cloth-type-number">
+                  <section className='selector__cloth-type-number'>
                     {!selectedClothes.length && (
                       <h6 style={{ color: "red", minWidth: "200px" }}>
-                        <i className="fas fa-info-circle mr-2"></i>
+                        <i className='fas fa-info-circle mr-2'></i>
                         No clothes selected
                       </h6>
                     )}
                     {selectedClothes.map((cloth, index) => {
                       return (
                         <aside
-                          className="cloth-type-number--item"
+                          className='cloth-type-number--item'
                           key={cloth.id}
                         >
                           <h6>
                             {cloth.name}{" "}
                             <span>{`(₦${cloth.price})${
-                              cloth.name.includes("Curtain") ? "/m2" : ""
+                              cloth.name.includes("Curtain")
+                                ? " per sq. meters"
+                                : ""
                             }`}</span>
                           </h6>
                           <NumberPicker
                             key={cloth.id}
-                            placeholder="Quantity"
-                            className="customization__number-picker"
+                            placeholder='Quantity'
+                            className='customization__number-picker'
                             onChange={(value) => {
                               handlePriceUpdate({
                                 price: cloth.price,
@@ -231,13 +244,13 @@ const Pricing = () => {
                           {cloth.ironOnlyPrice && (
                             <React.Fragment>
                               <DropdownList
-                                defaultValue="Wash and Iron"
+                                defaultValue='Wash and Iron'
                                 data={[
                                   "Iron All",
                                   "Wash and Iron",
                                   "Iron Specific Number",
                                 ]}
-                                containerClassName="service-type"
+                                containerClassName='service-type'
                                 onChange={(value) => {
                                   if (value === "Iron All") {
                                     handlePriceUpdate(
@@ -278,8 +291,8 @@ const Pricing = () => {
                               {cloth.specifyNumber && (
                                 <NumberPicker
                                   key={cloth.id}
-                                  placeholder="Quantity"
-                                  className="customization__number-picker"
+                                  placeholder='Quantity'
+                                  className='customization__number-picker'
                                   onChange={(value) =>
                                     handlePriceUpdate(
                                       {
@@ -307,57 +320,57 @@ const Pricing = () => {
                 </React.Fragment>
               ) : (
                 <React.Fragment>
-                  <div className="empty-price-list">
-                    <i className="fas fa-info-circle fa-2x"></i> <br /> No cloth
+                  <div className='empty-price-list'>
+                    <i className='fas fa-info-circle fa-2x'></i> <br /> No cloth
                     type selected. To select a cloth type, click on the select
                     box on the left section Or
                   </div>
-                  <div className="aae-about-us-hero--buttons my-0 justify-center flex mx-auto">
+                  <div className='aae-about-us-hero--buttons my-0 justify-center flex mx-auto'>
                     <a
-                      href="https://wa.me/message/TOKS546P3O5PI1"
-                      className="secondary-link p-3  "
-                      target="_blank"
-                      rel="noreferrer"
+                      href='https://wa.me/message/TOKS546P3O5PI1'
+                      className='secondary-link p-3  '
+                      target='_blank'
+                      rel='noreferrer'
                     >
-                      <i className="fab fa-whatsapp mr-2"></i> Contact Us
+                      <i className='fab fa-whatsapp mr-2'></i> Contact Us
                     </a>
                   </div>
                 </React.Fragment>
               )}
             </section>
             {(!!selectedClothes.length || deliveryPrice) && (
-              <section className="price__container">
-                <aside className="price__container--section">
+              <section className='price__container'>
+                <aside className='price__container--section'>
                   <h5>Total Items </h5>
-                  <span className="total--items__count">
+                  <span className='total--items__count'>
                     {totalPrice.quantity || 0}
                   </span>
                 </aside>
-                <aside className="price__container--section">
+                <aside className='price__container--section'>
                   <h5>Delivery Price</h5>
-                  <span className="total--delivery-price">
+                  <span className='total--delivery-price'>
                     ₦{deliveryPrice || 0}
                   </span>
                 </aside>
-                <aside className="price__container--section">
+                <aside className='price__container--section'>
                   <h5>Total Price (₦)</h5>
-                  <span className="price-tag price-tag--one-line">
-                    <span className="price-tag__main">₦{calculatedTotal}</span>
+                  <span className='price-tag price-tag--one-line'>
+                    <span className='price-tag__main'>₦{calculatedTotal}</span>
                   </span>
                 </aside>
-                <div className="mt-7 justify-center screenshot-request items-center flex flex-col mx-auto">
-                  <p className="not-satisfied-info">
+                <div className='mt-7 justify-center screenshot-request items-center flex flex-col mx-auto'>
+                  <p className='not-satisfied-info'>
                     Please take a screenshot of your request and send data to
                     the <b>WhatsApp account</b> below.
                   </p>
 
                   <a
-                    href="https://wa.me/message/TOKS546P3O5PI1"
-                    className="secondary-link p-3"
-                    target="_blank"
-                    rel="noreferrer"
+                    href='https://wa.me/message/TOKS546P3O5PI1'
+                    className='secondary-link p-3'
+                    target='_blank'
+                    rel='noreferrer'
                   >
-                    <i className="fab fa-whatsapp mr-2"></i> Send Request
+                    <i className='fab fa-whatsapp mr-2'></i> Send Request
                   </a>
                 </div>
               </section>
@@ -366,11 +379,11 @@ const Pricing = () => {
         </aside>
       </section>
 
-      <h2 className="suitable-plan pricing-table" id="pricing-table">
-        <i className="fas fa-table mr-3"></i>Our Pricing Table
+      <h2 className='suitable-plan pricing-table' id='pricing-table'>
+        <i className='fas fa-table mr-3'></i>Our Pricing Table
       </h2>
 
-      <div className="pricing-table--info">
+      <div className='pricing-table--info'>
         <span>Note</span>
         <p>
           * All <b>white garment</b> attracts extra ₦100{" "}
@@ -382,23 +395,23 @@ const Pricing = () => {
 
       {pricingList.map((item, index) => {
         return (
-          <section className="pricing-group__section" key={`index${index + 1}`}>
+          <section className='pricing-group__section' key={`index${index + 1}`}>
             <Collapse
               collapsible={false}
               accordion={true}
               key={index}
               defaultActiveKey={index === 0 && ["0"]}
-              className="pricing-table-header"
+              className='pricing-table-header'
             >
               <Panel
                 header={
-                  <h2 className="pricing-section__title">
+                  <h2 className='pricing-section__title'>
                     {item.sectionTitle}
                   </h2>
                 }
-                headerclassName="pricing-title-header"
+                headerclassName='pricing-title-header'
               >
-                <aside className="pricing-section__cards">
+                <aside className='pricing-section__cards'>
                   {item.pricingDetailsList.map((listItem, index) => (
                     <PricingCard
                       pricingDetailsList={listItem.listDetails}

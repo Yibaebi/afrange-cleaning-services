@@ -39,7 +39,9 @@
 .pricing-list__item span {
   color: #3b4a8fe1;
   font-size: 15px;
-  /* font-weight: 550; */
+}
+.pricing-list__item span:last-of-type {
+  font-size: 13px;
 }
 
 @media screen and (max-width: 320px) {

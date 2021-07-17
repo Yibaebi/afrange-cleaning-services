@@ -200,7 +200,7 @@
 
             {
               "type": "Kaftan",
-              "price": "₦500"
+              "price": "₦600"
             }
           ]
         },
@@ -286,8 +286,8 @@
               "type": "Bath Robe (Color)",
               "price": "₦1,000"
             },
-            { "type": "Curtain (Heavy)", "price": "₦250/m2" },
-            { "type": "Curtain (Light)", "price": "₦200/m2" }
+            { "type": "Curtain (Heavy)", "price": "₦250 per sq. meters" },
+            { "type": "Curtain (Light)", "price": "₦200 per sq. meters" }
           ]
         }
       ]
@@ -375,7 +375,7 @@
     {
       "id": "M14",
       "name": "Kaftan",
-      "price": 500,
+      "price": 600,
       "quantity": 1,
       "ironOnly": false,
       "ironQuantity": 1,
